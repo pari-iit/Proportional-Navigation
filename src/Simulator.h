@@ -10,8 +10,8 @@ class Dynamics;
 class Simulator{
     double dt;
     std::shared_ptr<Dynamics> dynamics;
-    public:
-
+  public:
+    State Simulate(const State& st);
 };
 
 
