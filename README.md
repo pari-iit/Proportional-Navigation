@@ -1,11 +1,10 @@
 <<<<<<< HEAD
-# CPPND: Capstone Hello World Repo
+# CPPND: ROS Simulation in Gazebo Repo 
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
+This repository creates a robotic simulation in Gazebo using ROS. The aim is missile interception guidance using a proportional controller to hit a target. 
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+This space will be filled up as and when the project is developed. 
 
-In this project, you can build your own C++ application starting with this repo, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -24,7 +23,7 @@ In this project, you can build your own C++ application starting with this repo,
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./HelloWorld`.
+4. Run it: `./simulator.
 =======
 # ROS-Simulation-Gazebo
 ROS simulation in Gazebo
