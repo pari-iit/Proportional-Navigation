@@ -28,10 +28,10 @@ class Control{
             _u = that._u;
             return *this;
         }
-        Control(const Control&& that) :
+        Control(Control&& that) :
             _t(std::exchange(that._t,0)),
             _u(std::move(that._u)){}
-        Control& operator=(const Control&& that) {
+        Control& operator=(Control&& that) {
             _t = std::exchange(that._t,0);
             _u = std::move(that._u); 
             return *this;
@@ -46,8 +46,34 @@ class Control{
 //Abstract class. Can define any kinds of controllers inside.
 class Controller{
 public:
+    virtual void generateControl(const std::vector<State>& st) = 0;
+};
 
-    virtual std::vector<Control> generateControl(const std::vector<State>& st) = 0;
+
+/* 1. Constant control u = Kx constant feedback control. 
+can be modified to include P control u = Ke. Just modify the state input.
+ */
+class ConstantControl:public Controller{
+    std::vector<std::vector<double> > _K;    
+    std::vector<Control> _U_t;
+    Control generateControlOneStep(const State& st);
+public:
+    ConstantControl(std::vector<std::vector<double> > K):_K(K),_U_t(std::vector<Control>()){};
+    void generateControl(const std::vector<State>& st);
+
+    std::vector<std::vector<double> > setGain() const{
+        return _K;
+    }
+    void getGain(const std::vector<std::vector<double> >& K){
+        _K = K;
+    }
+    std::vector<Control> getControl() const {
+        return _U_t;
+    }
+
+    void setControl(const std::vector<Control>& u){
+        _U_t = u;
+    }
 };
 
 

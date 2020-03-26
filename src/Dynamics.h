@@ -22,8 +22,9 @@ public:
         return *this;
     }
 
-    State(const State&& that):_t(std::exchange(that._t,0)), _x(std::move(that._x)),_P(std::move(that._P)){}
-    State& operator=(const State&& that){
+    State(State&& that):_t(std::exchange(that._t,0)), _x(std::move(that._x)),_P(std::move(that._P)){}
+    
+    State& operator=(State&& that){
         _t = std::exchange(that._t,0.0);
         _x = std::move(that._x);
         _P = std::move(that._P);
