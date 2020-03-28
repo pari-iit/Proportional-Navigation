@@ -38,7 +38,22 @@ public:
 };
 class Dynamics{
 public:
+//Can be used for continuous and discrete time. In an already discretized system dt = 1
     virtual void propagate(State& s,const double& dt) = 0;    
+};
+
+//Any generalized linear dynamics. Can be used for Kalman filter.
+class LinearDynamics:public Dynamics{
+    std::vector<std::vector<double> >  F;
+public:
+    void propagate(State& s, const double& dt);
+};
+
+class NonlinearDynamics:public Dynamics{
+    State nonlinearFunction(const State& s);
+    std::vector<std::vector<double> > Jacobian(const State& s);
+public:
+    void propagate(State& s, const double& dt);
 };
 
 

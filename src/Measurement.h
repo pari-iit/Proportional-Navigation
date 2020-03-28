@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <stdio.h>
+#include "Dynamics.h"
 
 class Measurement{
     double _t;
@@ -28,10 +29,33 @@ public:
         return *this;
     }
 
+    double Time() const{ return _t;}
+    std::vector<double> Y() const{return _y;}
+    std::vector<std::vector<double> > R() const{return _R;}
+
 
 };
 
+class MeasurementModel{
+public:
+    virtual std::vector<double> estimateMeasurement(const State& st) = 0;
+    virtual std::vector<std::vector<double> > Jacobian(const State& st) = 0;
+};
 
+class LinearMeasurementModel:public MeasurementModel{
+    std::vector<std::vector<double> > _H;
+public:
+    LinearMeasurementModel(const std::vector<std::vector<double> >& H):_H(H){}
+    std::vector<double> estimateMeasurement(const State& st);
+    std::vector<std::vector<double> > Jacobian(const State& st){ return _H;}
+};
+
+class NonlinearMeasurementModel:public MeasurementModel{
+    std::vector<double> MeasurementFunction(const State& st);    
+public:
+    std::vector<double> estimateMeasurement(const State& st);
+    std::vector<std::vector<double> > Jacobian(const State& st);
+};
 
 
 
