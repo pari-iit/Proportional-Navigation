@@ -8,14 +8,13 @@
 #include <unordered_map>
 #include "Dynamics.h"
 
-
-
 class Control{
     double _t;
-    std::vector<double> _u;
+    Eigen::VectorXf _u;
+    
 
     public:
-        Control(const double& t, const std::vector<double>& u):_t(t),_u(u){}
+        Control(const double& t, const Eigen::VectorXf& u):_t(t),_u(u){}
 
         //IMPLEMENT RULE OF FIVE HERE
         ~Control(){
@@ -38,7 +37,7 @@ class Control{
         }
 
         double time() const {return _t;}
-        std::vector<double> control() const {return _u;}
+        Eigen::VectorXf control() const {return _u;}
         
 };
 
@@ -54,17 +53,17 @@ public:
 can be modified to include P control u = Ke. Just modify the state input.
  */
 class ConstantControl:public Controller{
-    std::vector<std::vector<double> > _K;    
+    Eigen::MatrixXf _K;    
     std::vector<Control> _U_t;
     Control generateControlOneStep(const State& st);
 public:
-    ConstantControl(std::vector<std::vector<double> > K):_K(K),_U_t(std::vector<Control>()){};
+    ConstantControl(const Eigen::MatrixXf& K):_K(K),_U_t(std::vector<Control>()){};
     void generateControl(const std::vector<State>& st);
 
-    std::vector<std::vector<double> > setGain() const{
+    Eigen::MatrixXf getGain() const{
         return _K;
     }
-    void getGain(const std::vector<std::vector<double> >& K){
+    void setGain(const Eigen::MatrixXf& K){
         _K = K;
     }
     std::vector<Control> getControl() const {

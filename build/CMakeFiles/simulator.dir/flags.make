@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++17 -pthread   -std=c++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -isystem /usr/local/include/eigen3 
 

@@ -3,14 +3,15 @@
 
 #include <vector>
 #include <map>
+#include <eigen3/Eigen/Dense>
 
 class State{
     double _t;//time
-    std::vector<double> _x;//state
-    std::vector<std::vector<double > > _P;//covariance
+    Eigen::VectorXf _x;//state
+    Eigen::MatrixXf _P;//covariance
 
 public:
-    State(const double& t,const std::vector<double>& x, const std::vector<std::vector<double> >& P):_t(t),_x(x),_P(P){}
+    State(const double& t,const Eigen::VectorXf& x, const Eigen::MatrixXf& P):_t(t),_x(x),_P(P){}
     ~State(){
         printf("State at %f destroyed.\n",_t);
     }
@@ -32,8 +33,13 @@ public:
     }
 
     double t() const{ return _t;}
-    std::vector<double> x() const {return _x;}
-    std::vector<std::vector<double> > P() const {return _P;}
+    Eigen::VectorXf x() const {return _x;}
+    Eigen::MatrixXf P() const {return _P;}
+
+    
+    void setT(const double& t){ _t = t;}
+    void setX(const Eigen::VectorXf& x){_x = x;}
+    void setP(const Eigen::MatrixXf& P){_P = P;}
 
 };
 class Dynamics{
@@ -44,14 +50,14 @@ public:
 
 //Any generalized linear dynamics. Can be used for Kalman filter.
 class LinearDynamics:public Dynamics{
-    std::vector<std::vector<double> >  F;
+    Eigen::MatrixXf  F;
 public:
     void propagate(State& s, const double& dt);
 };
 
 class NonlinearDynamics:public Dynamics{
     State nonlinearFunction(const State& s);
-    std::vector<std::vector<double> > Jacobian(const State& s);
+    Eigen::MatrixXf Jacobian(const State& s);
 public:
     void propagate(State& s, const double& dt);
 };
