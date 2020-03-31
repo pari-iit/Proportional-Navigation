@@ -46,20 +46,31 @@ class Dynamics{
 public:
 //Can be used for continuous and discrete time. In an already discretized system dt = 1
     virtual void propagate(State& s,const double& dt) = 0;    
+    virtual Eigen::MatrixXf Q() = 0;
+    virtual void Q(const Eigen::MatrixXf& Q) = 0;
 };
 
 //Any generalized linear dynamics. Can be used for Kalman filter.
 class LinearDynamics:public Dynamics{
-    Eigen::MatrixXf  F;
+    Eigen::MatrixXf const  _F;
+    Eigen::MatrixXf _Q;
 public:
+    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q):_F(F),_Q(Q){}
     void propagate(State& s, const double& dt);
+    Eigen::MatrixXf Q(){return _Q;};
+    void Q(const Eigen::MatrixXf& Q){_Q = Q;};
 };
 
-class NonlinearDynamics:public Dynamics{
-    State nonlinearFunction(const State& s);
+
+//TODO: This depends on the nonlinear dynamical function used.Current project does not use this.
+class NonlinearDynamics:public Dynamics{    
     Eigen::MatrixXf Jacobian(const State& s);
+    Eigen::MatrixXf _Q;
 public:
+    NonlinearDynamics(const Eigen::MatrixXf& Q):_Q(Q){}
     void propagate(State& s, const double& dt);
+    Eigen::MatrixXf Q(){return _Q;};
+    void Q(const Eigen::MatrixXf& Q){_Q = Q;};
 };
 
 

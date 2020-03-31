@@ -5,7 +5,7 @@
 #include <vector>
 #include <iomanip>
 #include <utility>
-#include <unordered_map>
+#include <any>
 #include "Dynamics.h"
 
 class Control{
@@ -46,6 +46,10 @@ class Control{
 class Controller{
 public:
     virtual void generateControl(const std::vector<State>& st) = 0;
+    virtual std::any getGain() const = 0;
+    virtual void setGain(const std::any& K) = 0;
+    virtual std::vector<Control> getControl() const = 0;
+    virtual void setControl(const std::vector<Control>& u) = 0;
 };
 
 
@@ -60,19 +64,26 @@ public:
     ConstantControl(const Eigen::MatrixXf& K):_K(K),_U_t(std::vector<Control>()){};
     void generateControl(const std::vector<State>& st);
 
-    Eigen::MatrixXf getGain() const{
-        return _K;
-    }
-    void setGain(const Eigen::MatrixXf& K){
-        _K = K;
-    }
-    std::vector<Control> getControl() const {
-        return _U_t;
-    }
+    std::any getGain() const{return _K;}
 
-    void setControl(const std::vector<Control>& u){
-        _U_t = u;
-    }
+    void setGain(const std::any& K);
+
+    std::vector<Control> getControl() const {return _U_t;}
+
+    void setControl(const std::vector<Control>& u){_U_t = u;}
+};
+
+class ProNav:public Controller{
+    double _N;
+    std::vector<Control> _U_t;
+public:
+    ProNav(const double& N):_N(N),_U_t(std::vector<Control>()){}
+
+    void generateControl(const std::vector<State>& st);
+    std::any getGain() const {return _N;};                
+    void setGain(const std::any& N);
+    std::vector<Control> getControl() const{return _U_t;}
+    void setControl(const std::vector<Control>& u){_U_t = u;};
 };
 
 

@@ -14,6 +14,15 @@ Control ConstantControl::generateControlOneStep(const State& st){
     return {st.t(),_K*st.x()};
 }
 
+void ConstantControl::setGain(const std::any& K){
+    try{
+        _K = std::any_cast<Eigen::MatrixXf>(K);
+    }
+    catch(const std::bad_any_cast& e) {
+        printf("%s\n",e.what());
+    }
+}
+
 void ConstantControl::generateControl(const std::vector<State>& st){
     try{
         assert(_K.rows() != 0 && _K.cols() != 0);
@@ -27,3 +36,29 @@ void ConstantControl::generateControl(const std::vector<State>& st){
     }
 }
 
+
+//st is relative state vector. Own state - relative state of the other robot
+
+void ProNav::setGain(const std::any& N){
+    try{
+        _N = std::any_cast<double>(N);
+    }
+    catch(const std::bad_any_cast& e) {
+        printf("%s\n",e.what());
+    }
+}
+
+void ProNav::generateControl(const std::vector<State>& st){
+
+    for (auto s: st ){
+        assert( s.x().size() == 6);// Point mass model
+        Eigen::VectorXf x = s.x();
+        Eigen::Vector3f r = x.head(3), v = x.tail(3);
+        Eigen::Vector3f omega = ( r.cross(v))/( r.dot(r) );
+        Eigen::VectorXf a  = (r.stableNormalized()).cross(omega);
+        a = (-1*_N* (v.norm()) )* a;
+        Control u(s.t(),a);
+        _U_t.emplace_back(u);
+    }
+    
+}

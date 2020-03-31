@@ -61,7 +61,7 @@ public:
 
 class Radar{
 public:
-    constexpr static double lambda = 0.015;
+    static double constexpr _lambda{0.015};
 
 };
 
