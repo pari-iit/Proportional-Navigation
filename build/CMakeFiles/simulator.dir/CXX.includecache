@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.cpp
-Controller.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.h
-cassert
--
-exception
--
-
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.h
 vector
 -
@@ -25,12 +17,6 @@ any
 -
 Dynamics.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.cpp
-Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
-cassert
--
 
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
 vector
@@ -75,10 +61,6 @@ stdio.h
 -
 Dynamics.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.cpp
-Simulator.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.h
 
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.h
 vector

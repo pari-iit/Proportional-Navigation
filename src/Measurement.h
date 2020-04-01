@@ -49,9 +49,9 @@ public:
     Eigen::VectorXf estimateMeasurement(const State& st);
     Eigen::MatrixXf Jacobian(const State& st){ return _H;}
 };
-
+//Not Needed now
 class NonlinearMeasurementModel:public MeasurementModel{
-    Eigen::VectorXf MeasurementFunction(const State& st);    
+    // Eigen::VectorXf MeasurementFunction(const State& st);   
 public:
     Eigen::VectorXf estimateMeasurement(const State& st);
     Eigen::MatrixXf Jacobian(const State& st);
