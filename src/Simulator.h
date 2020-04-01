@@ -9,11 +9,12 @@
 
 class Dynamics;
 class Simulator{
-    double dt;
-    std::shared_ptr<Dynamics> dynamics;
-    std::mutex _mut;
+    double _dt;
+    std::shared_ptr<Dynamics> _dyn;
+    std::mutex _mut;    
   public:
-    State Simulate(const State& st);
+    Simulator(const double& dt,std::shared_ptr<Dynamics> dyn, const State& ic):_dt(dt),_dyn(std::move(dyn)){}  
+    std::vector<State> Simulate(State& st,const double& ti, const double& tf );
 };
 
 
