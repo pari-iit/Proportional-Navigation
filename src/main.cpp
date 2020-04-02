@@ -11,6 +11,11 @@ int main() {
     std::cout << "Hello World!" << "\n";
 
     //First simulate the robot and store it
-    
+
+    //Then use this measurement to guide the other robot
+    //1. obtain measurement
+    //2. Filter it
+    //3. Generate control law.
+    //4. Use control law to move
     return 0;
 }

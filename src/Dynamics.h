@@ -4,13 +4,17 @@
 #include <vector>
 #include <map>
 #include <eigen3/Eigen/Dense>
+#include "Controller.h"
+#define _N_STATES 3
 
+class Control;
 class State{
     double _t;//time
     Eigen::VectorXf _x;//state
     Eigen::MatrixXf _P;//covariance
 
 public:
+    State():_t(0.0),_x(Eigen::VectorXf::Zero(_N_STATES) ),_P(Eigen::MatrixXf::Identity(_N_STATES,_N_STATES) ){}
     State(const double& t,const Eigen::VectorXf& x, const Eigen::MatrixXf& P):_t(t),_x(x),_P(P){}
     ~State(){
         printf("State at %f destroyed.\n",_t);
@@ -45,7 +49,8 @@ public:
 class Dynamics{
 public:
 //Can be used for continuous and discrete time. In an already discretized system dt = 1
-    virtual void propagate(State& s,const double& dt) = 0;    
+    virtual void propagate(State& s,const Control& u,const double& dt) = 0;    
+    virtual void propagate(State& s, const double& dt) = 0;
     virtual Eigen::MatrixXf Q() = 0;
     virtual void Q(const Eigen::MatrixXf& Q) = 0;
 };
@@ -54,8 +59,10 @@ public:
 class LinearDynamics:public Dynamics{
     Eigen::MatrixXf const  _F;
     Eigen::MatrixXf _Q;
+    Eigen::MatrixXf const _B;    
 public:
-    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q):_F(F),_Q(Q){}
+    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q, const Eigen::MatrixXf& B):_F(F),_Q(Q), _B(B){}
+    void propagate(State& s, const Control& u, const double& dt);
     void propagate(State& s, const double& dt);
     Eigen::MatrixXf Q(){return _Q;};
     void Q(const Eigen::MatrixXf& Q){_Q = Q;};
@@ -68,6 +75,7 @@ class NonlinearDynamics:public Dynamics{
     Eigen::MatrixXf _Q;
 public:
     NonlinearDynamics(const Eigen::MatrixXf& Q):_Q(Q){}
+    void propagate(State& s, const Control& u, const double& dt);
     void propagate(State& s, const double& dt);
     Eigen::MatrixXf Q(){return _Q;};
     void Q(const Eigen::MatrixXf& Q){_Q = Q;};

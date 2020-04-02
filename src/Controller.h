@@ -8,12 +8,13 @@
 #include <any>
 #include "Dynamics.h"
 
+class State;
 class Control{
     double _t;
     Eigen::VectorXf _u;
     
 
-    public:
+    public:        
         Control(const double& t, const Eigen::VectorXf& u):_t(t),_u(u){}
 
         //IMPLEMENT RULE OF FIVE HERE

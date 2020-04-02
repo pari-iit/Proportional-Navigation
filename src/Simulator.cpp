@@ -1,5 +1,6 @@
 #include "Simulator.h"
 #include <cassert>
+#include <fstream>
 
 std::vector<State> Simulator::Simulate(State& st, const double& ti, const double& tf){
     try{

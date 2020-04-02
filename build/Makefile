@@ -231,6 +231,33 @@ src/Measurement.cpp.s:
 	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/Measurement.cpp.s
 .PHONY : src/Measurement.cpp.s
 
+src/SimManager.o: src/SimManager.cpp.o
+
+.PHONY : src/SimManager.o
+
+# target to build an object file
+src/SimManager.cpp.o:
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/SimManager.cpp.o
+.PHONY : src/SimManager.cpp.o
+
+src/SimManager.i: src/SimManager.cpp.i
+
+.PHONY : src/SimManager.i
+
+# target to preprocess a source file
+src/SimManager.cpp.i:
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/SimManager.cpp.i
+.PHONY : src/SimManager.cpp.i
+
+src/SimManager.s: src/SimManager.cpp.s
+
+.PHONY : src/SimManager.s
+
+# target to generate assembly for a file
+src/SimManager.cpp.s:
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/SimManager.cpp.s
+.PHONY : src/SimManager.cpp.s
+
 src/Simulator.o: src/Simulator.cpp.o
 
 .PHONY : src/Simulator.o
@@ -306,6 +333,9 @@ help:
 	@echo "... src/Measurement.o"
 	@echo "... src/Measurement.i"
 	@echo "... src/Measurement.s"
+	@echo "... src/SimManager.o"
+	@echo "... src/SimManager.i"
+	@echo "... src/SimManager.s"
 	@echo "... src/Simulator.o"
 	@echo "... src/Simulator.i"
 	@echo "... src/Simulator.s"

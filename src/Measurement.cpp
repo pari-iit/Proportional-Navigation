@@ -20,7 +20,13 @@ fd = -2/\lambda* ((x-x_own)(vx-vx_own)+(y-y_own)(vy-vy_own)+(z-z_own)(vz-vz_own)
 */
 Eigen::VectorXf NonlinearMeasurementModel::estimateMeasurement(const State& st){
     Eigen::VectorXf s = st.x();
-    Eigen::Vector3f x = s.head(3), v = s.tail(3);
+// #if _N_STATES == 3
+//     Eigen::Vector3f x,v; 
+// #elif _N_STATES == 2
+//     Eigen::Vector2f x,v;
+// #endif
+    Eigen::RowVectorXf x(_N_STATES),v(_N_STATES);
+    x = s.head(_N_STATES), v = s.tail(_N_STATES);
     //Distance measure
     double d = x.norm();
     //Doppler frequency
@@ -41,19 +47,25 @@ H(1,2) = -2/lambda[(z-z_own)/d]
 */
 Eigen::MatrixXf NonlinearMeasurementModel::Jacobian(const State& st){
     Eigen::VectorXf s = st.x();
-    Eigen::RowVector3f x = s.head(3), v = s.tail(3);
+// #if _N_STATES == 3
+//     Eigen::RowVector3f x,v;
+// #elif _N_STATES == 2
+//     Eigen::RowVector2f x,v;
+// #endif
+    Eigen::RowVectorXf x(_N_STATES),v(_N_STATES);
+    x = s.head(_N_STATES), v = s.tail(_N_STATES);
     Eigen::MatrixXf J(2,s.size());
     //Distance measure
     double d = x.norm();
     //Doppler frequency
     double fd = -2/Radar::_lambda*(x.dot(v))/d;
-    J.row(0) << x/d, 0,0,0;
+    J.row(0) << x/d, Eigen::RowVectorXf(_N_STATES);
     double K = -2/Radar::_lambda;
-    for(int i=0;i<3;++i){
+    for(int i=0;i<_N_STATES;++i){
         J(1,i) =  K*(  (v(i)/d) -  (v(i)*pow(x(i),2)/pow(d,3))  );
     }
 
-    for(int i=0;i<3;++i){
+    for(int i=0;i<_N_STATES;++i){
         J(1,i+3) =  K* (x(i)/d) ;
     }
 

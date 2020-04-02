@@ -9,7 +9,7 @@ Control ConstantControl::generateControlOneStep(const State& st){
         assert(_K.cols() == st.x().size());
     } catch (const std::exception& e){
         printf("Mismatch in Gain and state vector sizes. %s\n", e.what());
-        return {0,{}};
+        return {0,Eigen::VectorXf::Zero(1,1)};
     }
     return {st.t(),_K*st.x()};
 }
@@ -51,10 +51,15 @@ void ProNav::setGain(const std::any& N){
 void ProNav::generateControl(const std::vector<State>& st){
 
     for (auto s: st ){
-        assert( s.x().size() == 6);// Point mass model
+        assert( s.x().size() == _N_STATES*2);// Point mass model
         Eigen::VectorXf x = s.x();
-        Eigen::Vector3f r = x.head(3), v = x.tail(3);
+#if _N_STATES == 3
+        Eigen::Vector3f r = x.head(_N_STATES), v = x.tail(_N_STATES);
         Eigen::Vector3f omega = ( r.cross(v))/( r.dot(r) );
+#elif _N_STATES == 2
+        Eigen::Vector2f r = x.head(_N_STATES), v = x.tail(_N_STATES);
+        Eigen::Vector2f omega = ( r.cross(v))/( r.dot(r) );
+#endif      
         Eigen::VectorXf a  = (r.stableNormalized()).cross(omega);
         a = (-1*_N* (v.norm()) )* a;
         Control u(s.t(),a);
