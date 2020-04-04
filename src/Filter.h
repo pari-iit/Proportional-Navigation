@@ -21,7 +21,6 @@ class KalmanFilter:public Filter{
     void updateStep( State& s, const Measurement& m, const State& sref); 
     void propagateStep( State& st);
 public:
-    KalmanFilter(){};
     KalmanFilter(std::shared_ptr<Dynamics> dyn,  std::unique_ptr<MeasurementModel> meas):_dyn(std::move(dyn)),_meas(std::move(meas)){};
     void update(State& st, const Measurement& m, const State& sref);
 
