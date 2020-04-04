@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo
+CMAKE_SOURCE_DIR = /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build
+CMAKE_BINARY_DIR = /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/simulator.dir/depend.make
@@ -59,94 +59,94 @@ include CMakeFiles/simulator.dir/flags.make
 
 CMakeFiles/simulator.dir/src/Controller.cpp.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/Controller.cpp.o: ../src/Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulator.dir/src/Controller.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Controller.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulator.dir/src/Controller.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Controller.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.cpp
 
 CMakeFiles/simulator.dir/src/Controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/Controller.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.cpp > CMakeFiles/simulator.dir/src/Controller.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.cpp > CMakeFiles/simulator.dir/src/Controller.cpp.i
 
 CMakeFiles/simulator.dir/src/Controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/Controller.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.cpp -o CMakeFiles/simulator.dir/src/Controller.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.cpp -o CMakeFiles/simulator.dir/src/Controller.cpp.s
 
 CMakeFiles/simulator.dir/src/Dynamics.cpp.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/Dynamics.cpp.o: ../src/Dynamics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulator.dir/src/Dynamics.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Dynamics.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulator.dir/src/Dynamics.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Dynamics.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.cpp
 
 CMakeFiles/simulator.dir/src/Dynamics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/Dynamics.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.cpp > CMakeFiles/simulator.dir/src/Dynamics.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.cpp > CMakeFiles/simulator.dir/src/Dynamics.cpp.i
 
 CMakeFiles/simulator.dir/src/Dynamics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/Dynamics.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.cpp -o CMakeFiles/simulator.dir/src/Dynamics.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.cpp -o CMakeFiles/simulator.dir/src/Dynamics.cpp.s
 
 CMakeFiles/simulator.dir/src/Filter.cpp.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/Filter.cpp.o: ../src/Filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulator.dir/src/Filter.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Filter.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulator.dir/src/Filter.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Filter.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.cpp
 
 CMakeFiles/simulator.dir/src/Filter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/Filter.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.cpp > CMakeFiles/simulator.dir/src/Filter.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.cpp > CMakeFiles/simulator.dir/src/Filter.cpp.i
 
 CMakeFiles/simulator.dir/src/Filter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/Filter.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.cpp -o CMakeFiles/simulator.dir/src/Filter.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.cpp -o CMakeFiles/simulator.dir/src/Filter.cpp.s
 
 CMakeFiles/simulator.dir/src/Measurement.cpp.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/Measurement.cpp.o: ../src/Measurement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simulator.dir/src/Measurement.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Measurement.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simulator.dir/src/Measurement.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Measurement.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.cpp
 
 CMakeFiles/simulator.dir/src/Measurement.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/Measurement.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.cpp > CMakeFiles/simulator.dir/src/Measurement.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.cpp > CMakeFiles/simulator.dir/src/Measurement.cpp.i
 
 CMakeFiles/simulator.dir/src/Measurement.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/Measurement.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.cpp -o CMakeFiles/simulator.dir/src/Measurement.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.cpp -o CMakeFiles/simulator.dir/src/Measurement.cpp.s
 
 CMakeFiles/simulator.dir/src/SimManager.cpp.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/SimManager.cpp.o: ../src/SimManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simulator.dir/src/SimManager.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/SimManager.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/SimManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simulator.dir/src/SimManager.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/SimManager.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.cpp
 
 CMakeFiles/simulator.dir/src/SimManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/SimManager.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/SimManager.cpp > CMakeFiles/simulator.dir/src/SimManager.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.cpp > CMakeFiles/simulator.dir/src/SimManager.cpp.i
 
 CMakeFiles/simulator.dir/src/SimManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/SimManager.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/SimManager.cpp -o CMakeFiles/simulator.dir/src/SimManager.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.cpp -o CMakeFiles/simulator.dir/src/SimManager.cpp.s
 
 CMakeFiles/simulator.dir/src/Simulator.cpp.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/Simulator.cpp.o: ../src/Simulator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simulator.dir/src/Simulator.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Simulator.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simulator.dir/src/Simulator.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/Simulator.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.cpp
 
 CMakeFiles/simulator.dir/src/Simulator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/Simulator.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.cpp > CMakeFiles/simulator.dir/src/Simulator.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.cpp > CMakeFiles/simulator.dir/src/Simulator.cpp.i
 
 CMakeFiles/simulator.dir/src/Simulator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/Simulator.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.cpp -o CMakeFiles/simulator.dir/src/Simulator.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.cpp -o CMakeFiles/simulator.dir/src/Simulator.cpp.s
 
 CMakeFiles/simulator.dir/src/main.cpp.o: CMakeFiles/simulator.dir/flags.make
 CMakeFiles/simulator.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simulator.dir/src/main.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/main.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simulator.dir/src/main.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulator.dir/src/main.cpp.o -c /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/main.cpp
 
 CMakeFiles/simulator.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulator.dir/src/main.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/main.cpp > CMakeFiles/simulator.dir/src/main.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/main.cpp > CMakeFiles/simulator.dir/src/main.cpp.i
 
 CMakeFiles/simulator.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulator.dir/src/main.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/main.cpp -o CMakeFiles/simulator.dir/src/main.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/main.cpp -o CMakeFiles/simulator.dir/src/main.cpp.s
 
 # Object files for target simulator
 simulator_OBJECTS = \
@@ -170,7 +170,7 @@ simulator: CMakeFiles/simulator.dir/src/Simulator.cpp.o
 simulator: CMakeFiles/simulator.dir/src/main.cpp.o
 simulator: CMakeFiles/simulator.dir/build.make
 simulator: CMakeFiles/simulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable simulator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -183,6 +183,6 @@ CMakeFiles/simulator.dir/clean:
 .PHONY : CMakeFiles/simulator.dir/clean
 
 CMakeFiles/simulator.dir/depend:
-	cd /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/build/CMakeFiles/simulator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles/simulator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/simulator.dir/depend
 

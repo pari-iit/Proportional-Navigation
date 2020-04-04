@@ -37,6 +37,7 @@ CMakeFiles/simulator.dir/src/main.cpp.o: ../src/Controller.h
 CMakeFiles/simulator.dir/src/main.cpp.o: ../src/Dynamics.h
 CMakeFiles/simulator.dir/src/main.cpp.o: ../src/Filter.h
 CMakeFiles/simulator.dir/src/main.cpp.o: ../src/Measurement.h
+CMakeFiles/simulator.dir/src/main.cpp.o: ../src/SimManager.h
 CMakeFiles/simulator.dir/src/main.cpp.o: ../src/Simulator.h
 CMakeFiles/simulator.dir/src/main.cpp.o: ../src/main.cpp
 

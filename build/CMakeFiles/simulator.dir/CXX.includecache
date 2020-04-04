@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.cpp
-Controller.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.h
-cassert
--
-exception
--
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.h
 vector
 -
 iomanip
@@ -24,15 +16,9 @@ utility
 any
 -
 Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.cpp
-Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
-cassert
--
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 vector
 -
 map
@@ -40,19 +26,9 @@ map
 eigen3/Eigen/Dense
 -
 Controller.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.h
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.cpp
-Filter.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.h
-cassert
--
-algorithm
--
-functional
--
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.h
 vector
 -
 map
@@ -60,33 +36,29 @@ map
 memory
 -
 Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 Measurement.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.h
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.cpp
-Measurement.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.h
-cassert
--
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.h
 vector
 -
 stdio.h
 -
 Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/SimManager.cpp
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.cpp
 SimManager.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/SimManager.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.h
 fstream
+-
+iostream
 -
 cassert
 -
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/SimManager.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.h
 vector
 -
 memory
@@ -96,23 +68,15 @@ thread
 string
 -
 Controller.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.h
 Filter.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.h
 Measurement.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.h
 Simulator.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.h
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.cpp
-Simulator.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.h
-cassert
--
-fstream
--
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.h
 vector
 -
 memory
@@ -124,19 +88,11 @@ thread
 string
 -
 Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/main.cpp
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/main.cpp
 iostream
 -
-Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Dynamics.h
-Controller.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Controller.h
-Filter.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Filter.h
-Measurement.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Measurement.h
-Simulator.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/ROS-Simulation-Gazebo/src/Simulator.h
+SimManager.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.h
 

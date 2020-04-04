@@ -6,6 +6,7 @@
 #include <eigen3/Eigen/Dense>
 #include "Controller.h"
 #define _N_STATES 3
+#define NS (2*_N_STATES)
 
 class Control;
 class State{
@@ -61,9 +62,10 @@ class LinearDynamics:public Dynamics{
     Eigen::MatrixXf _Q;
     Eigen::MatrixXf const _B;    
 public:
-    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q, const Eigen::MatrixXf& B):_F(F),_Q(Q), _B(B){}
-    void propagate(State& s, const Control& u, const double& dt);
+    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q):_F(F),_Q(Q),_B(Eigen::MatrixXf::Zero(1,1)){}
+    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q, const Eigen::MatrixXf& B):_F(F),_Q(Q), _B(B){}    
     void propagate(State& s, const double& dt);
+    void propagate(State& s, const Control& u, const double& dt);    
     Eigen::MatrixXf Q(){return _Q;};
     void Q(const Eigen::MatrixXf& Q){_Q = Q;};
 };

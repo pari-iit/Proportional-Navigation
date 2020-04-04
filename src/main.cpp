@@ -1,13 +1,16 @@
 #include <iostream>
-#include "Dynamics.h"
-#include "Controller.h"
-#include "Filter.h"
-#include "Measurement.h"
-#include "Simulator.h"
+#include "SimManager.h"
 
-int main() {
-
-    std::unique_ptr<Controller> c(new ProNav(3));
+int main(int argc, char** argv) {
+    std::string in_file = "../Data/inputfile.txt";
+    if(argc <=1){
+        printf("No arguments.Using default file\n");
+    }
+    else{        
+        in_file = std::string(argv[0]);
+    }
+    
+    std::unique_ptr<SimManager> sim(new SimManager(in_file) );
     std::cout << "Hello World!" << "\n";
 
     //First simulate the robot and store it

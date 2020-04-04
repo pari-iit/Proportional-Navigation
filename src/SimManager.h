@@ -12,9 +12,7 @@
 
 
 class SimManager{
-  std::string _ifile;
-  
-  
+    
   //generating measurement
   std::vector<State> _ics;
 
@@ -35,13 +33,16 @@ class SimManager{
 
   
 
+  //pointers to individual programs
   std::unique_ptr<Controller> _c;
-  std::unique_ptr<Filter> _f;
-  std::unique_ptr<MeasurementModel> __m;
+  //Using Filter here instead of KalmanFilter gives valgrind error. Dont know why. 
+  std::unique_ptr<KalmanFilter> _f;
   std::unique_ptr<Simulator> _sim;  
-  void readFile();
+
+  //reading input file and constructing the inputs
+  void readFile(const std::string& ifile);
 public:
-  SimManager(const std::string& ifile):_ifile(ifile){}
+  SimManager(const std::string& ifile);
   bool runSimulation(const std::string& resDir);
   void generateMeasurement(const std::string measDir);
 

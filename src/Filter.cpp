@@ -12,7 +12,10 @@ void KalmanFilter::propagateStep(State& st ){
     _dyn->propagate(st,dt);
 }
 
-void KalmanFilter::updateStep(const Measurement& m,State& st){
+void KalmanFilter::updateStep( State& s, const Measurement& m, const State& sref){
+
+    VectorXf x_rel = s.x()-sref.x();
+    State st(s.t(),std::move(x_rel),std::move(s.P()) );
     VectorXf em = _meas->estimateMeasurement(st);
 
     //Calculate innovation
@@ -26,5 +29,12 @@ void KalmanFilter::updateStep(const Measurement& m,State& st){
 
     st.setX(st.x() + K*I); 
     st.setP( ( MatrixXf::Identity( st.P().rows(),st.P().cols() ) - K*_meas->Jacobian(st) )*st.P()  );
-    st.setT(st.t()+1);
+
+    s.setX(st.x()+sref.x());
+    s.setP(st.P());
 } 
+
+void KalmanFilter::update(State& st, const Measurement& m, const State& sref){
+    propagateStep(st);
+    updateStep(st,m,sref);
+}
