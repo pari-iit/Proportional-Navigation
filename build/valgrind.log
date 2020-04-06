@@ -1,0 +1,28 @@
+==31809== Memcheck, a memory error detector
+==31809== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==31809== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==31809== Command: ./simulator
+==31809== Parent PID: 17532
+==31809== 
+==31809== 
+==31809== HEAP SUMMARY:
+==31809==     in use at exit: 72,704 bytes in 1 blocks
+==31809==   total heap usage: 3,638 allocs, 3,637 frees, 427,133 bytes allocated
+==31809== 
+==31809== 72,704 bytes in 1 blocks are still reachable in loss record 1 of 1
+==31809==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31809==    by 0x4EDBF85: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+==31809==    by 0x40106C9: call_init.part.0 (dl-init.c:72)
+==31809==    by 0x40107DA: call_init (dl-init.c:30)
+==31809==    by 0x40107DA: _dl_init (dl-init.c:120)
+==31809==    by 0x4000C69: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+==31809== 
+==31809== LEAK SUMMARY:
+==31809==    definitely lost: 0 bytes in 0 blocks
+==31809==    indirectly lost: 0 bytes in 0 blocks
+==31809==      possibly lost: 0 bytes in 0 blocks
+==31809==    still reachable: 72,704 bytes in 1 blocks
+==31809==         suppressed: 0 bytes in 0 blocks
+==31809== 
+==31809== For counts of detected and suppressed errors, rerun with: -v
+==31809== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

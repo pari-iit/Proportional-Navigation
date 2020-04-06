@@ -19,7 +19,7 @@ class Control{
 
         //IMPLEMENT RULE OF FIVE HERE
         ~Control(){
-            printf("Control at %f destroyed.\n",_t);
+            // printf("Control at %f destroyed.\n",_t);
         }
         Control(const Control& that):_t(that._t), _u(that._u)
         {}

@@ -7,6 +7,7 @@
 #include "Controller.h"
 #define _N_STATES 3
 #define NS (2*_N_STATES)
+#define _N_CONTROL 3
 
 class Control;
 class State{
@@ -18,7 +19,7 @@ public:
     State():_t(0.0),_x(Eigen::VectorXf::Zero(_N_STATES) ),_P(Eigen::MatrixXf::Identity(_N_STATES,_N_STATES) ){}
     State(const double& t,const Eigen::VectorXf& x, const Eigen::MatrixXf& P):_t(t),_x(x),_P(P){}
     ~State(){
-        printf("State at %f destroyed.\n",_t);
+        // printf("State at %f destroyed.\n",_t);
     }
     State(const State& that):_t(that._t), _x(that._x),_P(that._P){}
     State& operator=(const State& that){
@@ -62,7 +63,7 @@ class LinearDynamics:public Dynamics{
     Eigen::MatrixXf _Q;
     Eigen::MatrixXf const _B;    
 public:
-    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q):_F(F),_Q(Q),_B(Eigen::MatrixXf::Zero(1,1)){}
+    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q):_F(F),_Q(Q),_B(Eigen::MatrixXf::Zero(NS,_N_CONTROL)){}
     LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q, const Eigen::MatrixXf& B):_F(F),_Q(Q), _B(B){}    
     void propagate(State& s, const double& dt);
     void propagate(State& s, const Control& u, const double& dt);    

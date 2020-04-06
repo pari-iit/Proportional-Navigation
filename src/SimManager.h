@@ -12,9 +12,12 @@
 
 
 class SimManager{
-    
-  //generating measurement
+  std::mutex _mut;
+
+  //generating 
+  std::vector<double> _tf;
   std::vector<State> _ics;
+  std::vector<std::vector<Control> > _u;
 
   //Dynamics
   Eigen::MatrixXf _F;
@@ -37,10 +40,12 @@ class SimManager{
   std::unique_ptr<Controller> _c;
   //Using Filter here instead of KalmanFilter gives valgrind error. Dont know why. 
   std::unique_ptr<KalmanFilter> _f;
-  std::unique_ptr<Simulator> _sim;  
+  //Multiple threads can use the same pointer. 
+  std::shared_ptr<Simulator> _sim;  
 
   //reading input file and constructing the inputs
   void readFile(const std::string& ifile);
+  void writeFile(const std::string& ofile, const std::vector<State>& st);
 public:
   SimManager(const std::string& ifile);
   bool runSimulation(const std::string& resDir);
