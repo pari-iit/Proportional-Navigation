@@ -10,7 +10,7 @@
 class MeasurementModel;
 class Filter{
     public:
-    virtual void update(State& st, const Measurement& m, const State& sref) = 0;
+    virtual void update(State& st, const Measurement& m, const State& sref, const double& dt) = 0;
 };
 
 //Define KF, EKF etc
@@ -19,10 +19,10 @@ class KalmanFilter:public Filter{
     std::shared_ptr<Dynamics> _dyn;
     std::unique_ptr<MeasurementModel> _meas;//Make sure measurement model is only used by a the filtering module.
     void updateStep( State& s, const Measurement& m, const State& sref); 
-    void propagateStep( State& st);
+    void propagateStep( State& st, const double& dt);
 public:
     KalmanFilter(std::shared_ptr<Dynamics> dyn,  std::unique_ptr<MeasurementModel> meas):_dyn(std::move(dyn)),_meas(std::move(meas)){};
-    void update(State& st, const Measurement& m, const State& sref);
+    void update(State& st, const Measurement& m, const State& sref, const double& dt);
 
 };
 

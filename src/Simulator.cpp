@@ -4,7 +4,7 @@
 
 
 void Simulator::SimStep(State& st,const std::vector<Control>& u){
-    if( u.size() == 1){
+    if( u.size() == 1){        
         _dyn->propagate(st,u[0],_dt);
     }
     else{

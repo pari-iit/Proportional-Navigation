@@ -4,6 +4,8 @@
 #include <cassert>
 #include <future>
 #include <unordered_set>
+#include <queue>
+#include <random>
 
 
 static std::vector<std::string> tokenizer(const std::string& s, const char& delimiter = ' '){
@@ -271,16 +273,28 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
     std::unique_lock<std::mutex> ulock(_mut);
     double dist = __DBL_MAX__;
     State t_st = std::move(_ics[t_id]);//actual target state
+    std::vector<Control> ut = std::move(_u[t_id]); //actual target control
 
-    State et_st = t_st; // estimate carried on by the onboard seeker.
-    State i_st = std::move(_iloc[i_id]);
-    std::vector<Control> ut = std::move(_u[t_id]);
+    //Move the initial point randomly
+    std::random_device rd;
+    std::mt19937 eng(rd());
+    
+    Eigen::VectorXf ex =t_st.x();
+    for (int i=0; i < ex.size(); ++i){
+        std::normal_distribution<double> pdf(0, 0.01*fabs(ex(i)));
+        ex(i) = ex(i) + pdf(eng);
+    }
+    
+    State et_st(t_st.t(),ex,t_st.P()); // estimate carried on by the onboard seeker.
+
+    //interceptor state and controls
+    State i_st = std::move(_iloc[i_id]);    
     Control ui = std::move(_iu[i_id]);
 
     std::vector<State> i_st_seq;i_st_seq.push_back(i_st);
     
-
-    while(dist > 1e-5){
+    std::queue<double> disthist;
+    while(dist > 1e-5 && t_st.t() <_tf[t_id]){
         //Actual target simulation
         _sim->SimStep(t_st,ut);
 
@@ -289,26 +303,45 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
         Measurement m = _m->generateNoisyMeasurement(std::move(relst),_R);
 
         //EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE ONBOARD SEEKER.
-
+        std::cout << "target estimate = " <<et_st.x() << std::endl;
         //Estimate postion of the target
-        _f->update(et_st,m,i_st);
+        _f->update(et_st,m,i_st,_dt);
+
+        
 
         // std::cout << (et_st.x()-t_st.x() ).norm() << std::endl; 
         
 
         //get relative state of the target with respect to the interceptor
-        relst = State(t_st.t(),i_st.x()-t_st.x(),t_st.P()+i_st.P());
+        relst = State(t_st.t(),et_st.x()-i_st.x(),et_st.P()+i_st.P());
 
+        std::cout <<"Rel state = " << relst.x() << std::endl;
         //generate control
+
         _c->generateControl({relst});        
 
+        // std::cout << "Control = " << _c->getControl()[0].control() << std::endl;
         //Apply control to the interceptor
         _sim->SimStep(i_st,_c->getControl());
         
         //Save state sequence
         i_st_seq.push_back(i_st);
         dist = i_st.getDistance(t_st);
-        printf("time = %f, dist = %f\n",i_st.t(),dist);
+
+        if (disthist.size() < 5){
+            disthist.push(dist);
+        }
+        else{
+            disthist.pop();
+            disthist.push(dist);
+        }
+        if (!disthist.empty())
+
+        
+        printf("time = %f, dist = %f\n",i_st.t(),dist);        
+        // getchar();
+        
+
     }
     
     return i_st_seq;

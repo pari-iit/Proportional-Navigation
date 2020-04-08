@@ -1,7 +1,6 @@
 #include "Controller.h"
 #include <cassert>
-#include <exception> 
-
+#include <exception>
 
 Control ConstantControl::generateControlOneStep(const State& st){
         
@@ -51,19 +50,20 @@ void ProNav::setGain(const std::any& N){
 
 //st is relative state vector. Own state - relative state of the target
 void ProNav::generateControl(const std::vector<State>& st){
-
+    _U_t.clear();
     for (auto s: st ){
-        assert( s.x().size() == _N_STATES*2);// Point mass model
+        assert( s.x().size() == NS);// Point mass model
         Eigen::VectorXf x = s.x();
 #if _N_STATES == 3
         Eigen::Vector3f r = x.head(_N_STATES), v = x.tail(_N_STATES);
-        Eigen::Vector3f omega = ( r.cross(v))/( r.dot(r) );
+        Eigen::Vector3f omega = ( r.cross(v))/( r.dot(r) );        
 #elif _N_STATES == 2
         Eigen::Vector2f r = x.head(_N_STATES), v = x.tail(_N_STATES);
         Eigen::Vector2f omega = ( r.cross(v))/( r.dot(r) );
-#endif      
-        Eigen::VectorXf a  = (r.stableNormalized()).cross(omega);
-        a = (-1*_N* (v.norm()) )* a;
+#endif    
+        double mult = (-1.0*_N* (v.norm())/(r.norm()) );
+        Eigen::VectorXf a  = r.cross(omega);
+        a = mult* a;
         Control u(s.t(),a);
         _U_t.emplace_back(u);
     }
