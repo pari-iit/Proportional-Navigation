@@ -37,7 +37,7 @@ void ConstantControl::generateControl(const std::vector<State>& st){
 }
 
 
-//st is relative state vector. Own state - relative state of the other robot
+
 
 void ProNav::setGain(const std::any& N){
     try{
@@ -48,6 +48,8 @@ void ProNav::setGain(const std::any& N){
     }
 }
 
+
+//st is relative state vector. Own state - relative state of the target
 void ProNav::generateControl(const std::vector<State>& st){
 
     for (auto s: st ){

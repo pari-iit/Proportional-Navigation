@@ -2,6 +2,28 @@
 #include <cassert>
 #include <fstream>
 
+
+void Simulator::SimStep(State& st,const std::vector<Control>& u){
+    if( u.size() == 1){
+        _dyn->propagate(st,u[0],_dt);
+    }
+    else{
+        auto it = std::find_if(u.begin(), u.end(), [&st](Control c){
+            return (st.t() < c.time());
+        });
+        
+        Control c(0,Eigen::VectorXf::Zero(_N_CONTROL));            
+        
+        if (it > u.begin()){
+            c = u[it-u.begin()-1];
+        }
+
+        _dyn->propagate(st,c,_dt);
+    }
+        
+        
+}
+
 std::vector<State> Simulator::Simulate(State&& st, const double&& ti, const double&& tf){
     try{
         assert( fabs(st.t() - ti ) <1e-5);
@@ -60,3 +82,4 @@ const std::vector<Control>&& U){
     
     return s_hist;
 }
+

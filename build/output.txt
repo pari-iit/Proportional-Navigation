@@ -1,0 +1,3686 @@
+No arguments.Using default file
+-nan
+time = 0.010000, dist = 1.008030
+-nan
+time = 0.020000, dist = 1.011179
+-nan
+time = 0.030000, dist = 1.014422
+-nan
+time = 0.040000, dist = 1.017752
+-nan
+time = 0.050000, dist = 1.021162
+-nan
+time = 0.060000, dist = 1.024647
+-nan
+time = 0.070000, dist = 1.028202
+-nan
+time = 0.080000, dist = 1.031822
+-nan
+time = 0.090000, dist = 1.035502
+-nan
+time = 0.100000, dist = 1.039239
+-nan
+time = 0.110000, dist = 1.043028
+-nan
+time = 0.120000, dist = 1.046867
+-nan
+time = 0.130000, dist = 1.050753
+-nan
+time = 0.140000, dist = 1.054682
+-nan
+time = 0.150000, dist = 1.058652
+-nan
+time = 0.160000, dist = 1.062661
+-nan
+time = 0.170000, dist = 1.066706
+-nan
+time = 0.180000, dist = 1.070785
+-nan
+time = 0.190000, dist = 1.074896
+-nan
+time = 0.200000, dist = 1.079038
+-nan
+time = 0.210000, dist = 1.083208
+-nan
+time = 0.220000, dist = 1.087406
+-nan
+time = 0.230000, dist = 1.091629
+-nan
+time = 0.240000, dist = 1.095876
+-nan
+time = 0.250000, dist = 1.100146
+-nan
+time = 0.260000, dist = 1.104437
+-nan
+time = 0.270000, dist = 1.108750
+-nan
+time = 0.280000, dist = 1.113081
+-nan
+time = 0.290000, dist = 1.117431
+-nan
+time = 0.300000, dist = 1.121799
+-nan
+time = 0.310000, dist = 1.126183
+-nan
+time = 0.320000, dist = 1.130583
+-nan
+time = 0.330000, dist = 1.134997
+-nan
+time = 0.340000, dist = 1.139426
+-nan
+time = 0.350000, dist = 1.143868
+-nan
+time = 0.360000, dist = 1.148323
+-nan
+time = 0.370000, dist = 1.152790
+-nan
+time = 0.380000, dist = 1.157269
+-nan
+time = 0.390000, dist = 1.161758
+-nan
+time = 0.400000, dist = 1.166258
+-nan
+time = 0.410000, dist = 1.170767
+-nan
+time = 0.420000, dist = 1.175286
+-nan
+time = 0.430000, dist = 1.179814
+-nan
+time = 0.440000, dist = 1.184350
+-nan
+time = 0.450000, dist = 1.188894
+-nan
+time = 0.460000, dist = 1.193445
+-nan
+time = 0.470000, dist = 1.198004
+-nan
+time = 0.480000, dist = 1.202570
+-nan
+time = 0.490000, dist = 1.207142
+-nan
+time = 0.500000, dist = 1.211720
+-nan
+time = 0.510000, dist = 1.216304
+-nan
+time = 0.520000, dist = 1.220893
+-nan
+time = 0.530000, dist = 1.225488
+-nan
+time = 0.540000, dist = 1.230088
+-nan
+time = 0.550000, dist = 1.234692
+-nan
+time = 0.560000, dist = 1.239301
+-nan
+time = 0.570000, dist = 1.243914
+-nan
+time = 0.580000, dist = 1.248531
+-nan
+time = 0.590000, dist = 1.253152
+-nan
+time = 0.600000, dist = 1.257776
+-nan
+time = 0.610000, dist = 1.262403
+-nan
+time = 0.620000, dist = 1.267034
+-nan
+time = 0.630000, dist = 1.271667
+-nan
+time = 0.640000, dist = 1.276304
+-nan
+time = 0.650000, dist = 1.280943
+-nan
+time = 0.660000, dist = 1.285584
+-nan
+time = 0.670000, dist = 1.290228
+-nan
+time = 0.680000, dist = 1.294873
+-nan
+time = 0.690000, dist = 1.299521
+-nan
+time = 0.700000, dist = 1.304171
+-nan
+time = 0.710000, dist = 1.308822
+-nan
+time = 0.720000, dist = 1.313475
+-nan
+time = 0.730000, dist = 1.318129
+-nan
+time = 0.740000, dist = 1.322785
+-nan
+time = 0.750000, dist = 1.327442
+-nan
+time = 0.760000, dist = 1.332099
+-nan
+time = 0.770000, dist = 1.336758
+-nan
+time = 0.780000, dist = 1.341418
+-nan
+time = 0.790000, dist = 1.346079
+-nan
+time = 0.800000, dist = 1.350740
+-nan
+time = 0.810000, dist = 1.355402
+-nan
+time = 0.820000, dist = 1.360065
+-nan
+time = 0.830000, dist = 1.364728
+-nan
+time = 0.840000, dist = 1.369392
+-nan
+time = 0.850000, dist = 1.374055
+-nan
+time = 0.860000, dist = 1.378719
+-nan
+time = 0.870000, dist = 1.383383
+-nan
+time = 0.880000, dist = 1.388048
+-nan
+time = 0.890000, dist = 1.392712
+-nan
+time = 0.900000, dist = 1.397376
+-nan
+time = 0.910000, dist = 1.402040
+-nan
+time = 0.920000, dist = 1.406704
+-nan
+time = 0.930000, dist = 1.411368
+-nan
+time = 0.940000, dist = 1.416031
+-nan
+time = 0.950000, dist = 1.420694
+-nan
+time = 0.960000, dist = 1.425357
+-nan
+time = 0.970000, dist = 1.430019
+-nan
+time = 0.980000, dist = 1.434681
+-nan
+time = 0.990000, dist = 1.439343
+-nan
+time = 1.000000, dist = 1.444003
+-nan
+time = 1.010000, dist = 1.448663
+-nan
+time = 1.020000, dist = 1.453323
+-nan
+time = 1.030000, dist = 1.457982
+-nan
+time = 1.040000, dist = 1.462640
+-nan
+time = 1.050000, dist = 1.467297
+-nan
+time = 1.060000, dist = 1.471954
+-nan
+time = 1.070000, dist = 1.476610
+-nan
+time = 1.080000, dist = 1.481264
+-nan
+time = 1.090000, dist = 1.485918
+-nan
+time = 1.100000, dist = 1.490571
+-nan
+time = 1.110000, dist = 1.495223
+-nan
+time = 1.120000, dist = 1.499874
+-nan
+time = 1.130000, dist = 1.504524
+-nan
+time = 1.140000, dist = 1.509173
+-nan
+time = 1.150000, dist = 1.513821
+-nan
+time = 1.160000, dist = 1.518468
+-nan
+time = 1.170000, dist = 1.523113
+-nan
+time = 1.180000, dist = 1.527758
+-nan
+time = 1.190000, dist = 1.532401
+-nan
+time = 1.200000, dist = 1.537043
+-nan
+time = 1.210000, dist = 1.541684
+-nan
+time = 1.220000, dist = 1.546324
+-nan
+time = 1.230000, dist = 1.550962
+-nan
+time = 1.240000, dist = 1.555599
+-nan
+time = 1.250000, dist = 1.560235
+-nan
+time = 1.260000, dist = 1.564870
+-nan
+time = 1.270000, dist = 1.569503
+-nan
+time = 1.280000, dist = 1.574135
+-nan
+time = 1.290000, dist = 1.578765
+-nan
+time = 1.300000, dist = 1.583394
+-nan
+time = 1.310000, dist = 1.588022
+-nan
+time = 1.320000, dist = 1.592648
+-nan
+time = 1.330000, dist = 1.597273
+-nan
+time = 1.340000, dist = 1.601896
+-nan
+time = 1.350000, dist = 1.606518
+-nan
+time = 1.360000, dist = 1.611138
+-nan
+time = 1.370000, dist = 1.615757
+-nan
+time = 1.380000, dist = 1.620374
+-nan
+time = 1.390000, dist = 1.624990
+-nan
+time = 1.400000, dist = 1.629604
+-nan
+time = 1.410000, dist = 1.634217
+-nan
+time = 1.420000, dist = 1.638829
+-nan
+time = 1.430000, dist = 1.643438
+-nan
+time = 1.440000, dist = 1.648046
+-nan
+time = 1.450000, dist = 1.652653
+-nan
+time = 1.460000, dist = 1.657258
+-nan
+time = 1.470000, dist = 1.661861
+-nan
+time = 1.480000, dist = 1.666463
+-nan
+time = 1.490000, dist = 1.671063
+-nan
+time = 1.500000, dist = 1.675661
+-nan
+time = 1.510000, dist = 1.680258
+-nan
+time = 1.520000, dist = 1.684853
+-nan
+time = 1.530000, dist = 1.689447
+-nan
+time = 1.540000, dist = 1.694038
+-nan
+time = 1.550000, dist = 1.698629
+-nan
+time = 1.560000, dist = 1.703217
+-nan
+time = 1.570000, dist = 1.707804
+-nan
+time = 1.580000, dist = 1.712389
+-nan
+time = 1.590000, dist = 1.716972
+-nan
+time = 1.600000, dist = 1.721554
+-nan
+time = 1.610000, dist = 1.726134
+-nan
+time = 1.620000, dist = 1.730712
+-nan
+time = 1.630000, dist = 1.735289
+-nan
+time = 1.640000, dist = 1.739864
+-nan
+time = 1.650000, dist = 1.744437
+-nan
+time = 1.660000, dist = 1.749008
+-nan
+time = 1.670000, dist = 1.753578
+-nan
+time = 1.680000, dist = 1.758146
+-nan
+time = 1.690000, dist = 1.762712
+-nan
+time = 1.700000, dist = 1.767276
+-nan
+time = 1.710000, dist = 1.771839
+-nan
+time = 1.720000, dist = 1.776400
+-nan
+time = 1.730000, dist = 1.780959
+-nan
+time = 1.740000, dist = 1.785516
+-nan
+time = 1.750000, dist = 1.790071
+-nan
+time = 1.760000, dist = 1.794625
+-nan
+time = 1.770000, dist = 1.799177
+-nan
+time = 1.780000, dist = 1.803727
+-nan
+time = 1.790000, dist = 1.808275
+-nan
+time = 1.800000, dist = 1.812822
+-nan
+time = 1.810000, dist = 1.817366
+-nan
+time = 1.820000, dist = 1.821909
+-nan
+time = 1.830000, dist = 1.826450
+-nan
+time = 1.840000, dist = 1.830990
+-nan
+time = 1.850000, dist = 1.835527
+-nan
+time = 1.860000, dist = 1.840063
+-nan
+time = 1.870000, dist = 1.844597
+-nan
+time = 1.880000, dist = 1.849129
+-nan
+time = 1.890000, dist = 1.853659
+-nan
+time = 1.900000, dist = 1.858187
+-nan
+time = 1.910000, dist = 1.862714
+-nan
+time = 1.920000, dist = 1.867238
+-nan
+time = 1.930000, dist = 1.871761
+-nan
+time = 1.940000, dist = 1.876282
+-nan
+time = 1.950000, dist = 1.880801
+-nan
+time = 1.960000, dist = 1.885319
+-nan
+time = 1.970000, dist = 1.889834
+-nan
+time = 1.980000, dist = 1.894348
+-nan
+time = 1.990000, dist = 1.898859
+-nan
+time = 2.000000, dist = 1.903369
+-nan
+time = 2.010000, dist = 1.907877
+-nan
+time = 2.020000, dist = 1.912383
+-nan
+time = 2.030000, dist = 1.916888
+-nan
+time = 2.040000, dist = 1.921390
+-nan
+time = 2.050000, dist = 1.925891
+-nan
+time = 2.060000, dist = 1.930390
+-nan
+time = 2.070000, dist = 1.934886
+-nan
+time = 2.080000, dist = 1.939381
+-nan
+time = 2.090000, dist = 1.943875
+-nan
+time = 2.100000, dist = 1.948366
+-nan
+time = 2.110000, dist = 1.952855
+-nan
+time = 2.120000, dist = 1.957343
+-nan
+time = 2.130000, dist = 1.961828
+-nan
+time = 2.140000, dist = 1.966312
+-nan
+time = 2.150000, dist = 1.970794
+-nan
+time = 2.160000, dist = 1.975274
+-nan
+time = 2.170000, dist = 1.979752
+-nan
+time = 2.180000, dist = 1.984229
+-nan
+time = 2.190000, dist = 1.988703
+-nan
+time = 2.200000, dist = 1.993176
+-nan
+time = 2.210000, dist = 1.997646
+-nan
+time = 2.220000, dist = 2.002115
+-nan
+time = 2.230000, dist = 2.006582
+-nan
+time = 2.240000, dist = 2.011047
+-nan
+time = 2.250000, dist = 2.015510
+-nan
+time = 2.260000, dist = 2.019972
+-nan
+time = 2.270000, dist = 2.024431
+-nan
+time = 2.280000, dist = 2.028888
+-nan
+time = 2.290000, dist = 2.033344
+-nan
+time = 2.300000, dist = 2.037798
+-nan
+time = 2.310000, dist = 2.042250
+-nan
+time = 2.320000, dist = 2.046700
+-nan
+time = 2.330000, dist = 2.051148
+-nan
+time = 2.340000, dist = 2.055594
+-nan
+time = 2.350000, dist = 2.060038
+-nan
+time = 2.360000, dist = 2.064481
+-nan
+time = 2.370000, dist = 2.068921
+-nan
+time = 2.380000, dist = 2.073360
+-nan
+time = 2.390000, dist = 2.077797
+-nan
+time = 2.400000, dist = 2.082232
+-nan
+time = 2.410000, dist = 2.086664
+-nan
+time = 2.420000, dist = 2.091095
+-nan
+time = 2.430000, dist = 2.095525
+-nan
+time = 2.440000, dist = 2.099952
+-nan
+time = 2.450000, dist = 2.104378
+-nan
+time = 2.460000, dist = 2.108801
+-nan
+time = 2.470000, dist = 2.113223
+-nan
+time = 2.480000, dist = 2.117642
+-nan
+time = 2.490000, dist = 2.122060
+-nan
+time = 2.500000, dist = 2.126476
+-nan
+time = 2.510000, dist = 2.130890
+-nan
+time = 2.520000, dist = 2.135302
+-nan
+time = 2.530000, dist = 2.139713
+-nan
+time = 2.540000, dist = 2.144121
+-nan
+time = 2.550000, dist = 2.148528
+-nan
+time = 2.560000, dist = 2.152932
+-nan
+time = 2.570000, dist = 2.157335
+-nan
+time = 2.580000, dist = 2.161736
+-nan
+time = 2.590000, dist = 2.166135
+-nan
+time = 2.600000, dist = 2.170532
+-nan
+time = 2.610000, dist = 2.174927
+-nan
+time = 2.620000, dist = 2.179321
+-nan
+time = 2.630000, dist = 2.183712
+-nan
+time = 2.640000, dist = 2.188102
+-nan
+time = 2.650000, dist = 2.192490
+-nan
+time = 2.660000, dist = 2.196875
+-nan
+time = 2.670000, dist = 2.201259
+-nan
+time = 2.680000, dist = 2.205641
+-nan
+time = 2.690000, dist = 2.210021
+-nan
+time = 2.700000, dist = 2.214400
+-nan
+time = 2.710000, dist = 2.218776
+-nan
+time = 2.720000, dist = 2.223150
+-nan
+time = 2.730000, dist = 2.227523
+-nan
+time = 2.740000, dist = 2.231894
+-nan
+time = 2.750000, dist = 2.236263
+-nan
+time = 2.760000, dist = 2.240629
+-nan
+time = 2.770000, dist = 2.244995
+-nan
+time = 2.780000, dist = 2.249358
+-nan
+time = 2.790000, dist = 2.253719
+-nan
+time = 2.800000, dist = 2.258079
+-nan
+time = 2.810000, dist = 2.262436
+-nan
+time = 2.820000, dist = 2.266792
+-nan
+time = 2.830000, dist = 2.271146
+-nan
+time = 2.840000, dist = 2.275497
+-nan
+time = 2.850000, dist = 2.279848
+-nan
+time = 2.860000, dist = 2.284196
+-nan
+time = 2.870000, dist = 2.288542
+-nan
+time = 2.880000, dist = 2.292886
+-nan
+time = 2.890000, dist = 2.297229
+-nan
+time = 2.900000, dist = 2.301570
+-nan
+time = 2.910000, dist = 2.305908
+-nan
+time = 2.920000, dist = 2.310246
+-nan
+time = 2.930000, dist = 2.314580
+-nan
+time = 2.940000, dist = 2.318913
+-nan
+time = 2.950000, dist = 2.323245
+-nan
+time = 2.960000, dist = 2.327574
+-nan
+time = 2.970000, dist = 2.331902
+-nan
+time = 2.980000, dist = 2.336228
+-nan
+time = 2.990000, dist = 2.340551
+-nan
+time = 3.000000, dist = 2.344873
+-nan
+time = 3.010000, dist = 2.349193
+-nan
+time = 3.020000, dist = 2.353512
+-nan
+time = 3.030000, dist = 2.357828
+-nan
+time = 3.040000, dist = 2.362142
+-nan
+time = 3.050000, dist = 2.366455
+-nan
+time = 3.060000, dist = 2.370766
+-nan
+time = 3.070000, dist = 2.375074
+-nan
+time = 3.080000, dist = 2.379381
+-nan
+time = 3.090000, dist = 2.383687
+-nan
+time = 3.100000, dist = 2.387990
+-nan
+time = 3.110000, dist = 2.392291
+-nan
+time = 3.120000, dist = 2.396591
+-nan
+time = 3.130000, dist = 2.400889
+-nan
+time = 3.140000, dist = 2.405185
+-nan
+time = 3.150000, dist = 2.409478
+-nan
+time = 3.160000, dist = 2.413770
+-nan
+time = 3.170000, dist = 2.418061
+-nan
+time = 3.180000, dist = 2.422349
+-nan
+time = 3.190000, dist = 2.426636
+-nan
+time = 3.200000, dist = 2.430920
+-nan
+time = 3.210000, dist = 2.435203
+-nan
+time = 3.220000, dist = 2.439484
+-nan
+time = 3.230000, dist = 2.443763
+-nan
+time = 3.240000, dist = 2.448040
+-nan
+time = 3.250000, dist = 2.452316
+-nan
+time = 3.260000, dist = 2.456589
+-nan
+time = 3.270000, dist = 2.460861
+-nan
+time = 3.280000, dist = 2.465131
+-nan
+time = 3.290000, dist = 2.469399
+-nan
+time = 3.300000, dist = 2.473665
+-nan
+time = 3.310000, dist = 2.477929
+-nan
+time = 3.320000, dist = 2.482192
+-nan
+time = 3.330000, dist = 2.486452
+-nan
+time = 3.340000, dist = 2.490711
+-nan
+time = 3.350000, dist = 2.494968
+-nan
+time = 3.360000, dist = 2.499223
+-nan
+time = 3.370000, dist = 2.503476
+-nan
+time = 3.380000, dist = 2.507727
+-nan
+time = 3.390000, dist = 2.511977
+-nan
+time = 3.400000, dist = 2.516225
+-nan
+time = 3.410000, dist = 2.520470
+-nan
+time = 3.420000, dist = 2.524714
+-nan
+time = 3.430000, dist = 2.528956
+-nan
+time = 3.440000, dist = 2.533197
+-nan
+time = 3.450000, dist = 2.537436
+-nan
+time = 3.460000, dist = 2.541672
+-nan
+time = 3.470000, dist = 2.545907
+-nan
+time = 3.480000, dist = 2.550140
+-nan
+time = 3.490000, dist = 2.554371
+-nan
+time = 3.500000, dist = 2.558600
+-nan
+time = 3.510000, dist = 2.562828
+-nan
+time = 3.520000, dist = 2.567053
+-nan
+time = 3.530000, dist = 2.571277
+-nan
+time = 3.540000, dist = 2.575499
+-nan
+time = 3.550000, dist = 2.579719
+-nan
+time = 3.560000, dist = 2.583938
+-nan
+time = 3.570000, dist = 2.588154
+-nan
+time = 3.580000, dist = 2.592369
+-nan
+time = 3.590000, dist = 2.596582
+-nan
+time = 3.600000, dist = 2.600793
+-nan
+time = 3.610000, dist = 2.605002
+-nan
+time = 3.620000, dist = 2.609209
+-nan
+time = 3.630000, dist = 2.613415
+-nan
+time = 3.640000, dist = 2.617619
+-nan
+time = 3.650000, dist = 2.621820
+-nan
+time = 3.660000, dist = 2.626021
+-nan
+time = 3.670000, dist = 2.630219
+-nan
+time = 3.680000, dist = 2.634416
+-nan
+time = 3.690000, dist = 2.638610
+-nan
+time = 3.700000, dist = 2.642803
+-nan
+time = 3.710000, dist = 2.646994
+-nan
+time = 3.720000, dist = 2.651183
+-nan
+time = 3.730000, dist = 2.655371
+-nan
+time = 3.740000, dist = 2.659556
+-nan
+time = 3.750000, dist = 2.663740
+-nan
+time = 3.760000, dist = 2.667922
+-nan
+time = 3.770000, dist = 2.672102
+-nan
+time = 3.780000, dist = 2.676281
+-nan
+time = 3.790000, dist = 2.680457
+-nan
+time = 3.800000, dist = 2.684632
+-nan
+time = 3.810000, dist = 2.688805
+-nan
+time = 3.820000, dist = 2.692976
+-nan
+time = 3.830000, dist = 2.697145
+-nan
+time = 3.840000, dist = 2.701313
+-nan
+time = 3.850000, dist = 2.705478
+-nan
+time = 3.860000, dist = 2.709642
+-nan
+time = 3.870000, dist = 2.713805
+-nan
+time = 3.880000, dist = 2.717965
+-nan
+time = 3.890000, dist = 2.722124
+-nan
+time = 3.900000, dist = 2.726280
+-nan
+time = 3.910000, dist = 2.730435
+-nan
+time = 3.920000, dist = 2.734588
+-nan
+time = 3.930000, dist = 2.738740
+-nan
+time = 3.940000, dist = 2.742889
+-nan
+time = 3.950000, dist = 2.747037
+-nan
+time = 3.960000, dist = 2.751183
+-nan
+time = 3.970000, dist = 2.755327
+-nan
+time = 3.980000, dist = 2.759470
+-nan
+time = 3.990000, dist = 2.763611
+-nan
+time = 4.000000, dist = 2.767749
+-nan
+time = 4.010000, dist = 2.771887
+-nan
+time = 4.020000, dist = 2.776021
+-nan
+time = 4.030000, dist = 2.780155
+-nan
+time = 4.040000, dist = 2.784287
+-nan
+time = 4.050000, dist = 2.788417
+-nan
+time = 4.060000, dist = 2.792545
+-nan
+time = 4.070000, dist = 2.796671
+-nan
+time = 4.080000, dist = 2.800796
+-nan
+time = 4.090000, dist = 2.804919
+-nan
+time = 4.100000, dist = 2.809039
+-nan
+time = 4.110000, dist = 2.813159
+-nan
+time = 4.120000, dist = 2.817276
+-nan
+time = 4.130000, dist = 2.821392
+-nan
+time = 4.140000, dist = 2.825506
+-nan
+time = 4.150000, dist = 2.829618
+-nan
+time = 4.160000, dist = 2.833728
+-nan
+time = 4.170000, dist = 2.837837
+-nan
+time = 4.180000, dist = 2.841944
+-nan
+time = 4.190000, dist = 2.846049
+-nan
+time = 4.200000, dist = 2.850152
+-nan
+time = 4.210000, dist = 2.854254
+-nan
+time = 4.220000, dist = 2.858354
+-nan
+time = 4.230000, dist = 2.862452
+-nan
+time = 4.240000, dist = 2.866548
+-nan
+time = 4.250000, dist = 2.870642
+-nan
+time = 4.260000, dist = 2.874735
+-nan
+time = 4.270000, dist = 2.878826
+-nan
+time = 4.280000, dist = 2.882915
+-nan
+time = 4.290000, dist = 2.887003
+-nan
+time = 4.300000, dist = 2.891088
+-nan
+time = 4.310000, dist = 2.895172
+-nan
+time = 4.320000, dist = 2.899254
+-nan
+time = 4.330000, dist = 2.903335
+-nan
+time = 4.340000, dist = 2.907413
+-nan
+time = 4.350000, dist = 2.911490
+-nan
+time = 4.360000, dist = 2.915565
+-nan
+time = 4.370000, dist = 2.919639
+-nan
+time = 4.380000, dist = 2.923711
+-nan
+time = 4.390000, dist = 2.927781
+-nan
+time = 4.400000, dist = 2.931849
+-nan
+time = 4.410000, dist = 2.935915
+-nan
+time = 4.420000, dist = 2.939980
+-nan
+time = 4.430000, dist = 2.944043
+-nan
+time = 4.440000, dist = 2.948104
+-nan
+time = 4.450000, dist = 2.952163
+-nan
+time = 4.460000, dist = 2.956221
+-nan
+time = 4.470000, dist = 2.960277
+-nan
+time = 4.480000, dist = 2.964331
+-nan
+time = 4.490000, dist = 2.968384
+-nan
+time = 4.500000, dist = 2.972435
+-nan
+time = 4.510000, dist = 2.976484
+-nan
+time = 4.520000, dist = 2.980531
+-nan
+time = 4.530000, dist = 2.984577
+-nan
+time = 4.540000, dist = 2.988621
+-nan
+time = 4.550000, dist = 2.992662
+-nan
+time = 4.560000, dist = 2.996703
+-nan
+time = 4.570000, dist = 3.000741
+-nan
+time = 4.580000, dist = 3.004778
+-nan
+time = 4.590000, dist = 3.008814
+-nan
+time = 4.600000, dist = 3.012847
+-nan
+time = 4.610000, dist = 3.016879
+-nan
+time = 4.620000, dist = 3.020909
+-nan
+time = 4.630000, dist = 3.024937
+-nan
+time = 4.640000, dist = 3.028964
+-nan
+time = 4.650000, dist = 3.032989
+-nan
+time = 4.660000, dist = 3.037012
+-nan
+time = 4.670000, dist = 3.041033
+-nan
+time = 4.680000, dist = 3.045053
+-nan
+time = 4.690000, dist = 3.049071
+-nan
+time = 4.700000, dist = 3.053087
+-nan
+time = 4.710000, dist = 3.057101
+-nan
+time = 4.720000, dist = 3.061114
+-nan
+time = 4.730000, dist = 3.065125
+-nan
+time = 4.740000, dist = 3.069135
+-nan
+time = 4.750000, dist = 3.073143
+-nan
+time = 4.760000, dist = 3.077149
+-nan
+time = 4.770000, dist = 3.081153
+-nan
+time = 4.780000, dist = 3.085156
+-nan
+time = 4.790000, dist = 3.089157
+-nan
+time = 4.800000, dist = 3.093156
+-nan
+time = 4.810000, dist = 3.097153
+-nan
+time = 4.820000, dist = 3.101149
+-nan
+time = 4.830000, dist = 3.105143
+-nan
+time = 4.840000, dist = 3.109136
+-nan
+time = 4.850000, dist = 3.113127
+-nan
+time = 4.860000, dist = 3.117115
+-nan
+time = 4.870000, dist = 3.121103
+-nan
+time = 4.880000, dist = 3.125088
+-nan
+time = 4.890000, dist = 3.129072
+-nan
+time = 4.900000, dist = 3.133054
+-nan
+time = 4.910000, dist = 3.137035
+-nan
+time = 4.920000, dist = 3.141014
+-nan
+time = 4.930000, dist = 3.144991
+-nan
+time = 4.940000, dist = 3.148967
+-nan
+time = 4.950000, dist = 3.152940
+-nan
+time = 4.960000, dist = 3.156912
+-nan
+time = 4.970000, dist = 3.160883
+-nan
+time = 4.980000, dist = 3.164851
+-nan
+time = 4.990000, dist = 3.168818
+-nan
+time = 5.000000, dist = 3.172784
+-nan
+time = 5.010000, dist = 3.176747
+-nan
+time = 5.020000, dist = 3.180710
+-nan
+time = 5.030000, dist = 3.184676
+-nan
+time = 5.040000, dist = 3.188647
+-nan
+time = 5.050000, dist = 3.192622
+-nan
+time = 5.060000, dist = 3.196602
+-nan
+time = 5.070000, dist = 3.200586
+-nan
+time = 5.080000, dist = 3.204575
+-nan
+time = 5.090000, dist = 3.208568
+-nan
+time = 5.100000, dist = 3.212566
+-nan
+time = 5.110000, dist = 3.216568
+-nan
+time = 5.120000, dist = 3.220575
+-nan
+time = 5.130000, dist = 3.224586
+-nan
+time = 5.140000, dist = 3.228601
+-nan
+time = 5.150000, dist = 3.232621
+-nan
+time = 5.160000, dist = 3.236645
+-nan
+time = 5.170000, dist = 3.240675
+-nan
+time = 5.180000, dist = 3.244708
+-nan
+time = 5.190000, dist = 3.248746
+-nan
+time = 5.200000, dist = 3.252789
+-nan
+time = 5.210000, dist = 3.256835
+-nan
+time = 5.220000, dist = 3.260886
+-nan
+time = 5.230000, dist = 3.264942
+-nan
+time = 5.240000, dist = 3.269002
+-nan
+time = 5.250000, dist = 3.273067
+-nan
+time = 5.260000, dist = 3.277136
+-nan
+time = 5.270000, dist = 3.281210
+-nan
+time = 5.280000, dist = 3.285288
+-nan
+time = 5.290000, dist = 3.289371
+-nan
+time = 5.300000, dist = 3.293458
+-nan
+time = 5.310000, dist = 3.297549
+-nan
+time = 5.320000, dist = 3.301646
+-nan
+time = 5.330000, dist = 3.305746
+-nan
+time = 5.340000, dist = 3.309851
+-nan
+time = 5.350000, dist = 3.313961
+-nan
+time = 5.360000, dist = 3.318075
+-nan
+time = 5.370000, dist = 3.322193
+-nan
+time = 5.380000, dist = 3.326316
+-nan
+time = 5.390000, dist = 3.330444
+-nan
+time = 5.400000, dist = 3.334576
+-nan
+time = 5.410000, dist = 3.338712
+-nan
+time = 5.420000, dist = 3.342853
+-nan
+time = 5.430000, dist = 3.346999
+-nan
+time = 5.440000, dist = 3.351149
+-nan
+time = 5.450000, dist = 3.355303
+-nan
+time = 5.460000, dist = 3.359462
+-nan
+time = 5.470000, dist = 3.363626
+-nan
+time = 5.480000, dist = 3.367794
+-nan
+time = 5.490000, dist = 3.371966
+-nan
+time = 5.500000, dist = 3.376143
+-nan
+time = 5.510000, dist = 3.380324
+-nan
+time = 5.520000, dist = 3.384510
+-nan
+time = 5.530000, dist = 3.388701
+-nan
+time = 5.540000, dist = 3.392896
+-nan
+time = 5.550000, dist = 3.397095
+-nan
+time = 5.560000, dist = 3.401299
+-nan
+time = 5.570000, dist = 3.405508
+-nan
+time = 5.580000, dist = 3.409721
+-nan
+time = 5.590000, dist = 3.413939
+-nan
+time = 5.600000, dist = 3.418161
+-nan
+time = 5.610000, dist = 3.422387
+-nan
+time = 5.620000, dist = 3.426618
+-nan
+time = 5.630000, dist = 3.430854
+-nan
+time = 5.640000, dist = 3.435094
+-nan
+time = 5.650000, dist = 3.439338
+-nan
+time = 5.660000, dist = 3.443588
+-nan
+time = 5.670000, dist = 3.447841
+-nan
+time = 5.680000, dist = 3.452099
+-nan
+time = 5.690000, dist = 3.456362
+-nan
+time = 5.700000, dist = 3.460629
+-nan
+time = 5.710000, dist = 3.464901
+-nan
+time = 5.720000, dist = 3.469178
+-nan
+time = 5.730000, dist = 3.473458
+-nan
+time = 5.740000, dist = 3.477744
+-nan
+time = 5.750000, dist = 3.482034
+-nan
+time = 5.760000, dist = 3.486328
+-nan
+time = 5.770000, dist = 3.490627
+-nan
+time = 5.780000, dist = 3.494931
+-nan
+time = 5.790000, dist = 3.499239
+-nan
+time = 5.800000, dist = 3.503551
+-nan
+time = 5.810000, dist = 3.507868
+-nan
+time = 5.820000, dist = 3.512190
+-nan
+time = 5.830000, dist = 3.516516
+-nan
+time = 5.840000, dist = 3.520847
+-nan
+time = 5.850000, dist = 3.525182
+-nan
+time = 5.860000, dist = 3.529522
+-nan
+time = 5.870000, dist = 3.533866
+-nan
+time = 5.880000, dist = 3.538216
+-nan
+time = 5.890000, dist = 3.542569
+-nan
+time = 5.900000, dist = 3.546927
+-nan
+time = 5.910000, dist = 3.551290
+-nan
+time = 5.920000, dist = 3.555657
+-nan
+time = 5.930000, dist = 3.560028
+-nan
+time = 5.940000, dist = 3.564405
+-nan
+time = 5.950000, dist = 3.568785
+-nan
+time = 5.960000, dist = 3.573171
+-nan
+time = 5.970000, dist = 3.577561
+-nan
+time = 5.980000, dist = 3.581955
+-nan
+time = 5.990000, dist = 3.586354
+-nan
+time = 6.000000, dist = 3.590758
+-nan
+time = 6.010000, dist = 3.595166
+-nan
+time = 6.020000, dist = 3.599579
+-nan
+time = 6.030000, dist = 3.603997
+-nan
+time = 6.040000, dist = 3.608418
+-nan
+time = 6.050000, dist = 3.612845
+-nan
+time = 6.060000, dist = 3.617276
+-nan
+time = 6.070000, dist = 3.621712
+-nan
+time = 6.080000, dist = 3.626152
+-nan
+time = 6.090000, dist = 3.630597
+-nan
+time = 6.100000, dist = 3.635046
+-nan
+time = 6.110000, dist = 3.639500
+-nan
+time = 6.120000, dist = 3.643958
+-nan
+time = 6.130000, dist = 3.648422
+-nan
+time = 6.140000, dist = 3.652889
+-nan
+time = 6.150000, dist = 3.657362
+-nan
+time = 6.160000, dist = 3.661838
+-nan
+time = 6.170000, dist = 3.666319
+-nan
+time = 6.180000, dist = 3.670805
+-nan
+time = 6.190000, dist = 3.675296
+-nan
+time = 6.200000, dist = 3.679791
+-nan
+time = 6.210000, dist = 3.684291
+-nan
+time = 6.220000, dist = 3.688796
+-nan
+time = 6.230000, dist = 3.693305
+-nan
+time = 6.240000, dist = 3.697818
+-nan
+time = 6.250000, dist = 3.702337
+-nan
+time = 6.260000, dist = 3.706859
+-nan
+time = 6.270000, dist = 3.711386
+-nan
+time = 6.280000, dist = 3.715919
+-nan
+time = 6.290000, dist = 3.720455
+-nan
+time = 6.300000, dist = 3.724996
+-nan
+time = 6.310000, dist = 3.729542
+-nan
+time = 6.320000, dist = 3.734092
+-nan
+time = 6.330000, dist = 3.738647
+-nan
+time = 6.340000, dist = 3.743207
+-nan
+time = 6.350000, dist = 3.747771
+-nan
+time = 6.360000, dist = 3.752340
+-nan
+time = 6.370000, dist = 3.756914
+-nan
+time = 6.380000, dist = 3.761492
+-nan
+time = 6.390000, dist = 3.766075
+-nan
+time = 6.400000, dist = 3.770662
+-nan
+time = 6.410000, dist = 3.775254
+-nan
+time = 6.420000, dist = 3.779850
+-nan
+time = 6.430000, dist = 3.784451
+-nan
+time = 6.440000, dist = 3.789057
+-nan
+time = 6.450000, dist = 3.793668
+-nan
+time = 6.460000, dist = 3.798283
+-nan
+time = 6.470000, dist = 3.802902
+-nan
+time = 6.480000, dist = 3.807527
+-nan
+time = 6.490000, dist = 3.812156
+-nan
+time = 6.500000, dist = 3.816789
+-nan
+time = 6.510000, dist = 3.821428
+-nan
+time = 6.520000, dist = 3.826070
+-nan
+time = 6.530000, dist = 3.830718
+-nan
+time = 6.540000, dist = 3.835370
+-nan
+time = 6.550000, dist = 3.840026
+-nan
+time = 6.560000, dist = 3.844688
+-nan
+time = 6.570000, dist = 3.849354
+-nan
+time = 6.580000, dist = 3.854025
+-nan
+time = 6.590000, dist = 3.858700
+-nan
+time = 6.600000, dist = 3.863380
+-nan
+time = 6.610000, dist = 3.868065
+-nan
+time = 6.620000, dist = 3.872754
+-nan
+time = 6.630000, dist = 3.877448
+-nan
+time = 6.640000, dist = 3.882147
+-nan
+time = 6.650000, dist = 3.886850
+-nan
+time = 6.660000, dist = 3.891557
+-nan
+time = 6.670000, dist = 3.896270
+-nan
+time = 6.680000, dist = 3.900987
+-nan
+time = 6.690000, dist = 3.905709
+-nan
+time = 6.700000, dist = 3.910436
+-nan
+time = 6.710000, dist = 3.915167
+-nan
+time = 6.720000, dist = 3.919903
+-nan
+time = 6.730000, dist = 3.924643
+-nan
+time = 6.740000, dist = 3.929389
+-nan
+time = 6.750000, dist = 3.934138
+-nan
+time = 6.760000, dist = 3.938893
+-nan
+time = 6.770000, dist = 3.943652
+-nan
+time = 6.780000, dist = 3.948416
+-nan
+time = 6.790000, dist = 3.953184
+-nan
+time = 6.800000, dist = 3.957958
+-nan
+time = 6.810000, dist = 3.962735
+-nan
+time = 6.820000, dist = 3.967518
+-nan
+time = 6.830000, dist = 3.972305
+-nan
+time = 6.840000, dist = 3.977097
+-nan
+time = 6.850000, dist = 3.981894
+-nan
+time = 6.860000, dist = 3.986695
+-nan
+time = 6.870000, dist = 3.991501
+-nan
+time = 6.880000, dist = 3.996311
+-nan
+time = 6.890000, dist = 4.001127
+-nan
+time = 6.900000, dist = 4.005947
+-nan
+time = 6.910000, dist = 4.010772
+-nan
+time = 6.920000, dist = 4.015601
+-nan
+time = 6.930000, dist = 4.020435
+-nan
+time = 6.940000, dist = 4.025274
+-nan
+time = 6.950000, dist = 4.030117
+-nan
+time = 6.960000, dist = 4.034966
+-nan
+time = 6.970000, dist = 4.039818
+-nan
+time = 6.980000, dist = 4.044676
+-nan
+time = 6.990000, dist = 4.049538
+-nan
+time = 7.000000, dist = 4.054405
+-nan
+time = 7.010000, dist = 4.059277
+-nan
+time = 7.020000, dist = 4.064153
+-nan
+time = 7.030000, dist = 4.069034
+-nan
+time = 7.040000, dist = 4.073919
+-nan
+time = 7.050000, dist = 4.078810
+-nan
+time = 7.060000, dist = 4.083705
+-nan
+time = 7.070000, dist = 4.088605
+-nan
+time = 7.080000, dist = 4.093510
+-nan
+time = 7.090000, dist = 4.098419
+-nan
+time = 7.100000, dist = 4.103333
+-nan
+time = 7.110000, dist = 4.108252
+-nan
+time = 7.120000, dist = 4.113175
+-nan
+time = 7.130000, dist = 4.118104
+-nan
+time = 7.140000, dist = 4.123036
+-nan
+time = 7.150000, dist = 4.127974
+-nan
+time = 7.160000, dist = 4.132916
+-nan
+time = 7.170000, dist = 4.137863
+-nan
+time = 7.180000, dist = 4.142815
+-nan
+time = 7.190000, dist = 4.147772
+-nan
+time = 7.200000, dist = 4.152733
+-nan
+time = 7.210000, dist = 4.157699
+-nan
+time = 7.220000, dist = 4.162670
+-nan
+time = 7.230000, dist = 4.167645
+-nan
+time = 7.240000, dist = 4.172625
+-nan
+time = 7.250000, dist = 4.177610
+-nan
+time = 7.260000, dist = 4.182599
+-nan
+time = 7.270000, dist = 4.187593
+-nan
+time = 7.280000, dist = 4.192593
+-nan
+time = 7.290000, dist = 4.197597
+-nan
+time = 7.300000, dist = 4.202605
+-nan
+time = 7.310000, dist = 4.207618
+-nan
+time = 7.320000, dist = 4.212636
+-nan
+time = 7.330000, dist = 4.217659
+-nan
+time = 7.340000, dist = 4.222687
+-nan
+time = 7.350000, dist = 4.227719
+-nan
+time = 7.360000, dist = 4.232756
+-nan
+time = 7.370000, dist = 4.237798
+-nan
+time = 7.380000, dist = 4.242844
+-nan
+time = 7.390000, dist = 4.247896
+-nan
+time = 7.400000, dist = 4.252952
+-nan
+time = 7.410000, dist = 4.258012
+-nan
+time = 7.420000, dist = 4.263078
+-nan
+time = 7.430000, dist = 4.268148
+-nan
+time = 7.440000, dist = 4.273223
+-nan
+time = 7.450000, dist = 4.278303
+-nan
+time = 7.460000, dist = 4.283388
+-nan
+time = 7.470000, dist = 4.288476
+-nan
+time = 7.480000, dist = 4.293571
+-nan
+time = 7.490000, dist = 4.298670
+-nan
+time = 7.500000, dist = 4.303773
+-nan
+time = 7.510000, dist = 4.308882
+-nan
+time = 7.520000, dist = 4.313995
+-nan
+time = 7.530000, dist = 4.319113
+-nan
+time = 7.540000, dist = 4.324235
+-nan
+time = 7.550000, dist = 4.329363
+-nan
+time = 7.560000, dist = 4.334495
+-nan
+time = 7.570000, dist = 4.339632
+-nan
+time = 7.580000, dist = 4.344774
+-nan
+time = 7.590000, dist = 4.349920
+-nan
+time = 7.600000, dist = 4.355072
+-nan
+time = 7.610000, dist = 4.360228
+-nan
+time = 7.620000, dist = 4.365388
+-nan
+time = 7.630000, dist = 4.370554
+-nan
+time = 7.640000, dist = 4.375725
+-nan
+time = 7.650000, dist = 4.380900
+-nan
+time = 7.660000, dist = 4.386080
+-nan
+time = 7.670000, dist = 4.391264
+-nan
+time = 7.680000, dist = 4.396454
+-nan
+time = 7.690000, dist = 4.401649
+-nan
+time = 7.700000, dist = 4.406848
+-nan
+time = 7.710000, dist = 4.412052
+-nan
+time = 7.720000, dist = 4.417260
+-nan
+time = 7.730000, dist = 4.422473
+-nan
+time = 7.740000, dist = 4.427692
+-nan
+time = 7.750000, dist = 4.432915
+-nan
+time = 7.760000, dist = 4.438143
+-nan
+time = 7.770000, dist = 4.443376
+-nan
+time = 7.780000, dist = 4.448613
+-nan
+time = 7.790000, dist = 4.453856
+-nan
+time = 7.800000, dist = 4.459103
+-nan
+time = 7.810000, dist = 4.464355
+-nan
+time = 7.820000, dist = 4.469611
+-nan
+time = 7.830000, dist = 4.474873
+-nan
+time = 7.840000, dist = 4.480139
+-nan
+time = 7.850000, dist = 4.485410
+-nan
+time = 7.860000, dist = 4.490686
+-nan
+time = 7.870000, dist = 4.495967
+-nan
+time = 7.880000, dist = 4.501252
+-nan
+time = 7.890000, dist = 4.506543
+-nan
+time = 7.900000, dist = 4.511838
+-nan
+time = 7.910000, dist = 4.517138
+-nan
+time = 7.920000, dist = 4.522442
+-nan
+time = 7.930000, dist = 4.527752
+-nan
+time = 7.940000, dist = 4.533066
+-nan
+time = 7.950000, dist = 4.538386
+-nan
+time = 7.960000, dist = 4.543709
+-nan
+time = 7.970000, dist = 4.549039
+-nan
+time = 7.980000, dist = 4.554373
+-nan
+time = 7.990000, dist = 4.559711
+-nan
+time = 8.000000, dist = 4.565054
+-nan
+time = 8.010000, dist = 4.570403
+-nan
+time = 8.020000, dist = 4.575755
+-nan
+time = 8.030000, dist = 4.581113
+-nan
+time = 8.040000, dist = 4.586476
+-nan
+time = 8.050000, dist = 4.591844
+-nan
+time = 8.060000, dist = 4.597216
+-nan
+time = 8.070000, dist = 4.602593
+-nan
+time = 8.080000, dist = 4.607975
+-nan
+time = 8.090000, dist = 4.613362
+-nan
+time = 8.100000, dist = 4.618753
+-nan
+time = 8.110000, dist = 4.624150
+-nan
+time = 8.120000, dist = 4.629551
+-nan
+time = 8.130000, dist = 4.634957
+-nan
+time = 8.140000, dist = 4.640368
+-nan
+time = 8.150000, dist = 4.645784
+-nan
+time = 8.160000, dist = 4.651205
+-nan
+time = 8.170000, dist = 4.656631
+-nan
+time = 8.180000, dist = 4.662061
+-nan
+time = 8.190000, dist = 4.667496
+-nan
+time = 8.200000, dist = 4.672936
+-nan
+time = 8.210000, dist = 4.678381
+-nan
+time = 8.220000, dist = 4.683831
+-nan
+time = 8.230000, dist = 4.689285
+-nan
+time = 8.240000, dist = 4.694745
+-nan
+time = 8.250000, dist = 4.700210
+-nan
+time = 8.260000, dist = 4.705678
+-nan
+time = 8.270000, dist = 4.711152
+-nan
+time = 8.280000, dist = 4.716631
+-nan
+time = 8.290000, dist = 4.722115
+-nan
+time = 8.300000, dist = 4.727604
+-nan
+time = 8.310000, dist = 4.733097
+-nan
+time = 8.320000, dist = 4.738595
+-nan
+time = 8.330000, dist = 4.744099
+-nan
+time = 8.340000, dist = 4.749606
+-nan
+time = 8.350000, dist = 4.755119
+-nan
+time = 8.360000, dist = 4.760637
+-nan
+time = 8.370000, dist = 4.766160
+-nan
+time = 8.380000, dist = 4.771687
+-nan
+time = 8.390000, dist = 4.777220
+-nan
+time = 8.400000, dist = 4.782757
+-nan
+time = 8.410000, dist = 4.788299
+-nan
+time = 8.420000, dist = 4.793846
+-nan
+time = 8.430000, dist = 4.799398
+-nan
+time = 8.440000, dist = 4.804955
+-nan
+time = 8.450000, dist = 4.810516
+-nan
+time = 8.460000, dist = 4.816082
+-nan
+time = 8.470000, dist = 4.821654
+-nan
+time = 8.480000, dist = 4.827230
+-nan
+time = 8.490000, dist = 4.832811
+-nan
+time = 8.500000, dist = 4.838397
+-nan
+time = 8.510000, dist = 4.843988
+-nan
+time = 8.520000, dist = 4.849584
+-nan
+time = 8.530000, dist = 4.855185
+-nan
+time = 8.540000, dist = 4.860790
+-nan
+time = 8.550000, dist = 4.866400
+-nan
+time = 8.560000, dist = 4.872015
+-nan
+time = 8.570000, dist = 4.877636
+-nan
+time = 8.580000, dist = 4.883261
+-nan
+time = 8.590000, dist = 4.888890
+-nan
+time = 8.600000, dist = 4.894525
+-nan
+time = 8.610000, dist = 4.900165
+-nan
+time = 8.620000, dist = 4.905810
+-nan
+time = 8.630000, dist = 4.911459
+-nan
+time = 8.640000, dist = 4.917113
+-nan
+time = 8.650000, dist = 4.922773
+-nan
+time = 8.660000, dist = 4.928437
+-nan
+time = 8.670000, dist = 4.934106
+-nan
+time = 8.680000, dist = 4.939780
+-nan
+time = 8.690000, dist = 4.945459
+-nan
+time = 8.700000, dist = 4.951143
+-nan
+time = 8.710000, dist = 4.956831
+-nan
+time = 8.720000, dist = 4.962525
+-nan
+time = 8.730000, dist = 4.968224
+-nan
+time = 8.740000, dist = 4.973927
+-nan
+time = 8.750000, dist = 4.979635
+-nan
+time = 8.760000, dist = 4.985349
+-nan
+time = 8.770000, dist = 4.991066
+-nan
+time = 8.780000, dist = 4.996789
+-nan
+time = 8.790000, dist = 5.002517
+-nan
+time = 8.800000, dist = 5.008251
+-nan
+time = 8.810000, dist = 5.013988
+-nan
+time = 8.820000, dist = 5.019731
+-nan
+time = 8.830000, dist = 5.025478
+-nan
+time = 8.840000, dist = 5.031231
+-nan
+time = 8.850000, dist = 5.036989
+-nan
+time = 8.860000, dist = 5.042750
+-nan
+time = 8.870000, dist = 5.048518
+-nan
+time = 8.880000, dist = 5.054290
+-nan
+time = 8.890000, dist = 5.060067
+-nan
+time = 8.900000, dist = 5.065849
+-nan
+time = 8.910000, dist = 5.071636
+-nan
+time = 8.920000, dist = 5.077427
+-nan
+time = 8.930000, dist = 5.083224
+-nan
+time = 8.940000, dist = 5.089026
+-nan
+time = 8.950000, dist = 5.094833
+-nan
+time = 8.960000, dist = 5.100644
+-nan
+time = 8.970000, dist = 5.106460
+-nan
+time = 8.980000, dist = 5.112282
+-nan
+time = 8.990000, dist = 5.118108
+-nan
+time = 9.000000, dist = 5.123939
+-nan
+time = 9.010000, dist = 5.129775
+-nan
+time = 9.020000, dist = 5.135617
+-nan
+time = 9.030000, dist = 5.141463
+-nan
+time = 9.040000, dist = 5.147314
+-nan
+time = 9.050000, dist = 5.153170
+-nan
+time = 9.060000, dist = 5.159030
+-nan
+time = 9.070000, dist = 5.164896
+-nan
+time = 9.080000, dist = 5.170767
+-nan
+time = 9.090000, dist = 5.176642
+-nan
+time = 9.100000, dist = 5.182523
+-nan
+time = 9.110000, dist = 5.188408
+-nan
+time = 9.120000, dist = 5.194299
+-nan
+time = 9.130000, dist = 5.200194
+-nan
+time = 9.140000, dist = 5.206095
+-nan
+time = 9.150000, dist = 5.212000
+-nan
+time = 9.160000, dist = 5.217911
+-nan
+time = 9.170000, dist = 5.223826
+-nan
+time = 9.180000, dist = 5.229746
+-nan
+time = 9.190000, dist = 5.235671
+-nan
+time = 9.200000, dist = 5.241601
+-nan
+time = 9.210000, dist = 5.247536
+-nan
+time = 9.220000, dist = 5.253476
+-nan
+time = 9.230000, dist = 5.259421
+-nan
+time = 9.240000, dist = 5.265370
+-nan
+time = 9.250000, dist = 5.271325
+-nan
+time = 9.260000, dist = 5.277285
+-nan
+time = 9.270000, dist = 5.283250
+-nan
+time = 9.280000, dist = 5.289219
+-nan
+time = 9.290000, dist = 5.295194
+-nan
+time = 9.300000, dist = 5.301174
+-nan
+time = 9.310000, dist = 5.307158
+-nan
+time = 9.320000, dist = 5.313147
+-nan
+time = 9.330000, dist = 5.319142
+-nan
+time = 9.340000, dist = 5.325141
+-nan
+time = 9.350000, dist = 5.331146
+-nan
+time = 9.360000, dist = 5.337155
+-nan
+time = 9.370000, dist = 5.343169
+-nan
+time = 9.380000, dist = 5.349189
+-nan
+time = 9.390000, dist = 5.355213
+-nan
+time = 9.400000, dist = 5.361242
+-nan
+time = 9.410000, dist = 5.367276
+-nan
+time = 9.420000, dist = 5.373315
+-nan
+time = 9.430000, dist = 5.379360
+-nan
+time = 9.440000, dist = 5.385409
+-nan
+time = 9.450000, dist = 5.391463
+-nan
+time = 9.460000, dist = 5.397522
+-nan
+time = 9.470000, dist = 5.403586
+-nan
+time = 9.480000, dist = 5.409655
+-nan
+time = 9.490000, dist = 5.415730
+-nan
+time = 9.500000, dist = 5.421808
+-nan
+time = 9.510000, dist = 5.427892
+-nan
+time = 9.520000, dist = 5.433981
+-nan
+time = 9.530000, dist = 5.440075
+-nan
+time = 9.540000, dist = 5.446174
+-nan
+time = 9.550000, dist = 5.452278
+-nan
+time = 9.560000, dist = 5.458387
+-nan
+time = 9.570000, dist = 5.464501
+-nan
+time = 9.580000, dist = 5.470620
+-nan
+time = 9.590000, dist = 5.476743
+-nan
+time = 9.600000, dist = 5.482872
+-nan
+time = 9.610000, dist = 5.489006
+-nan
+time = 9.620000, dist = 5.495144
+-nan
+time = 9.630000, dist = 5.501288
+-nan
+time = 9.640000, dist = 5.507437
+-nan
+time = 9.650000, dist = 5.513591
+-nan
+time = 9.660000, dist = 5.519749
+-nan
+time = 9.670000, dist = 5.525913
+-nan
+time = 9.680000, dist = 5.532082
+-nan
+time = 9.690000, dist = 5.538256
+-nan
+time = 9.700000, dist = 5.544435
+-nan
+time = 9.710000, dist = 5.550618
+-nan
+time = 9.720000, dist = 5.556807
+-nan
+time = 9.730000, dist = 5.563000
+-nan
+time = 9.740000, dist = 5.569199
+-nan
+time = 9.750000, dist = 5.575403
+-nan
+time = 9.760000, dist = 5.581612
+-nan
+time = 9.770000, dist = 5.587825
+-nan
+time = 9.780000, dist = 5.594044
+-nan
+time = 9.790000, dist = 5.600268
+-nan
+time = 9.800000, dist = 5.606497
+-nan
+time = 9.810000, dist = 5.612731
+-nan
+time = 9.820000, dist = 5.618969
+-nan
+time = 9.830000, dist = 5.625213
+-nan
+time = 9.840000, dist = 5.631461
+-nan
+time = 9.850000, dist = 5.637715
+-nan
+time = 9.860000, dist = 5.643974
+-nan
+time = 9.870000, dist = 5.650238
+-nan
+time = 9.880000, dist = 5.656507
+-nan
+time = 9.890000, dist = 5.662780
+-nan
+time = 9.900000, dist = 5.669059
+-nan
+time = 9.910000, dist = 5.675344
+-nan
+time = 9.920000, dist = 5.681632
+-nan
+time = 9.930000, dist = 5.687926
+-nan
+time = 9.940000, dist = 5.694224
+-nan
+time = 9.950000, dist = 5.700529
+-nan
+time = 9.960000, dist = 5.706838
+-nan
+time = 9.970000, dist = 5.713151
+-nan
+time = 9.980000, dist = 5.719471
+-nan
+time = 9.990000, dist = 5.725794
+-nan
+time = 10.000000, dist = 5.732123
+-nan
+time = 10.010000, dist = 5.738457
+-nan
+time = 10.020000, dist = 5.744796
+-nan
+time = 10.030000, dist = 5.751140
+-nan
+time = 10.040000, dist = 5.757489
+-nan
+time = 10.050000, dist = 5.763843
+-nan
+time = 10.060000, dist = 5.770202
+-nan
+time = 10.070000, dist = 5.776567
+-nan
+time = 10.080000, dist = 5.782935
+-nan
+time = 10.090000, dist = 5.789310
+-nan
+time = 10.100000, dist = 5.795689
+-nan
+time = 10.110000, dist = 5.802073
+-nan
+time = 10.120000, dist = 5.808463
+-nan
+time = 10.130000, dist = 5.814857
+-nan
+time = 10.140000, dist = 5.821256
+-nan
+time = 10.150000, dist = 5.827661
+-nan
+time = 10.160000, dist = 5.834070
+-nan
+time = 10.170000, dist = 5.840485
+-nan
+time = 10.180000, dist = 5.846904
+-nan
+time = 10.190000, dist = 5.853329
+-nan
+time = 10.200000, dist = 5.859758
+-nan
+time = 10.210000, dist = 5.866193
+-nan
+time = 10.220000, dist = 5.872633
+-nan
+time = 10.230000, dist = 5.879077
+-nan
+time = 10.240000, dist = 5.885527
+-nan
+time = 10.250000, dist = 5.891982
+-nan
+time = 10.260000, dist = 5.898442
+-nan
+time = 10.270000, dist = 5.904906
+-nan
+time = 10.280000, dist = 5.911376
+-nan
+time = 10.290000, dist = 5.917851
+-nan
+time = 10.300000, dist = 5.924331
+-nan
+time = 10.310000, dist = 5.930817
+-nan
+time = 10.320000, dist = 5.937306
+-nan
+time = 10.330000, dist = 5.943802
+-nan
+time = 10.340000, dist = 5.950302
+-nan
+time = 10.350000, dist = 5.956808
+-nan
+time = 10.360000, dist = 5.963318
+-nan
+time = 10.370000, dist = 5.969833
+-nan
+time = 10.380000, dist = 5.976353
+-nan
+time = 10.390000, dist = 5.982879
+-nan
+time = 10.400000, dist = 5.989409
+-nan
+time = 10.410000, dist = 5.995945
+-nan
+time = 10.420000, dist = 6.002486
+-nan
+time = 10.430000, dist = 6.009031
+-nan
+time = 10.440000, dist = 6.015582
+-nan
+time = 10.450000, dist = 6.022138
+-nan
+time = 10.460000, dist = 6.028699
+-nan
+time = 10.470000, dist = 6.035264
+-nan
+time = 10.480000, dist = 6.041836
+-nan
+time = 10.490000, dist = 6.048412
+-nan
+time = 10.500000, dist = 6.054993
+-nan
+time = 10.510000, dist = 6.061579
+-nan
+time = 10.520000, dist = 6.068171
+-nan
+time = 10.530000, dist = 6.074767
+-nan
+time = 10.540000, dist = 6.081368
+-nan
+time = 10.550000, dist = 6.087974
+-nan
+time = 10.560000, dist = 6.094586
+-nan
+time = 10.570000, dist = 6.101202
+-nan
+time = 10.580000, dist = 6.107824
+-nan
+time = 10.590000, dist = 6.114451
+-nan
+time = 10.600000, dist = 6.121083
+-nan
+time = 10.610000, dist = 6.127719
+-nan
+time = 10.620000, dist = 6.134362
+-nan
+time = 10.630000, dist = 6.141008
+-nan
+time = 10.640000, dist = 6.147660
+-nan
+time = 10.650000, dist = 6.154317
+-nan
+time = 10.660000, dist = 6.160980
+-nan
+time = 10.670000, dist = 6.167647
+-nan
+time = 10.680000, dist = 6.174319
+-nan
+time = 10.690000, dist = 6.180997
+-nan
+time = 10.700000, dist = 6.187679
+-nan
+time = 10.710000, dist = 6.194366
+-nan
+time = 10.720000, dist = 6.201060
+-nan
+time = 10.730000, dist = 6.207757
+-nan
+time = 10.740000, dist = 6.214461
+-nan
+time = 10.750000, dist = 6.221168
+-nan
+time = 10.760000, dist = 6.227881
+-nan
+time = 10.770000, dist = 6.234600
+-nan
+time = 10.780000, dist = 6.241323
+-nan
+time = 10.790000, dist = 6.248051
+-nan
+time = 10.800000, dist = 6.254784
+-nan
+time = 10.810000, dist = 6.261523
+-nan
+time = 10.820000, dist = 6.268267
+-nan
+time = 10.830000, dist = 6.275015
+-nan
+time = 10.840000, dist = 6.281769
+-nan
+time = 10.850000, dist = 6.288527
+-nan
+time = 10.860000, dist = 6.295291
+-nan
+time = 10.870000, dist = 6.302061
+-nan
+time = 10.880000, dist = 6.308835
+-nan
+time = 10.890000, dist = 6.315614
+-nan
+time = 10.900000, dist = 6.322398
+-nan
+time = 10.910000, dist = 6.329187
+-nan
+time = 10.920000, dist = 6.335982
+-nan
+time = 10.930000, dist = 6.342781
+-nan
+time = 10.940000, dist = 6.349586
+-nan
+time = 10.950000, dist = 6.356396
+-nan
+time = 10.960000, dist = 6.363211
+-nan
+time = 10.970000, dist = 6.370030
+-nan
+time = 10.980000, dist = 6.376856
+-nan
+time = 10.990000, dist = 6.383685
+-nan
+time = 11.000000, dist = 6.390521
+-nan
+time = 11.010000, dist = 6.397361
+-nan
+time = 11.020000, dist = 6.404207
+-nan
+time = 11.030000, dist = 6.411057
+-nan
+time = 11.040000, dist = 6.417912
+-nan
+time = 11.050000, dist = 6.424773
+-nan
+time = 11.060000, dist = 6.431640
+-nan
+time = 11.070000, dist = 6.438510
+-nan
+time = 11.080000, dist = 6.445386
+-nan
+time = 11.090000, dist = 6.452268
+-nan
+time = 11.100000, dist = 6.459154
+-nan
+time = 11.110000, dist = 6.466045
+-nan
+time = 11.120000, dist = 6.472941
+-nan
+time = 11.130000, dist = 6.479843
+-nan
+time = 11.140000, dist = 6.486750
+-nan
+time = 11.150000, dist = 6.493661
+-nan
+time = 11.160000, dist = 6.500578
+-nan
+time = 11.170000, dist = 6.507501
+-nan
+time = 11.180000, dist = 6.514428
+-nan
+time = 11.190000, dist = 6.521361
+-nan
+time = 11.200000, dist = 6.528298
+-nan
+time = 11.210000, dist = 6.535240
+-nan
+time = 11.220000, dist = 6.542188
+-nan
+time = 11.230000, dist = 6.549140
+-nan
+time = 11.240000, dist = 6.556098
+-nan
+time = 11.250000, dist = 6.563062
+-nan
+time = 11.260000, dist = 6.570030
+-nan
+time = 11.270000, dist = 6.577003
+-nan
+time = 11.280000, dist = 6.583982
+-nan
+time = 11.290000, dist = 6.590966
+-nan
+time = 11.300000, dist = 6.597954
+-nan
+time = 11.310000, dist = 6.604948
+-nan
+time = 11.320000, dist = 6.611947
+-nan
+time = 11.330000, dist = 6.618950
+-nan
+time = 11.340000, dist = 6.625959
+-nan
+time = 11.350000, dist = 6.632974
+-nan
+time = 11.360000, dist = 6.639993
+-nan
+time = 11.370000, dist = 6.647017
+-nan
+time = 11.380000, dist = 6.654047
+-nan
+time = 11.390000, dist = 6.661081
+-nan
+time = 11.400000, dist = 6.668122
+-nan
+time = 11.410000, dist = 6.675167
+-nan
+time = 11.420000, dist = 6.682216
+-nan
+time = 11.430000, dist = 6.689272
+-nan
+time = 11.440000, dist = 6.696332
+-nan
+time = 11.450000, dist = 6.703398
+-nan
+time = 11.460000, dist = 6.710468
+-nan
+time = 11.470000, dist = 6.717545
+-nan
+time = 11.480000, dist = 6.724626
+-nan
+time = 11.490000, dist = 6.731711
+-nan
+time = 11.500000, dist = 6.738803
+-nan
+time = 11.510000, dist = 6.745900
+-nan
+time = 11.520000, dist = 6.753001
+-nan
+time = 11.530000, dist = 6.760107
+-nan
+time = 11.540000, dist = 6.767220
+-nan
+time = 11.550000, dist = 6.774336
+-nan
+time = 11.560000, dist = 6.781458
+-nan
+time = 11.570000, dist = 6.788586
+-nan
+time = 11.580000, dist = 6.795718
+-nan
+time = 11.590000, dist = 6.802856
+-nan
+time = 11.600000, dist = 6.809998
+-nan
+time = 11.610000, dist = 6.817146
+-nan
+time = 11.620000, dist = 6.824299
+-nan
+time = 11.630000, dist = 6.831457
+-nan
+time = 11.640000, dist = 6.838621
+-nan
+time = 11.650000, dist = 6.845789
+-nan
+time = 11.660000, dist = 6.852962
+-nan
+time = 11.670000, dist = 6.860142
+-nan
+time = 11.680000, dist = 6.867325
+-nan
+time = 11.690000, dist = 6.874514
+-nan
+time = 11.700000, dist = 6.881708
+-nan
+time = 11.710000, dist = 6.888907
+-nan
+time = 11.720000, dist = 6.896112
+-nan
+time = 11.730000, dist = 6.903321
+-nan
+time = 11.740000, dist = 6.910536
+-nan
+time = 11.750000, dist = 6.917757
+-nan
+time = 11.760000, dist = 6.924981
+-nan
+time = 11.770000, dist = 6.932211
+-nan
+time = 11.780000, dist = 6.939446
+-nan
+time = 11.790000, dist = 6.946687
+-nan
+time = 11.800000, dist = 6.953933
+-nan
+time = 11.810000, dist = 6.961184
+-nan
+time = 11.820000, dist = 6.968440
+-nan
+time = 11.830000, dist = 6.975701
+-nan
+time = 11.840000, dist = 6.982967
+-nan
+time = 11.850000, dist = 6.990239
+-nan
+time = 11.860000, dist = 6.997515
+-nan
+time = 11.870000, dist = 7.004797
+-nan
+time = 11.880000, dist = 7.012084
+-nan
+time = 11.890000, dist = 7.019376
+-nan
+time = 11.900000, dist = 7.026673
+-nan
+time = 11.910000, dist = 7.033976
+-nan
+time = 11.920000, dist = 7.041284
+-nan
+time = 11.930000, dist = 7.048596
+-nan
+time = 11.940000, dist = 7.055914
+-nan
+time = 11.950000, dist = 7.063238
+-nan
+time = 11.960000, dist = 7.070566
+-nan
+time = 11.970000, dist = 7.077899
+-nan
+time = 11.980000, dist = 7.085238
+-nan
+time = 11.990000, dist = 7.092582
+-nan
+time = 12.000000, dist = 7.099931
+-nan
+time = 12.010000, dist = 7.107285
+-nan
+time = 12.020000, dist = 7.114645
+-nan
+time = 12.030000, dist = 7.122009
+-nan
+time = 12.040000, dist = 7.129379
+-nan
+time = 12.050000, dist = 7.136754
+-nan
+time = 12.060000, dist = 7.144134
+-nan
+time = 12.070000, dist = 7.151519
+-nan
+time = 12.080000, dist = 7.158909
+-nan
+time = 12.090000, dist = 7.166305
+-nan
+time = 12.100000, dist = 7.173706
+-nan
+time = 12.110000, dist = 7.181111
+-nan
+time = 12.120000, dist = 7.188523
+-nan
+time = 12.130000, dist = 7.195939
+-nan
+time = 12.140000, dist = 7.203361
+-nan
+time = 12.150000, dist = 7.210787
+-nan
+time = 12.160000, dist = 7.218219
+-nan
+time = 12.170000, dist = 7.225656
+-nan
+time = 12.180000, dist = 7.233099
+-nan
+time = 12.190000, dist = 7.240546
+-nan
+time = 12.200000, dist = 7.247998
+-nan
+time = 12.210000, dist = 7.255456
+-nan
+time = 12.220000, dist = 7.262919
+-nan
+time = 12.230000, dist = 7.270387
+-nan
+time = 12.240000, dist = 7.277861
+-nan
+time = 12.250000, dist = 7.285339
+-nan
+time = 12.260000, dist = 7.292823
+-nan
+time = 12.270000, dist = 7.300312
+-nan
+time = 12.280000, dist = 7.307806
+-nan
+time = 12.290000, dist = 7.315305
+-nan
+time = 12.300000, dist = 7.322810
+-nan
+time = 12.310000, dist = 7.330319
+-nan
+time = 12.320000, dist = 7.337834
+-nan
+time = 12.330000, dist = 7.345355
+-nan
+time = 12.340000, dist = 7.352880
+-nan
+time = 12.350000, dist = 7.360410
+-nan
+time = 12.360000, dist = 7.367946
+-nan
+time = 12.370000, dist = 7.375486
+-nan
+time = 12.380000, dist = 7.383033
+-nan
+time = 12.390000, dist = 7.390584
+-nan
+time = 12.400000, dist = 7.398140
+-nan
+time = 12.410000, dist = 7.405701
+-nan
+time = 12.420000, dist = 7.413268
+-nan
+time = 12.430000, dist = 7.420840
+-nan
+time = 12.440000, dist = 7.428418
+-nan
+time = 12.450000, dist = 7.436000
+-nan
+time = 12.460000, dist = 7.443587
+-nan
+time = 12.470000, dist = 7.451180
+-nan
+time = 12.480000, dist = 7.458779
+-nan
+time = 12.490000, dist = 7.466382
+-nan
+time = 12.500000, dist = 7.473990
+-nan
+time = 12.510000, dist = 7.481604
+-nan
+time = 12.520000, dist = 7.489222
+-nan
+time = 12.530000, dist = 7.496846
+-nan
+time = 12.540000, dist = 7.504476
+-nan
+time = 12.550000, dist = 7.512111
+-nan
+time = 12.560000, dist = 7.519749
+-nan
+time = 12.570000, dist = 7.527395
+-nan
+time = 12.580000, dist = 7.535045
+-nan
+time = 12.590000, dist = 7.542700
+-nan
+time = 12.600000, dist = 7.550361
+-nan
+time = 12.610000, dist = 7.558026
+-nan
+time = 12.620000, dist = 7.565697
+-nan
+time = 12.630000, dist = 7.573374
+-nan
+time = 12.640000, dist = 7.581055
+-nan
+time = 12.650000, dist = 7.588742
+-nan
+time = 12.660000, dist = 7.596433
+-nan
+time = 12.670000, dist = 7.604130
+-nan
+time = 12.680000, dist = 7.611833
+-nan
+time = 12.690000, dist = 7.619540
+-nan
+time = 12.700000, dist = 7.627253
+-nan
+time = 12.710000, dist = 7.634971
+-nan
+time = 12.720000, dist = 7.642694
+-nan
+time = 12.730000, dist = 7.650422
+-nan
+time = 12.740000, dist = 7.658156
+-nan
+time = 12.750000, dist = 7.665895
+-nan
+time = 12.760000, dist = 7.673639
+-nan
+time = 12.770000, dist = 7.681387
+-nan
+time = 12.780000, dist = 7.689142
+-nan
+time = 12.790000, dist = 7.696902
+-nan
+time = 12.800000, dist = 7.704667
+-nan
+time = 12.810000, dist = 7.712437
+-nan
+time = 12.820000, dist = 7.720212
+-nan
+time = 12.830000, dist = 7.727993
+-nan
+time = 12.840000, dist = 7.735778
+-nan
+time = 12.850000, dist = 7.743569
+-nan
+time = 12.860000, dist = 7.751366
+-nan
+time = 12.870000, dist = 7.759167
+-nan
+time = 12.880000, dist = 7.766974
+-nan
+time = 12.890000, dist = 7.774786
+-nan
+time = 12.900000, dist = 7.782602
+-nan
+time = 12.910000, dist = 7.790425
+-nan
+time = 12.920000, dist = 7.798252
+-nan
+time = 12.930000, dist = 7.806085
+-nan
+time = 12.940000, dist = 7.813923
+-nan
+time = 12.950000, dist = 7.821767
+-nan
+time = 12.960000, dist = 7.829615
+-nan
+time = 12.970000, dist = 7.837469
+-nan
+time = 12.980000, dist = 7.845328
+-nan
+time = 12.990000, dist = 7.853193
+-nan
+time = 13.000000, dist = 7.861062
+-nan
+time = 13.010000, dist = 7.868937
+-nan
+time = 13.020000, dist = 7.876817
+-nan
+time = 13.030000, dist = 7.884702
+-nan
+time = 13.040000, dist = 7.892592
+-nan
+time = 13.050000, dist = 7.900488
+-nan
+time = 13.060000, dist = 7.908389
+-nan
+time = 13.070000, dist = 7.916295
+-nan
+time = 13.080000, dist = 7.924206
+-nan
+time = 13.090000, dist = 7.932123
+-nan
+time = 13.100000, dist = 7.940045
+-nan
+time = 13.110000, dist = 7.947971
+-nan
+time = 13.120000, dist = 7.955904
+-nan
+time = 13.130000, dist = 7.963841
+-nan
+time = 13.140000, dist = 7.971784
+-nan
+time = 13.150000, dist = 7.979732
+-nan
+time = 13.160000, dist = 7.987686
+-nan
+time = 13.170000, dist = 7.995644
+-nan
+time = 13.180000, dist = 8.003608
+-nan
+time = 13.190000, dist = 8.011577
+-nan
+time = 13.200000, dist = 8.019551
+-nan
+time = 13.210000, dist = 8.027531
+-nan
+time = 13.220000, dist = 8.035515
+-nan
+time = 13.230000, dist = 8.043505
+-nan
+time = 13.240000, dist = 8.051500
+-nan
+time = 13.250000, dist = 8.059501
+-nan
+time = 13.260000, dist = 8.067507
+-nan
+time = 13.270000, dist = 8.075518
+-nan
+time = 13.280000, dist = 8.083533
+-nan
+time = 13.290000, dist = 8.091556
+-nan
+time = 13.300000, dist = 8.099583
+-nan
+time = 13.310000, dist = 8.107615
+-nan
+time = 13.320000, dist = 8.115651
+-nan
+time = 13.330000, dist = 8.123694
+-nan
+time = 13.340000, dist = 8.131742
+-nan
+time = 13.350000, dist = 8.139795
+-nan
+time = 13.360000, dist = 8.147853
+-nan
+time = 13.370000, dist = 8.155917
+-nan
+time = 13.380000, dist = 8.163986
+-nan
+time = 13.390000, dist = 8.172059
+-nan
+time = 13.400000, dist = 8.180139
+-nan
+time = 13.410000, dist = 8.188224
+-nan
+time = 13.420000, dist = 8.196313
+-nan
+time = 13.430000, dist = 8.204409
+-nan
+time = 13.440000, dist = 8.212508
+-nan
+time = 13.450000, dist = 8.220613
+-nan
+time = 13.460000, dist = 8.228725
+-nan
+time = 13.470000, dist = 8.236841
+-nan
+time = 13.480000, dist = 8.244963
+-nan
+time = 13.490000, dist = 8.253090
+-nan
+time = 13.500000, dist = 8.261222
+-nan
+time = 13.510000, dist = 8.269360
+-nan
+time = 13.520000, dist = 8.277501
+-nan
+time = 13.530000, dist = 8.285649
+-nan
+time = 13.540000, dist = 8.293802
+-nan
+time = 13.550000, dist = 8.301960
+-nan
+time = 13.560000, dist = 8.310124
+-nan
+time = 13.570000, dist = 8.318294
+-nan
+time = 13.580000, dist = 8.326468
+-nan
+time = 13.590000, dist = 8.334646
+-nan
+time = 13.600000, dist = 8.342831
+-nan
+time = 13.610000, dist = 8.351021
+-nan
+time = 13.620000, dist = 8.359216
+-nan
+time = 13.630000, dist = 8.367416
+-nan
+time = 13.640000, dist = 8.375622
+-nan
+time = 13.650000, dist = 8.383833
+-nan
+time = 13.660000, dist = 8.392050
+-nan
+time = 13.670000, dist = 8.400270
+-nan
+time = 13.680000, dist = 8.408498
+-nan
+time = 13.690000, dist = 8.416730
+-nan
+time = 13.700000, dist = 8.424967
+-nan
+time = 13.710000, dist = 8.433209
+-nan
+time = 13.720000, dist = 8.441458
+-nan
+time = 13.730000, dist = 8.449711
+-nan
+time = 13.740000, dist = 8.457970
+-nan
+time = 13.750000, dist = 8.466233
+-nan
+time = 13.760000, dist = 8.474502
+-nan
+time = 13.770000, dist = 8.482777
+-nan
+time = 13.780000, dist = 8.491056
+-nan
+time = 13.790000, dist = 8.499340
+-nan
+time = 13.800000, dist = 8.507630
+-nan
+time = 13.810000, dist = 8.515926
+-nan
+time = 13.820000, dist = 8.524227
+-nan
+time = 13.830000, dist = 8.532534
+-nan
+time = 13.840000, dist = 8.540845
+-nan
+time = 13.850000, dist = 8.549161
+-nan
+time = 13.860000, dist = 8.557483
+-nan
+time = 13.870000, dist = 8.565810
+-nan
+time = 13.880000, dist = 8.574143
+-nan
+time = 13.890000, dist = 8.582480
+-nan
+time = 13.900000, dist = 8.590823
+-nan
+time = 13.910000, dist = 8.599172
+-nan
+time = 13.920000, dist = 8.607525
+-nan
+time = 13.930000, dist = 8.615884
+-nan
+time = 13.940000, dist = 8.624249
+-nan
+time = 13.950000, dist = 8.632617
+-nan
+time = 13.960000, dist = 8.640992
+-nan
+time = 13.970000, dist = 8.649372
+-nan
+time = 13.980000, dist = 8.657758
+-nan
+time = 13.990000, dist = 8.666148
+-nan
+time = 14.000000, dist = 8.674544
+-nan
+time = 14.010000, dist = 8.682945
+-nan
+time = 14.020000, dist = 8.691352
+-nan
+time = 14.030000, dist = 8.699763
+-nan
+time = 14.040000, dist = 8.708180
+-nan
+time = 14.050000, dist = 8.716603
+-nan
+time = 14.060000, dist = 8.725030
+-nan
+time = 14.070000, dist = 8.733463
+-nan
+time = 14.080000, dist = 8.741902
+-nan
+time = 14.090000, dist = 8.750346
+-nan
+time = 14.100000, dist = 8.758794
+-nan
+time = 14.110000, dist = 8.767248
+-nan
+time = 14.120000, dist = 8.775708
+-nan
+time = 14.130000, dist = 8.784173
+-nan
+time = 14.140000, dist = 8.792643
+-nan
+time = 14.150000, dist = 8.801118
+-nan
+time = 14.160000, dist = 8.809598
+-nan
+time = 14.170000, dist = 8.818085
+-nan
+time = 14.180000, dist = 8.826576
+-nan
+time = 14.190000, dist = 8.835073
+-nan
+time = 14.200000, dist = 8.843575
+-nan
+time = 14.210000, dist = 8.852080
+-nan
+time = 14.220000, dist = 8.860594
+-nan
+time = 14.230000, dist = 8.869111
+-nan
+time = 14.240000, dist = 8.877634
+-nan
+time = 14.250000, dist = 8.886163
+-nan
+time = 14.260000, dist = 8.894697
+-nan
+time = 14.270000, dist = 8.903235
+-nan
+time = 14.280000, dist = 8.911780
+-nan
+time = 14.290000, dist = 8.920330
+-nan
+time = 14.300000, dist = 8.928885
+-nan
+time = 14.310000, dist = 8.937445
+-nan
+time = 14.320000, dist = 8.946011
+-nan
+time = 14.330000, dist = 8.954581
+-nan
+time = 14.340000, dist = 8.963158
+-nan
+time = 14.350000, dist = 8.971739
+-nan
+time = 14.360000, dist = 8.980326
+-nan
+time = 14.370000, dist = 8.988918
+-nan
+time = 14.380000, dist = 8.997515
+-nan
+time = 14.390000, dist = 9.006118
+-nan
+time = 14.400000, dist = 9.014726
+-nan
+time = 14.410000, dist = 9.023339
+-nan
+time = 14.420000, dist = 9.031957
+-nan
+time = 14.430000, dist = 9.040582
+-nan
+time = 14.440000, dist = 9.049212
+-nan
+time = 14.450000, dist = 9.057845
+-nan
+time = 14.460000, dist = 9.066485
+-nan
+time = 14.470000, dist = 9.075130
+-nan
+time = 14.480000, dist = 9.083781
+-nan
+time = 14.490000, dist = 9.092438
+-nan
+time = 14.500000, dist = 9.101098
+-nan
+time = 14.510000, dist = 9.109765
+-nan
+time = 14.520000, dist = 9.118437
+-nan
+time = 14.530000, dist = 9.127114
+-nan
+time = 14.540000, dist = 9.135797
+-nan
+time = 14.550000, dist = 9.144485
+-nan
+time = 14.560000, dist = 9.153177
+-nan
+time = 14.570000, dist = 9.161876
+-nan
+time = 14.580000, dist = 9.170579
+-nan
+time = 14.590000, dist = 9.179289
+-nan
+time = 14.600000, dist = 9.188004
+-nan
+time = 14.610000, dist = 9.196723
+-nan
+time = 14.620000, dist = 9.205448
+-nan
+time = 14.630000, dist = 9.214179
+-nan
+time = 14.640000, dist = 9.222916
+-nan
+time = 14.650000, dist = 9.231655
+-nan
+time = 14.660000, dist = 9.240402
+-nan
+time = 14.670000, dist = 9.249154
+-nan
+time = 14.680000, dist = 9.257911
+-nan
+time = 14.690000, dist = 9.266672
+-nan
+time = 14.700000, dist = 9.275440
+-nan
+time = 14.710000, dist = 9.284213
+-nan
+time = 14.720000, dist = 9.292992
+-nan
+time = 14.730000, dist = 9.301775
+-nan
+time = 14.740000, dist = 9.310564
+-nan
+time = 14.750000, dist = 9.319359
+-nan
+time = 14.760000, dist = 9.328158
+-nan
+time = 14.770000, dist = 9.336964
+-nan
+time = 14.780000, dist = 9.345774
+-nan
+time = 14.790000, dist = 9.354589
+-nan
+time = 14.800000, dist = 9.363411
+-nan
+time = 14.810000, dist = 9.372237
+-nan
+time = 14.820000, dist = 9.381069
+-nan
+time = 14.830000, dist = 9.389906
+-nan
+time = 14.840000, dist = 9.398748
+-nan
+time = 14.850000, dist = 9.407597
+-nan
+time = 14.860000, dist = 9.416450
+-nan
+time = 14.870000, dist = 9.425307
+-nan
+time = 14.880000, dist = 9.434172
+-nan
+time = 14.890000, dist = 9.443041
+-nan
+time = 14.900000, dist = 9.451915
+-nan
+time = 14.910000, dist = 9.460794
+-nan
+time = 14.920000, dist = 9.469681
+-nan
+time = 14.930000, dist = 9.478570
+-nan
+time = 14.940000, dist = 9.487466
+-nan
+time = 14.950000, dist = 9.496367
+-nan
+time = 14.960000, dist = 9.505273
+-nan
+time = 14.970000, dist = 9.514185
+-nan
+time = 14.980000, dist = 9.523102
+-nan
+time = 14.990000, dist = 9.532024
+-nan
+time = 15.000000, dist = 9.540953
+-nan
+time = 15.010000, dist = 9.549886
+-nan
+time = 15.020000, dist = 9.558825
+-nan
+time = 15.030000, dist = 9.567767
+-nan
+time = 15.040000, dist = 9.576716
+-nan
+time = 15.050000, dist = 9.585671
+-nan
+time = 15.060000, dist = 9.594631
+-nan
+time = 15.070000, dist = 9.603597
+-nan
+time = 15.080000, dist = 9.612567
+-nan
+time = 15.090000, dist = 9.621543
+-nan
+time = 15.100000, dist = 9.630525
+-nan
+time = 15.110000, dist = 9.639511
+-nan
+time = 15.120000, dist = 9.648502
+-nan
+time = 15.130000, dist = 9.657500
+-nan
+time = 15.140000, dist = 9.666502
+-nan
+time = 15.150000, dist = 9.675510
+-nan
+time = 15.160000, dist = 9.684524
+-nan
+time = 15.170000, dist = 9.693542
+-nan
+time = 15.180000, dist = 9.702566
+-nan
+time = 15.190000, dist = 9.711596
+-nan
+time = 15.200000, dist = 9.720631
+-nan
+time = 15.210000, dist = 9.729671
+-nan
+time = 15.220000, dist = 9.738716
+-nan
+time = 15.230000, dist = 9.747766
+-nan
+time = 15.240000, dist = 9.756823
+-nan
+time = 15.250000, dist = 9.765884
+-nan
+time = 15.260000, dist = 9.774951
+-nan
+time = 15.270000, dist = 9.784023
+-nan
+time = 15.280000, dist = 9.793101
+-nan
+time = 15.290000, dist = 9.802185
+-nan
+time = 15.300000, dist = 9.811273
+-nan
+time = 15.310000, dist = 9.820367
+-nan
+time = 15.320000, dist = 9.829466
+-nan
+time = 15.330000, dist = 9.838571
+-nan
+time = 15.340000, dist = 9.847680
+-nan
+time = 15.350000, dist = 9.856795
+-nan
+time = 15.360000, dist = 9.865916
+-nan
+time = 15.370000, dist = 9.875043
+-nan
+time = 15.380000, dist = 9.884173
+-nan
+time = 15.390000, dist = 9.893311
+-nan
+time = 15.400000, dist = 9.902452
+-nan
+time = 15.410000, dist = 9.911599
+-nan
+time = 15.420000, dist = 9.920753
+-nan
+time = 15.430000, dist = 9.929911
+-nan
+time = 15.440000, dist = 9.939075
+-nan
+time = 15.450000, dist = 9.948242
+-nan
+time = 15.460000, dist = 9.957417
+-nan
+time = 15.470000, dist = 9.966597
+-nan
+time = 15.480000, dist = 9.975780
+-nan
+time = 15.490000, dist = 9.984972
+-nan
+time = 15.500000, dist = 9.994167
+-nan
+time = 15.510000, dist = 10.003367
+-nan
+time = 15.520000, dist = 10.012574
+-nan
+time = 15.530000, dist = 10.021787
+-nan
+time = 15.540000, dist = 10.031004
+-nan
+time = 15.550000, dist = 10.040227
+-nan
+time = 15.560000, dist = 10.049455
+-nan
+time = 15.570000, dist = 10.058688
+-nan
+time = 15.580000, dist = 10.067927
+-nan
+time = 15.590000, dist = 10.077170
+-nan
+time = 15.600000, dist = 10.086421
+-nan
+time = 15.610000, dist = 10.095675
+-nan
+time = 15.620000, dist = 10.104936
+-nan
+time = 15.630000, dist = 10.114201
+-nan
+time = 15.640000, dist = 10.123472
+-nan
+time = 15.650000, dist = 10.132748
+-nan
+time = 15.660000, dist = 10.142029
+-nan
+time = 15.670000, dist = 10.151317
+-nan
+time = 15.680000, dist = 10.160608
+-nan
+time = 15.690000, dist = 10.169907
+-nan
+time = 15.700000, dist = 10.179210
+-nan
+time = 15.710000, dist = 10.188519
+-nan
+time = 15.720000, dist = 10.197832
+-nan
+time = 15.730000, dist = 10.207151
+-nan
+time = 15.740000, dist = 10.216477
+-nan
+time = 15.750000, dist = 10.225806
+-nan
+time = 15.760000, dist = 10.235142
+-nan
+time = 15.770000, dist = 10.244483
+-nan
+time = 15.780000, dist = 10.253829
+-nan
+time = 15.790000, dist = 10.263181
+-nan
+time = 15.800000, dist = 10.272538
+-nan
+time = 15.810000, dist = 10.281899
+-nan
+time = 15.820000, dist = 10.291268
+-nan
+time = 15.830000, dist = 10.300641
+-nan
+time = 15.840000, dist = 10.310019
+-nan
+time = 15.850000, dist = 10.319404
+-nan
+time = 15.860000, dist = 10.328793
+-nan
+time = 15.870000, dist = 10.338188
+-nan
+time = 15.880000, dist = 10.347589
+-nan
+time = 15.890000, dist = 10.356993
+-nan
+time = 15.900000, dist = 10.366405
+-nan
+time = 15.910000, dist = 10.375820
+-nan
+time = 15.920000, dist = 10.385242
+-nan
+time = 15.930000, dist = 10.394670
+-nan
+time = 15.940000, dist = 10.404101
+-nan
+time = 15.950000, dist = 10.413539
+-nan
+time = 15.960000, dist = 10.422982
+-nan
+time = 15.970000, dist = 10.432431
+-nan
+time = 15.980000, dist = 10.441886
+-nan
+time = 15.990000, dist = 10.451344
+-nan
+time = 16.000000, dist = 10.460810
+-nan
+time = 16.010000, dist = 10.470279
+-nan
+time = 16.020000, dist = 10.479754
+-nan
+time = 16.030000, dist = 10.489236
+-nan
+time = 16.040000, dist = 10.498722
+-nan
+time = 16.050000, dist = 10.508214
+-nan
+time = 16.060000, dist = 10.517712
+-nan
+time = 16.070000, dist = 10.527214
+-nan
+time = 16.080000, dist = 10.536721
+-nan
+time = 16.090000, dist = 10.546235
+-nan
+time = 16.100000, dist = 10.555754
+-nan
+time = 16.110000, dist = 10.565278
+-nan
+time = 16.120000, dist = 10.574807
+-nan
+time = 16.130000, dist = 10.584342
+-nan
+time = 16.140000, dist = 10.593884
+-nan
+time = 16.150000, dist = 10.603429
+-nan
+time = 16.160000, dist = 10.612980
+-nan
+time = 16.170000, dist = 10.622536
+-nan
+time = 16.180000, dist = 10.632098
+-nan
+time = 16.190000, dist = 10.641665
+-nan
+time = 16.200000, dist = 10.651237
+-nan
+time = 16.210000, dist = 10.660816
+-nan
+time = 16.220000, dist = 10.670400
+-nan
+time = 16.230000, dist = 10.679989
+-nan
+time = 16.240000, dist = 10.689583
+-nan
+time = 16.250000, dist = 10.699183
+-nan
+time = 16.260000, dist = 10.708788
+-nan
+time = 16.270000, dist = 10.718398
+-nan
+time = 16.280000, dist = 10.728014
+-nan
+time = 16.290000, dist = 10.737636
+-nan
+time = 16.300000, dist = 10.747262
+-nan
+time = 16.310000, dist = 10.756894
+-nan
+time = 16.320000, dist = 10.766531
+-nan
+time = 16.330000, dist = 10.776175
+-nan
+time = 16.340000, dist = 10.785823
+-nan
+time = 16.350000, dist = 10.795477
+-nan
+time = 16.360000, dist = 10.805137
+-nan
+time = 16.370000, dist = 10.814800
+-nan
+time = 16.380000, dist = 10.824471
+-nan
+time = 16.390000, dist = 10.834146
+-nan
+time = 16.400000, dist = 10.843827
+-nan
+time = 16.410000, dist = 10.853514
+-nan
+time = 16.420000, dist = 10.863205
+-nan
+time = 16.430000, dist = 10.872902
+-nan
+time = 16.440000, dist = 10.882605
+-nan
+time = 16.450000, dist = 10.892312
+-nan
+time = 16.460000, dist = 10.902026
+-nan
+time = 16.470000, dist = 10.911745
+-nan
+time = 16.480000, dist = 10.921469
+-nan
+time = 16.490000, dist = 10.931199
+-nan
+time = 16.500000, dist = 10.940934
+-nan
+time = 16.510000, dist = 10.950673
+-nan
+time = 16.520000, dist = 10.960420
+-nan
+time = 16.530000, dist = 10.970171
+-nan
+time = 16.540000, dist = 10.979928
+-nan
+time = 16.550000, dist = 10.989690
+-nan
+time = 16.560000, dist = 10.999457
+-nan
+time = 16.570000, dist = 11.009231
+-nan
+time = 16.580000, dist = 11.019010
+-nan
+time = 16.590000, dist = 11.028793
+-nan
+time = 16.600000, dist = 11.038582
+-nan
+time = 16.610000, dist = 11.048375
+-nan
+time = 16.620000, dist = 11.058176
+-nan
+time = 16.630000, dist = 11.067981
+-nan
+time = 16.640000, dist = 11.077792
+-nan
+time = 16.650000, dist = 11.087609
+-nan
+time = 16.660000, dist = 11.097431
+-nan
+time = 16.670000, dist = 11.107258
+-nan
+time = 16.680000, dist = 11.117090
+-nan
+time = 16.690000, dist = 11.126927
+-nan
+time = 16.700000, dist = 11.136771
+-nan
+time = 16.710000, dist = 11.146620
+-nan
+time = 16.720000, dist = 11.156475
+-nan
+time = 16.730000, dist = 11.166334
+-nan
+time = 16.740000, dist = 11.176200
+-nan
+time = 16.750000, dist = 11.186070
+-nan
+time = 16.760000, dist = 11.195947
+-nan
+time = 16.770000, dist = 11.205827
+-nan
+time = 16.780000, dist = 11.215714
+-nan
+time = 16.790000, dist = 11.225606
+-nan
+time = 16.800000, dist = 11.235503
+-nan
+time = 16.810000, dist = 11.245406
+-nan
+time = 16.820000, dist = 11.255314
+-nan
+time = 16.830000, dist = 11.265229
+-nan
+time = 16.840000, dist = 11.275148
+-nan
+time = 16.850000, dist = 11.285072
+-nan
+time = 16.860000, dist = 11.295004
+-nan
+time = 16.870000, dist = 11.304939
+-nan
+time = 16.880000, dist = 11.314880
+-nan
+time = 16.890000, dist = 11.324827
+-nan
+time = 16.900000, dist = 11.334779
+-nan
+time = 16.910000, dist = 11.344735
+-nan
+time = 16.920000, dist = 11.354698
+-nan
+time = 16.930000, dist = 11.364667
+-nan
+time = 16.940000, dist = 11.374641
+-nan
+time = 16.950000, dist = 11.384620
+-nan
+time = 16.960000, dist = 11.394605
+-nan
+time = 16.970000, dist = 11.404595
+-nan
+time = 16.980000, dist = 11.414591
+-nan
+time = 16.990000, dist = 11.424591
+-nan
+time = 17.000000, dist = 11.434598
+-nan
+time = 17.010000, dist = 11.444609
+-nan
+time = 17.020000, dist = 11.454626
+-nan
+time = 17.030000, dist = 11.464649
+-nan
+time = 17.040000, dist = 11.474677
+-nan
+time = 17.050000, dist = 11.484711
+-nan
+time = 17.060000, dist = 11.494750
+-nan
+time = 17.070000, dist = 11.504794
+-nan
+time = 17.080000, dist = 11.514845
+-nan
+time = 17.090000, dist = 11.524899
+-nan
+time = 17.100000, dist = 11.534961
+-nan
+time = 17.110000, dist = 11.545026
+-nan
+time = 17.120000, dist = 11.555099
+-nan
+time = 17.130000, dist = 11.565174
+-nan
+time = 17.140000, dist = 11.575257
+-nan
+time = 17.150000, dist = 11.585345
+-nan
+time = 17.160000, dist = 11.595438
+-nan
+time = 17.170000, dist = 11.605537
+-nan
+time = 17.180000, dist = 11.615643
+-nan
+time = 17.190000, dist = 11.625752
+-nan
+time = 17.200000, dist = 11.635867
+-nan
+time = 17.210000, dist = 11.645988
+-nan
+time = 17.220000, dist = 11.656114
+-nan
+time = 17.230000, dist = 11.666244
+-nan
+time = 17.240000, dist = 11.676382
+-nan
+time = 17.250000, dist = 11.686524
+-nan
+time = 17.260000, dist = 11.696672
+-nan
+time = 17.270000, dist = 11.706826
+-nan
+time = 17.280000, dist = 11.716986
+-nan
+time = 17.290000, dist = 11.727149
+-nan
+time = 17.300000, dist = 11.737318
+-nan
+time = 17.310000, dist = 11.747493
+-nan
+time = 17.320000, dist = 11.757673
+-nan
+time = 17.330000, dist = 11.767859
+-nan
+time = 17.340000, dist = 11.778050
+-nan
+time = 17.350000, dist = 11.788247
+-nan
+time = 17.360000, dist = 11.798450
+-nan
+time = 17.370000, dist = 11.808659
+-nan
+time = 17.380000, dist = 11.818872
+-nan
+time = 17.390000, dist = 11.829090
+-nan
+time = 17.400000, dist = 11.839314
+-nan
+time = 17.410000, dist = 11.849544
+-nan
+time = 17.420000, dist = 11.859779
+-nan
+time = 17.430000, dist = 11.870019
+-nan
+time = 17.440000, dist = 11.880264
+-nan
+time = 17.450000, dist = 11.890516
+-nan
+time = 17.460000, dist = 11.900774
+-nan
+time = 17.470000, dist = 11.911036
+-nan
+time = 17.480000, dist = 11.921304
+-nan
+time = 17.490000, dist = 11.931577
+-nan
+time = 17.500000, dist = 11.941856
+-nan
+time = 17.510000, dist = 11.952140
+-nan
+time = 17.520000, dist = 11.962429
+-nan
+time = 17.530000, dist = 11.972724
+-nan
+time = 17.540000, dist = 11.983024
+-nan
+time = 17.550000, dist = 11.993330
+-nan
+time = 17.560000, dist = 12.003642
+-nan
+time = 17.570000, dist = 12.013959
+-nan
+time = 17.580000, dist = 12.024282
+-nan
+time = 17.590000, dist = 12.034611
+-nan
+time = 17.600000, dist = 12.044943
+-nan
+time = 17.610000, dist = 12.055283
+-nan
+time = 17.620000, dist = 12.065626
+-nan
+time = 17.630000, dist = 12.075975
+-nan
+time = 17.640000, dist = 12.086330
+-nan
+time = 17.650000, dist = 12.096692
+-nan
+time = 17.660000, dist = 12.107059
+-nan
+time = 17.670000, dist = 12.117431
+-nan
+time = 17.680000, dist = 12.127808
+-nan
+time = 17.690000, dist = 12.138189
+-nan
+time = 17.700000, dist = 12.148579
+-nan
+time = 17.710000, dist = 12.158971
+-nan
+time = 17.720000, dist = 12.169370
+-nan
+time = 17.730000, dist = 12.179774
+-nan
+time = 17.740000, dist = 12.190184
+-nan
+time = 17.750000, dist = 12.200599
+-nan
+time = 17.760000, dist = 12.211020
+-nan
+time = 17.770000, dist = 12.221447
+-nan
+time = 17.780000, dist = 12.231879
+-nan
+time = 17.790000, dist = 12.242315
+-nan
+time = 17.800000, dist = 12.252758
+-nan
+time = 17.810000, dist = 12.263206
+-nan
+time = 17.820000, dist = 12.273661
+-nan
+time = 17.830000, dist = 12.284120
+-nan
+time = 17.840000, dist = 12.294583
+-nan
+time = 17.850000, dist = 12.305053
+-nan
+time = 17.860000, dist = 12.315528
+-nan
+time = 17.870000, dist = 12.326010
+-nan
+time = 17.880000, dist = 12.336497
+-nan
+time = 17.890000, dist = 12.346990
+-nan
+time = 17.900000, dist = 12.357487
+-nan
+time = 17.910000, dist = 12.367990
+-nan
+time = 17.920000, dist = 12.378498
+-nan
+time = 17.930000, dist = 12.389010
+-nan
+time = 17.940000, dist = 12.399530
+-nan
+time = 17.950000, dist = 12.410055
+-nan
+time = 17.960000, dist = 12.420586
+-nan
+time = 17.970000, dist = 12.431123
+-nan
+time = 17.980000, dist = 12.441663
+-nan
+time = 17.990000, dist = 12.452210
+-nan
+time = 18.000000, dist = 12.462762
+-nan
+time = 18.010000, dist = 12.473319
+-nan
+time = 18.020000, dist = 12.483883
+-nan
+time = 18.030000, dist = 12.494452
+-nan
+time = 18.040000, dist = 12.505025
+-nan
+time = 18.050000, dist = 12.515604
+-nan
+time = 18.060000, dist = 12.526190
+-nan
+time = 18.070000, dist = 12.536779
+-nan
+time = 18.080000, dist = 12.547376
+-nan
+time = 18.090000, dist = 12.557979
+-nan
+time = 18.100000, dist = 12.568585
+-nan
+time = 18.110000, dist = 12.579198
+-nan
+time = 18.120000, dist = 12.589815
+-nan
+time = 18.130000, dist = 12.600439
+-nan
+time = 18.140000, dist = 12.611067
+-nan
+time = 18.150000, dist = 12.621701
+-nan
+time = 18.160000, dist = 12.632340
+-nan
+time = 18.170000, dist = 12.642986
+-nan
+time = 18.180000, dist = 12.653638
+-nan
+time = 18.190000, dist = 12.664294
+-nan
+time = 18.200000, dist = 12.674955
+-nan
+time = 18.210000, dist = 12.685622
+-nan
+time = 18.220000, dist = 12.696296
+-nan
+time = 18.230000, dist = 12.706974
+-nan
+time = 18.240000, dist = 12.717658
+-nan
+time = 18.250000, dist = 12.728346
+-nan
+time = 18.260000, dist = 12.739040
+-nan
+time = 18.270000, dist = 12.749741
+-nan
+time = 18.280000, dist = 12.760448
+-nan
+time = 18.290000, dist = 12.771158
+-nan
+time = 18.300000, dist = 12.781877
+-nan
+time = 18.310000, dist = 12.792599
+-nan
+time = 18.320000, dist = 12.803327
+-nan
+time = 18.330000, dist = 12.814059
+-nan
+time = 18.340000, dist = 12.824798
+-nan
+time = 18.350000, dist = 12.835542
+-nan
+time = 18.360000, dist = 12.846291
+-nan
+time = 18.370000, dist = 12.857045
+-nan
+time = 18.380000, dist = 12.867807
+-nan
+time = 18.390000, dist = 12.878574
+-nan
+time = 18.400000, dist = 12.889345
+-nan
+time = 18.410000, dist = 12.900122
+-nan
+time = 18.420000, dist = 12.910905
+-nan

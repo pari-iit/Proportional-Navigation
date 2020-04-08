@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
     }
     
     std::unique_ptr<SimManager> sim(new SimManager(in_file) );
-    sim->generateMeasurement("../Data");
+    sim->runSimulation("../Data");
     std::cout << "Hello World!" << "\n";
 
     //First simulate the robot and store it

@@ -11,7 +11,7 @@ class Traj:
     
 def plotTargetPaths(dirname = '../Data/',ns = 6):
     Trajs = [];
-    for file in glob.glob(dirname+'./[0-100].txt'):
+    for file in glob.glob(dirname+'./[0-9].txt'):
         fid  = open(os.path.join(dirname,file),"r");
         A = fid.readlines();
         fid.close();
@@ -41,10 +41,13 @@ def plotTargetPaths(dirname = '../Data/',ns = 6):
         Trajs.append(traj);
     
 
-
+    i = 1;
     for traj in Trajs:
-        
-        plt.plot(traj._x[0,:],traj._x[1,:],'--x');
+        print(np.shape(traj._x));
+        plt.plot(traj._x[0,0],traj._x[0,1],'o');
+        plt.plot(traj._x[:,0],traj._x[:,1],'--x', label = str(i));
+        i = i+1;
+    plt.legend();
     plt.title('x-y trace');
     plt.show();
 

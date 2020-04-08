@@ -17,6 +17,7 @@ class Simulator{
     Simulator(const double& dt,std::shared_ptr<Dynamics> dyn):_dt(dt),_dyn(std::move(dyn)){}  
     std::vector<State> Simulate(State&& st,const double&& ti, const double&& tf );
     std::vector<State> SimulateControl(State&& st,const double&& ti, const double&& tf, const std::vector<Control>&& U );
+    void SimStep(State& st,const std::vector<Control>& u);
 };
 
 

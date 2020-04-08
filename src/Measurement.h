@@ -4,6 +4,7 @@
 #include <vector>
 #include <stdio.h>
 #include "Dynamics.h"
+#define _NM 2
 
 class Measurement{
     double _t;
@@ -14,8 +15,7 @@ public:
     Measurement(const double& t, const Eigen::VectorXf& y, const Eigen::MatrixXf& R):_t(t), _y(y), _R(R){}
 
     //RULE OF FIVE
-    ~Measurement(){
-        printf("Destroying measurement for %f time.\n",_t);
+    ~Measurement(){        
     }
 
     Measurement(const Measurement& that):_t(that._t),_y(that._y),_R(that._R){}
@@ -40,6 +40,7 @@ class MeasurementModel{
 public:
     virtual Eigen::VectorXf estimateMeasurement(const State& st) = 0;
     virtual Eigen::MatrixXf Jacobian(const State& st) = 0;
+    virtual Measurement generateNoisyMeasurement(const State&& st,const Eigen::MatrixXf& R) = 0;
 };
 
 class LinearMeasurementModel:public MeasurementModel{
@@ -48,6 +49,9 @@ public:
     LinearMeasurementModel(const Eigen::MatrixXf& H):_H(H){}
     Eigen::VectorXf estimateMeasurement(const State& st);
     Eigen::MatrixXf Jacobian(const State& st){ return _H;}
+    Measurement generateNoisyMeasurement(const State&& st,const Eigen::MatrixXf& R){
+        return {st.t(),Eigen::VectorXf::Zero(_NM),R};
+    };
 };
 
 class NonlinearMeasurementModel:public MeasurementModel{
@@ -55,6 +59,7 @@ class NonlinearMeasurementModel:public MeasurementModel{
 public:
     Eigen::VectorXf estimateMeasurement(const State& st);
     Eigen::MatrixXf Jacobian(const State& st);
+    Measurement generateNoisyMeasurement(const State&& st,const Eigen::MatrixXf& R);
 };
 
 

@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.cpp
-Controller.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.h
-cassert
--
-exception
--
-
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.h
 vector
 -
@@ -26,12 +18,6 @@ any
 Dynamics.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.cpp
-Dynamics.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
-cassert
--
-
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 vector
 -
@@ -41,16 +27,6 @@ eigen3/Eigen/Dense
 -
 Controller.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.h
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.cpp
-Filter.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.h
-cassert
--
-algorithm
--
-functional
--
 
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Filter.h
 vector
@@ -63,12 +39,6 @@ Dynamics.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
 Measurement.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.h
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.cpp
-Measurement.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.h
-cassert
--
 
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.h
 vector
@@ -89,6 +59,8 @@ cassert
 -
 future
 -
+unordered_set
+-
 
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.h
 vector
@@ -99,6 +71,8 @@ thread
 -
 string
 -
+unordered_map
+-
 Controller.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Controller.h
 Filter.h
@@ -107,14 +81,6 @@ Measurement.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Measurement.h
 Simulator.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.h
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.cpp
-Simulator.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.h
-cassert
--
-fstream
--
 
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Simulator.h
 vector
@@ -129,10 +95,4 @@ string
 -
 Dynamics.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
-
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/main.cpp
-iostream
--
-SimManager.h
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.h
 

@@ -47,6 +47,11 @@ public:
     void setX(const Eigen::VectorXf& x){_x = x;}
     void setP(const Eigen::MatrixXf& P){_P = P;}
 
+
+    double getDistance(const State& that){        
+        return (_x.head(_N_STATES)-that.x().head(_N_STATES) ).norm();
+    }
+
 };
 class Dynamics{
 public:

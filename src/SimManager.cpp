@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cassert>
 #include <future>
-
+#include <unordered_set>
 
 
 static std::vector<std::string> tokenizer(const std::string& s, const char& delimiter = ' '){
@@ -21,13 +21,71 @@ static std::vector<std::string> tokenizer(const std::string& s, const char& deli
 
 }
 
+template<typename T>
+std::vector<T> slice(std::vector<T> const& v, int m, int n)
+{
+    auto first = v.cbegin() + m;
+    auto last = v.cbegin() + n ;
+
+    std::vector<T> vec(first, last);
+    return vec;
+}
+
 SimManager::SimManager(const std::string& ifile){
 
     readFile(ifile);
     
     _c = std::make_unique<ProNav>(_N);
+    _m = std::make_unique<NonlinearMeasurementModel>();
     _f = std::make_unique<KalmanFilter>(std::make_shared<LinearDynamics>(_F,_Q), std::make_unique<NonlinearMeasurementModel>());        
     _sim = std::make_shared<Simulator>(_dt,std::make_shared<LinearDynamics>(_F,_Q,_B));
+}
+
+State SimManager::readState(const std::vector<std::string>& tokens){
+
+    double t = std::stof(tokens[0]);
+    Eigen::VectorXf x(NS);
+    for(int i=1;i< 1+NS;++i){
+        x(i-1) =  std::stof( tokens[i] );
+    }
+                
+    Eigen::MatrixXf P(NS,NS);
+    for(int i=NS+1;i< 1+NS +(NS*NS);++i){
+        int idx =i-(NS+1);
+        int rowv = (int)(idx/NS);
+        int colv = idx - (rowv*NS);
+                
+        P(rowv,colv)  = std::stof( tokens[i] );
+    }
+    State s(t,x,P);
+    return s;
+
+}
+
+std::vector<Control> SimManager::readControlSequence(const std::vector<std::string>& tokens){
+
+    int numel = tokens.size();
+    int ccnt = 0;
+    int t = 0; Eigen::VectorXf v(_N_CONTROL);
+    std::vector<Control> uo;
+    
+    for(int i = 0;i< numel; ++i){
+        
+        if (i% (_N_CONTROL + 1) == 0 ){
+            t = std::stof(tokens[i]);
+        }
+        else{
+
+            v[ccnt++] = std::stof(tokens[i]);
+        }
+        if (ccnt == 3){
+            Control u(t,v);
+            uo.emplace_back(u);
+            ccnt = 0;
+        }
+
+    }
+    return uo;    
 }
 
 void SimManager::readFile(const std::string& ifile){
@@ -46,46 +104,18 @@ void SimManager::readFile(const std::string& ifile){
             }
             //first get the target vehicle initial conditions
             if (count == 0){
-                
                 assert(tokens.size() >= 2+ NS + NS*NS);                
                 _tf.emplace_back(std::stof(tokens[0]));
-                double t = std::stof(tokens[1]);
-                Eigen::VectorXf x(NS);
-                for(int i=2;i< 2+NS;++i){
-                    x(i-2) =  std::stof( tokens[i] );
-                }
                 
-                Eigen::MatrixXf P(NS,NS);
-                for(int i=NS+2;i< 2+NS +(NS*NS);++i){
-                    int idx =i-(NS+2);
-                    int rowv = (int)(idx/NS);
-                    int colv = idx - (rowv*NS);
+                State s = readState(slice(tokens,1,2+ NS + NS*NS));
                 
-                    P(rowv,colv)  = std::stof( tokens[i] );
-                }
-                State s(t,x,P);
                 _ics.emplace_back(s);  
 
                 if (tokens.size() > 2+ NS + NS*NS){
                     int numel = tokens.size() - (2+ NS + NS*NS);
                     assert(numel% (_N_CONTROL + 1)  == 0);
-                    int tokcnt = 2+ NS + NS*NS, ccnt = 0;
-                    int t = 0; Eigen::VectorXf v(_N_CONTROL);
-                    std::vector<Control> uo;
-                    for(int i = 0;i< numel; ++i){
-                        if (i% (_N_CONTROL + 1) == 0 ){
-                            t = std::stof(tokens[tokcnt+i]);
-                        }
-                        else{
-                            v[ccnt++] = std::stof(tokens[tokcnt+i]);
-                        }
-                        if (ccnt == 3){
-                            Control u(t,v);
-                            uo.emplace_back(u);
-                            ccnt = 0;
-                        }
-
-                    }
+                    int tokcnt = 2+ NS + NS*NS;                    
+                    std::vector<Control> uo = readControlSequence(slice(tokens,tokcnt,tokens.size()) );                    
                     _u.emplace_back(uo);
                 }
                 else{
@@ -93,9 +123,29 @@ void SimManager::readFile(const std::string& ifile){
                 }                         
                 
             }
+            //Get the initial states for the interceptors.
+            if (count == 1){
+                assert(tokens.size() >= 1+ NS + NS*NS);                
+                State s = readState(slice(tokens,0,1+ NS + NS*NS));                
+                _iloc.emplace_back(s);  
+
+                if (tokens.size() > 1+ NS + NS*NS){
+                    int numel = tokens.size() - (1+ NS + NS*NS);
+                    assert(numel == (_N_CONTROL + 1) );
+                    int tokcnt = 1+ NS + NS*NS;                    
+                    std::vector<Control> uo = readControlSequence(slice(tokens,tokcnt,tokens.size()) );                 
+                    assert (uo.size() == 1);   
+                    assert (s.t() == uo[0].time());
+                    _iu.emplace_back(uo[0]);
+                }
+                else{
+                    _iu.emplace_back( Control(s.t(),Eigen::VectorXf::Zero(_N_CONTROL)) );    /* code */
+                }                         
+                
+            }
 
             //then get the F, Q and B  of the vehicles. Assume identical robots
-            if(count == 1){
+            if(count == 2){
                 assert(tokens.size() >= 2*NS*NS);
                 _F = Eigen::MatrixXf::Identity(NS,NS);
                 _Q = Eigen::MatrixXf::Identity(NS,NS);
@@ -129,14 +179,26 @@ void SimManager::readFile(const std::string& ifile){
                 }
 
             }
+
+            //Get the R Matrix
+            if(count == 3){
+                assert(tokens.size() == _NM*_NM);
+                _R = Eigen::MatrixXf::Zero(_NM,_NM);
+                for(int i=0;i < tokens.size(); ++i){
+                    int rnum = i/_NM;
+                    int cnum = i-(rnum*_NM);
+                    _R(rnum,cnum) = std::stof(tokens[i]);
+                }
+            }
+
             //Get the ProNav gain.
-            if(count == 2){
+            if(count == 4){
                 assert(tokens.size() == 1);
                 _N = std::stof(tokens[0]);
             }
 
             //Get the simulation interval.
-            if(count == 3){
+            if(count == 5){
                 assert(tokens.size() == 1);
                 _dt = std::stof(tokens[0]);
             }
@@ -175,11 +237,91 @@ void SimManager::writeFile(const std::string& ofile, const std::vector<State>& s
     }
 }
 
+ std::unordered_map<int,int> SimManager::mapTargetToInterceptor(){
+    std::unordered_map<int,int> t_to_i;
+
+     for (int i=0;i<_ics.size(); ++i){
+         int minidx = 0;
+         std::unordered_set<int> assigned;
+         double dist = __DBL_MAX__;
+         for(int j=0;j<_iloc.size(); ++j){
+             if (assigned.find(j) != assigned.end() ) continue;
+             int d = _ics[i].getDistance(_iloc[j]);
+             if( dist < d){
+                 dist = d;
+                 minidx = j;
+             }
+         }
+         t_to_i[i] = minidx;
+         assigned.insert(minidx);
+     }
+    return t_to_i;
+ }
+
+std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id){
+    //sim target one step t_k->t_k+1;
+    //generate measurement  at t_k+1
+    //add noise to measurement at t_k+1;
+    //get estimated position by using Kalman filter at t_k+1;
+    // use estimated position to generate relative measurement t_k-t_k+1;
+    // use relative measurment to get control at t_k
+    // move interceptor t->t_k+1;
+    //go to step 1;
+    //repeat until distance minimized. 
+    std::unique_lock<std::mutex> ulock(_mut);
+    double dist = __DBL_MAX__;
+    State t_st = std::move(_ics[t_id]);//actual target state
+
+    State et_st = t_st; // estimate carried on by the onboard seeker.
+    State i_st = std::move(_iloc[i_id]);
+    std::vector<Control> ut = std::move(_u[t_id]);
+    Control ui = std::move(_iu[i_id]);
+
+    std::vector<State> i_st_seq;i_st_seq.push_back(i_st);
+    
+
+    while(dist > 1e-5){
+        //Actual target simulation
+        _sim->SimStep(t_st,ut);
+
+        //Generation of radar measurment;
+        State relst(t_st.t(),t_st.x()-i_st.x(),t_st.P()+i_st.P());
+        Measurement m = _m->generateNoisyMeasurement(std::move(relst),_R);
+
+        //EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE ONBOARD SEEKER.
+
+        //Estimate postion of the target
+        _f->update(et_st,m,i_st);
+
+        // std::cout << (et_st.x()-t_st.x() ).norm() << std::endl; 
+        
+
+        //get relative state of the target with respect to the interceptor
+        relst = State(t_st.t(),i_st.x()-t_st.x(),t_st.P()+i_st.P());
+
+        //generate control
+        _c->generateControl({relst});        
+
+        //Apply control to the interceptor
+        _sim->SimStep(i_st,_c->getControl());
+        
+        //Save state sequence
+        i_st_seq.push_back(i_st);
+        dist = i_st.getDistance(t_st);
+        printf("time = %f, dist = %f\n",i_st.t(),dist);
+    }
+    
+    return i_st_seq;
+     
+}
+
 void SimManager::generateMeasurement(const std::string measDir){
+    
     std::vector<std::future< std::vector<State> > > futures;
     for (int i = 0;i< _ics.size(); ++i){
         State s = _ics[i];
         double ti = s.t(),tf = _tf[i];
+        
         futures.emplace_back( std::async( std::launch::async,&Simulator::SimulateControl,_sim,std::move(s),std::move(ti), std::move(tf), std::move(_u[i]) ) );        
     }
     std::vector<std::vector<State> > simres;
@@ -195,3 +337,20 @@ void SimManager::generateMeasurement(const std::string measDir){
 
 
 
+void SimManager::runSimulation(const std::string& resDir){
+    std::unordered_map<int,int> t_to_i = mapTargetToInterceptor();
+    std::vector<std::future< std::vector<State> > > futures;
+    for (int i = 0;i< _ics.size(); ++i){
+        int targ= i; int icp = t_to_i[i];
+        futures.emplace_back( std::async( std::launch::async,&SimManager::simulateProNav,this,std::move(targ),std::move(icp) ) );        
+    }
+    std::vector<std::vector<State> > simres;
+    std::for_each(futures.begin(), futures.end(), [&simres](std::future<std::vector<State> >& fut){
+        simres.emplace_back(fut.get());
+    });
+
+    for(int i =0;i<simres.size(); ++i){
+        writeFile(resDir + "/interp_" + std::to_string(i) + ".txt",simres.at(i) );        
+
+    }
+}

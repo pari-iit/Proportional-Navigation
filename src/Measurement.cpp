@@ -1,5 +1,6 @@
 #include "Measurement.h"
 #include <cassert>
+#include <random>
 
 
 Eigen::VectorXf LinearMeasurementModel::estimateMeasurement(const State& st){
@@ -31,9 +32,26 @@ Eigen::VectorXf NonlinearMeasurementModel::estimateMeasurement(const State& st){
     double d = x.norm();
     //Doppler frequency
     double fd = -2/Radar::_lambda*(x.dot(v))/d;
-    Eigen::Vector2f m;m << d,fd;
+    Eigen::VectorXf m(_NM);m << d,fd;
     return m;
 }
+//Same thing now we will add noise to the measurements;
+Measurement NonlinearMeasurementModel::generateNoisyMeasurement(const State&& st,const Eigen::MatrixXf& R){    
+    std::random_device rd;
+    std::mt19937 eng(rd());
+    
+    Eigen::VectorXf v = estimateMeasurement(st);    
+    assert (v.size() == _NM );
+
+    for (int i=0;i < v.size(); ++i){
+        std::normal_distribution<double> dist(0, R(i,i));
+        v(i) = v(i) + dist(eng);
+    }
+
+    return {st.t(),v,R};
+    
+}
+
 /* Jacobian defined as 
 H = [(x-x_own)/d      (y-y_own)/d    (x-x_own)/d    0       0        0]
 H(0,0) = -2/lambda[(vx-vx_own)/d-(vx-vx_own)*(x-x_own)^2/d^3]
@@ -72,3 +90,5 @@ Eigen::MatrixXf NonlinearMeasurementModel::Jacobian(const State& st){
 
     return J;
 }
+
+

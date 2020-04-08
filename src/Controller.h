@@ -64,13 +64,9 @@ class ConstantControl:public Controller{
 public:
     ConstantControl(const Eigen::MatrixXf& K):_K(K),_U_t(std::vector<Control>()){};
     void generateControl(const std::vector<State>& st);
-
     std::any getGain() const{return _K;}
-
     void setGain(const std::any& K);
-
     std::vector<Control> getControl() const {return _U_t;}
-
     void setControl(const std::vector<Control>& u){_U_t = u;}
 };
 
