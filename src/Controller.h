@@ -7,6 +7,7 @@
 #include <utility>
 #include <any>
 #include "Dynamics.h"
+#include <mutex>
 
 class State;
 class Control{
@@ -73,6 +74,7 @@ public:
 class ProNav:public Controller{
     double _N;
     std::vector<Control> _U_t;
+    std::mutex _mut;
 public:
     ProNav(const double& N):_N(N),_U_t(std::vector<Control>()){}
 

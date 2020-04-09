@@ -65,8 +65,8 @@ public:
 
 
 class Radar{
-public:
-    static double constexpr _lambda{-2.0};
+public:    
+    static double constexpr _lambda{-2};
 
 };
 

@@ -50,6 +50,7 @@ void ProNav::setGain(const std::any& N){
 
 //st is relative state vector. Own state - relative state of the target
 void ProNav::generateControl(const std::vector<State>& st){
+    std::unique_lock<std::mutex> lck(_mut);
     _U_t.clear();
     for (auto s: st ){
         assert( s.x().size() == NS);// Point mass model

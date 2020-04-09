@@ -16,8 +16,8 @@ s = [(x-x_own), (y-y_own),  (z-z_own),  (vx-vx_own),  (vy-vy_own),  (vz-vz_own)]
 
 Measurements y = [d, fd]
 d = \sqrt((x-x_own)^2+(y-y_own)^2+(z-z_own)^2)
-fd = -2/\lambda* ((x-x_own)(vx-vx_own)+(y-y_own)(vy-vy_own)+(z-z_own)(vz-vz_own))/d; 
-
+fd = -2/lambda* ((x-x_own)(vx-vx_own)+(y-y_own)(vy-vy_own)+(z-z_own)(vz-vz_own))/d; 
+For simplicity, we will drop the factor 2/lambda (lambda is the radar wavelength)
 */
 Eigen::VectorXf NonlinearMeasurementModel::estimateMeasurement(const State& st){
     Eigen::VectorXf s = st.x();
@@ -31,7 +31,7 @@ Eigen::VectorXf NonlinearMeasurementModel::estimateMeasurement(const State& st){
     //Distance measure
     double d = x.norm();
     //Doppler frequency
-    double fd = -2/Radar::_lambda*(x.dot(v))/d;
+    double fd = (x.dot(v))/d;
     Eigen::VectorXf m(_NM);m << d,fd;
     return m;
 }
@@ -44,8 +44,8 @@ Measurement NonlinearMeasurementModel::generateNoisyMeasurement(const State&& st
     assert (v.size() == _NM );
 
     for (int i=0;i < v.size(); ++i){
-        std::normal_distribution<double> dist(0, 0.01*R(i,i));
-        v(i) = v(i) + dist(eng);
+        std::normal_distribution<double> dist(v(i), R(i,i));
+        v(i) =  std::move(dist(eng) );
     }
 
     return {st.t(),v,R};
@@ -61,7 +61,7 @@ H(1,2) = -2/lambda[(vz-vz_own)/d-(vz-vz_own)*(z-z_own)^2/d^3]
 H(1,3) = -2/lambda[(x-x_own)/d]
 H(1,4) = -2/lambda[(y-y_own)/d]
 H(1,5) = -2/lambda[(z-z_own)/d]
-
+For simplicity, we will drop the factor -2/lambda (lambda is the radar wavelength)
 */
 Eigen::MatrixXf NonlinearMeasurementModel::Jacobian(const State& st){
     Eigen::VectorXf s = st.x();
@@ -72,19 +72,16 @@ Eigen::MatrixXf NonlinearMeasurementModel::Jacobian(const State& st){
 // #endif
     Eigen::RowVectorXf x(_N_STATES),v(_N_STATES);
     x = s.head(_N_STATES), v = s.tail(_N_STATES);
-    Eigen::MatrixXf J(2,s.size());
+    Eigen::MatrixXf J(_NM,s.size());
     //Distance measure
     double d = x.norm();
-    //Doppler frequency
-    double fd = -2/Radar::_lambda*(x.dot(v))/d;
-    J.row(0) << x/d, Eigen::RowVectorXf::Zero(_N_STATES);
-    double K = -2/Radar::_lambda;
+    J.row(0) << x/d, Eigen::RowVectorXf::Zero(_N_STATES);    
     for(int i=0;i<_N_STATES;++i){
-        J(1,i) =  K*(  (v(i)/d) -  (v(i)*pow(x(i),2)/pow(d,3))  );
+        J(1,i) =  (  (v(i)/d) -  (v(i)*pow(x(i),2)/pow(d,3))  );
     }
 
     for(int i=0;i<_N_STATES;++i){
-        J(1,i+3) =  K* (x(i)/d) ;
+        J(1,i+3) =  (x(i)/d) ;
     }
 
 

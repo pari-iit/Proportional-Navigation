@@ -6,7 +6,7 @@
 #include <unordered_set>
 #include <queue>
 #include <random>
-
+#define _USE_KF 1
 
 static std::vector<std::string> tokenizer(const std::string& s, const char& delimiter = ' '){
   std::istringstream str_tok(s);
@@ -242,18 +242,19 @@ void SimManager::writeFile(const std::string& ofile, const std::vector<State>& s
  std::unordered_map<int,int> SimManager::mapTargetToInterceptor(){
     std::unordered_map<int,int> t_to_i;
 
+    assert(_ics.size() == _iloc.size());
+    std::unordered_set<int> assigned;
      for (int i=0;i<_ics.size(); ++i){
-         int minidx = 0;
-         std::unordered_set<int> assigned;
-         double dist = __DBL_MAX__;
+         int minidx = 0;         
+         double mindist = __DBL_MAX__;
          for(int j=0;j<_iloc.size(); ++j){
              if (assigned.find(j) != assigned.end() ) continue;
              int d = _ics[i].getDistance(_iloc[j]);
-             if( dist < d){
-                 dist = d;
+             if( mindist > d){
+                 mindist = d;
                  minidx = j;
-             }
-         }
+             }            
+         }         
          t_to_i[i] = minidx;
          assigned.insert(minidx);
      }
@@ -269,55 +270,53 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
     // use relative measurment to get control at t_k
     // move interceptor t->t_k+1;
     //go to step 1;
-    //repeat until distance minimized. 
-    std::unique_lock<std::mutex> ulock(_mut);
+    //repeat until distance minimized.     
     double dist = __DBL_MAX__;
     State t_st = std::move(_ics[t_id]);//actual target state
     std::vector<Control> ut = std::move(_u[t_id]); //actual target control
 
     //Move the initial point randomly
     std::random_device rd;
-    std::mt19937 eng(rd());
-    
+    std::mt19937 eng(rd());    
     Eigen::VectorXf ex =t_st.x();
+    Eigen::MatrixXf eP =t_st.P();
     for (int i=0; i < ex.size(); ++i){
-        std::normal_distribution<double> pdf(0, 0.01*fabs(ex(i)));
+        std::normal_distribution<double> pdf(0,0.01*eP(i,i) );
         ex(i) = ex(i) + pdf(eng);
-    }
-    
-    State et_st(t_st.t(),ex,t_st.P()); // estimate carried on by the onboard seeker.
-
+    }        
+    State et_st(t_st.t(),ex,eP); // estimate carried on by the onboard seeker.
     //interceptor state and controls
-    State i_st = std::move(_iloc[i_id]);    
-    Control ui = std::move(_iu[i_id]);
 
+    State i_st = std::move(_iloc[i_id]);    
+    Control ui = std::move(_iu[i_id]);    
     std::vector<State> i_st_seq;i_st_seq.push_back(i_st);
     
-    std::queue<double> disthist;
+    std::vector<double> disthist;
     while(dist > 1e-5 && t_st.t() <_tf[t_id]){
         //Actual target simulation
+        
         _sim->SimStep(t_st,ut);
 
         //Generation of radar measurment;
-        State relst(t_st.t(),t_st.x()-i_st.x(),t_st.P()+i_st.P());
+        // std::cout << t_st.P().rows() <<" " << i_st.P().rows() << " ,<-row, col->"
+        //           << t_st.P().cols() <<" " << i_st.P().cols() 
+        //           <<std::endl; 
+        
+        State relst(t_st.t(),t_st.x()-i_st.x(),t_st.P()+i_st.P());        
+
         Measurement m = _m->generateNoisyMeasurement(std::move(relst),_R);
 
         //EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE ONBOARD SEEKER.
-        std::cout << "target estimate = " <<et_st.x() << std::endl;
+        //Kalman filter to estimate the target. Should be tuned separately different targets.
+        //set _USE_KF to zero if you want to use direct measurements. 
+#if (_USE_KF)        
         //Estimate postion of the target
         _f->update(et_st,m,i_st,_dt);
-
+        // get relative state of the target with respect to the interceptor
+        relst = State(et_st.t(),et_st.x()-i_st.x(),et_st.P()+i_st.P());
+#endif
         
-
-        // std::cout << (et_st.x()-t_st.x() ).norm() << std::endl; 
-        
-
-        //get relative state of the target with respect to the interceptor
-        relst = State(t_st.t(),et_st.x()-i_st.x(),et_st.P()+i_st.P());
-
-        std::cout <<"Rel state = " << relst.x() << std::endl;
         //generate control
-
         _c->generateControl({relst});        
 
         // std::cout << "Control = " << _c->getControl()[0].control() << std::endl;
@@ -328,21 +327,34 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
         i_st_seq.push_back(i_st);
         dist = i_st.getDistance(t_st);
 
-        if (disthist.size() < 5){
-            disthist.push(dist);
+
+        if (disthist.size() < 10){
+            disthist.push_back(dist);
         }
         else{
-            disthist.pop();
-            disthist.push(dist);
+            
+            if (std::all_of(disthist.begin(),disthist.end(),[dist](const double& d){
+                return (d <= dist);
+            })){
+                break;
+            }
+            disthist.erase(disthist.begin());
+            disthist.push_back(dist);
         }
-        if (!disthist.empty())
 
-        
-        printf("time = %f, dist = %f\n",i_st.t(),dist);        
-        // getchar();
+        // Eigen::VectorXf diffst = t_st.x()-et_st.x();
+        // std::cout << "Target at = " <<t_st.x() << std::endl;
+        // std::cout << "Estimated target at = " <<et_st.x() << std::endl;
+        // std::cout << "difference = "<< diffst << std::endl;
+        // std::cout <<"error in pos = " << ( (diffst).head(_N_STATES) ).norm() << 
+        // ", error in vel = " << ( (diffst).tail(_N_STATES) ).norm() << std::endl;
+        // std::cout << "Interceptor at = " << i_st.x() << std::endl;
+        // printf("time = %f, dist = %f\n",i_st.t(),dist);                
         
 
     }
+    printf("time = %f, dist = %f\n",i_st.t(),dist);                
+    
     
     return i_st_seq;
      
@@ -374,7 +386,8 @@ void SimManager::runSimulation(const std::string& resDir){
     std::unordered_map<int,int> t_to_i = mapTargetToInterceptor();
     std::vector<std::future< std::vector<State> > > futures;
     for (int i = 0;i< _ics.size(); ++i){
-        int targ= i; int icp = t_to_i[i];
+        int targ= i; int icp = t_to_i[i];        
+        
         futures.emplace_back( std::async( std::launch::async,&SimManager::simulateProNav,this,std::move(targ),std::move(icp) ) );        
     }
     std::vector<std::vector<State> > simres;
