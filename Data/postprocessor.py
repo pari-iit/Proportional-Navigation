@@ -52,9 +52,63 @@ def plotTargetPaths(dirname = '../Data/',ns = 6):
     plt.show()
 
 def readInputFile(dirname = '../Data/',ns = 6):
+    TargTrajs = []
+    IntTrajs = []
+    for file in glob.glob(dirname+'./res_[0-9].txt'):
+        fid  = open(os.path.join(dirname,file),"r")
+        A = fid.readlines()
+        fid.close()
+
+        startpt = 0
+        T = []; X = [];P = []        
+        for i in range(len(A)):
+            A[i] = A[i].split(',')
+            if len(A[i]) < 1+ ns +ns*ns:
+                startpt = i
+                break
+            t = np.double(A[i][0])            
+            x = []
+            for j in range(ns):
+                x.append(np.double(A[i][j+1]) )
+            p = []
+            for j in range(ns*ns):
+                p.append(np.double(A[i][j+1+ns]))
+            x = np.array(x); p = np.array(p)
+            p = np.reshape(p, (ns,ns))
+            
+            T.append(t); 
+            X.append(x)
+            P.append(p)
+        T = np.array(T); X = np.array(X)
+        traj = Traj(T,X,P)
+        TargTrajs.append(traj)
+        
+        T = []; X = [];P = []
+        for i in range(startpt+1,len(A)):            
+            A[i] = A[i].split(',')     
+            if len(A[i]) < 1+ ns +ns*ns:
+                continue
+            t = np.double(A[i][0])            
+            x = []
+            for j in range(ns):
+                x.append(np.double(A[i][j+1]) )
+            p = []
+            for j in range(ns*ns):
+                p.append(np.double(A[i][j+1+ns]))
+            x = np.array(x); p = np.array(p)
+            p = np.reshape(p, (ns,ns))
+            
+            T.append(t); 
+            X.append(x)
+            P.append(p)
+        T = np.array(T); X = np.array(X)
+        traj = Traj(T,X,P)
+        IntTrajs.append(traj)
+    return TargTrajs,IntTrajs
+    
 
 if __name__ == '__main__':
-    plotTargetPaths()
+    TargTrajs,IntTrajs = readInputFile();
     
     
 
