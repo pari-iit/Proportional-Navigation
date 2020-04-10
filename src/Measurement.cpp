@@ -21,11 +21,6 @@ For simplicity, we will drop the factor 2/lambda (lambda is the radar wavelength
 */
 Eigen::VectorXf NonlinearMeasurementModel::estimateMeasurement(const State& st){
     Eigen::VectorXf s = st.x();
-// #if _N_STATES == 3
-//     Eigen::Vector3f x,v; 
-// #elif _N_STATES == 2
-//     Eigen::Vector2f x,v;
-// #endif
     Eigen::RowVectorXf x(_N_STATES),v(_N_STATES);
     x = s.head(_N_STATES), v = s.tail(_N_STATES);
     //Distance measure
@@ -65,11 +60,6 @@ For simplicity, we will drop the factor -2/lambda (lambda is the radar wavelengt
 */
 Eigen::MatrixXf NonlinearMeasurementModel::Jacobian(const State& st){
     Eigen::VectorXf s = st.x();
-// #if _N_STATES == 3
-//     Eigen::RowVector3f x,v;
-// #elif _N_STATES == 2
-//     Eigen::RowVector2f x,v;
-// #endif
     Eigen::RowVectorXf x(_N_STATES),v(_N_STATES);
     x = s.head(_N_STATES), v = s.tail(_N_STATES);
     Eigen::MatrixXf J(_NM,s.size());

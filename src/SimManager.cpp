@@ -208,32 +208,42 @@ void SimManager::readFile(const std::string& ifile){
     }
 }
 
-void SimManager::writeFile(const std::string& ofile, const std::vector<State>& st){
+void SimManager::writeStates(std::ofstream& filestream, const std::vector<State>& st){
+    for(int i=0;i<st.size();++i){
+        Eigen::VectorXf x = st.at(i).x();
+        Eigen::MatrixXf P = st.at(i).P();
+        filestream << st.at(i).t();
+        filestream << ", ";
+        for(int j=0;j< x.size(); ++j){
+            filestream << x(j);
+            filestream << ",";
+        }
+        filestream <<" ";
+        for(int j=0;j< P.rows(); ++j){
+            for(int k=0;k < P.cols();++k){
+                filestream << P(j,k);
+                if (j < P.rows()-1 || k <P.cols()-1){
+                    filestream << ",";
+                }
+                    
+            }
+        }
+        filestream <<"\n";
+    }
+}
+
+
+void SimManager::writeFile(const std::string& ofile, const Results& res){
     
+    std::vector<State> ist = res.i_seq;
+    std::vector<State> tst = res.t_seq;
+
     std::ofstream filestream(ofile);
     std::unique_lock<std::mutex> lck(_mut);
     if(filestream.is_open()){
-        for(int i=0;i<st.size();++i){
-            Eigen::VectorXf x = st.at(i).x();
-            Eigen::MatrixXf P = st.at(i).P();
-            filestream << st.at(i).t();
-            filestream << ", ";
-            for(int j=0;j< x.size(); ++j){
-                filestream << x(j);
-                filestream << ",";
-            }
-            filestream <<" ";
-            for(int j=0;j< P.rows(); ++j){
-                for(int k=0;k < P.cols();++k){
-                    filestream << P(j,k);
-                    if (j < P.rows()-1 || k <P.cols()-1){
-                        filestream << ",";
-                    }
-                    
-                }
-            }
-            filestream <<"\n";
-        }
+        writeStates(filestream,tst);
+        filestream << "\n\n";
+        writeStates(filestream,ist);
         filestream.close();
     }
 }
@@ -260,7 +270,7 @@ void SimManager::writeFile(const std::string& ofile, const std::vector<State>& s
     return t_to_i;
  }
 
-std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id){
+Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
     //sim target one step t_k->t_k+1;
     //generate measurement  at t_k+1
     //add noise to measurement at t_k+1;
@@ -274,6 +284,7 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
     double dist = __DBL_MAX__;
     State t_st = std::move(_ics[t_id]);//actual target state
     std::vector<Control> ut = std::move(_u[t_id]); //actual target control
+    std::vector<State> t_st_seq;t_st_seq.push_back(t_st);
 
 #if _USE_KF
     //Move the initial point randomly
@@ -293,16 +304,16 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
 
     State i_st = std::move(_iloc[i_id]);    
     Control ui = std::move(_iu[i_id]);    
-    std::vector<State> i_st_seq;i_st_seq.push_back(i_st);
+    std::vector<State> i_st_seq;
+    i_st_seq.push_back(i_st);
     
     std::vector<double> disthist;
     while(dist > 1e-5 && t_st.t() <_tf[t_id]){
-        //Actual target simulation
-        // ulock.unlock();
+        //Actual target simulation        
         _sim->SimStep(t_st,ut);
+        t_st_seq.push_back(t_st);
 
         //Generation of radar measurment;
-        // ulock.lock();
         State relst(t_st.t(),t_st.x()-i_st.x(),t_st.P()+i_st.P());        
 
 
@@ -313,25 +324,21 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
 
         //EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE ONBOARD SEEKER.
         //Kalman filter to estimate the target. Should be tuned separately different targets.
-        //set _USE_KF to zero if you want to use direct measurements. 
-        // ulock.unlock();
+        //set _USE_KF to zero if you want to use direct measurements.         
         //Estimate postion of the target
         _f->update(et_st,m,i_st,_dt);
-        // get relative state of the target with respect to the interceptor
-        // ulock.lock();
+        // get relative state of the target with respect to the interceptor        
         relst = State(et_st.t(),et_st.x()-i_st.x(),et_st.P()+i_st.P());
-#endif
-        
-        // ulock.unlock();
+#endif        
         //generate control
         _c->generateControl({relst});        
 
-        // std::cout << "Control = " << _c->getControl()[0].control() << std::endl;
-        //Apply control to the interceptor
+      
+        //Apply control to the interceptor to move it
         _sim->SimStep(i_st,_c->getControl());
         
+        //Recording and termination criteria checking 
         //Save state sequence
-        // ulock.lock();
         i_st_seq.push_back(i_st);
         dist = i_st.getDistance(t_st);
 
@@ -350,53 +357,34 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
             disthist.erase(disthist.begin());
             disthist.push_back(dist);
         }
+        std::cout << "Thread id = " << (std::this_thread::get_id()) 
+                  << " time = " << t_st.t() << " dist = " << dist << std::endl;
     }
     std::cout << "Thread id = " << (std::this_thread::get_id())
               << ". Time = " << i_st.t()
               << ". Dist = " << dist << std::endl;                
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
-    
-    return i_st_seq;
+
+
+    return {t_st_seq,i_st_seq};
      
 }
 
-void SimManager::generateMeasurement(const std::string measDir){
-    
-    std::vector<std::future< std::vector<State> > > futures;
-    for (int i = 0;i< _ics.size(); ++i){
-        State s = _ics[i];
-        double ti = s.t(),tf = _tf[i];
-        
-        futures.emplace_back( std::async( std::launch::async,&Simulator::SimulateControl,_sim,std::move(s),std::move(ti), std::move(tf), std::move(_u[i]) ) );        
-    }
-    std::vector<std::vector<State> > simres;
-    std::for_each(futures.begin(), futures.end(), [&simres](std::future<std::vector<State> >& fut){
-        simres.emplace_back(fut.get());
-    });
-
-    for(int i =0;i<simres.size(); ++i){
-        writeFile(measDir + "/" + std::to_string(i) + ".txt",simres.at(i) );        
-
-    }
-}
-
-
-
 void SimManager::runSimulation(const std::string& resDir){
     std::unordered_map<int,int> t_to_i = mapTargetToInterceptor();
-    std::vector<std::future< std::vector<State> > > futures;
+    std::vector<std::future< Results > > futures;
     for (int i = 0;i< _ics.size(); ++i){
         int targ= i; int icp = t_to_i[i];        
         
         futures.emplace_back( std::async( std::launch::async,&SimManager::simulateProNav,this,std::move(targ),std::move(icp) ) );        
     }
-    std::vector<std::vector<State> > simres;
-    std::for_each(futures.begin(), futures.end(), [&simres](std::future<std::vector<State> >& fut){
+    std::vector<Results> simres;
+    std::for_each(futures.begin(), futures.end(), [&simres](std::future<Results >& fut){
         simres.emplace_back(fut.get());
     });
 
     for(int i =0;i<simres.size(); ++i){
-        writeFile(resDir + "/interp_" + std::to_string(i) + ".txt",simres.at(i) );        
+        writeFile(resDir + "/res_" + std::to_string(i) + ".txt",simres.at(i) );        
 
     }
 }

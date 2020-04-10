@@ -8,7 +8,7 @@
 					"build" : ".",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.7"
+						"string" : "3.11.3"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -18,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "simulator::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-simulator-Debug-9d8ab2f6b4b6b3fc6b55.json",
+					"jsonFile" : "target-simulator-7b35f5f6549b96bbb439.json",
 					"name" : "simulator",
 					"projectIndex" : 0
 				}

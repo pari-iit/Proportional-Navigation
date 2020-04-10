@@ -51,13 +51,13 @@ const std::vector<Control>&& U){
         assert( U.size() > 0);
     }
     catch(std::exception& e){
-        printf("Input vector empty. Using autonomous system.\n");
+        printf("Input vector empty. Using non input system.\n");
         double cpyti = ti,cpytf = tf;
         return Simulate(std::move(st),std::move(cpyti),std::move(cpytf));
     }
 
     try{
-        assert( fabs(st.t() - ti ) <1e-5);
+        assert( fabs(st.t() - ti ) <1.0e-5);
     }
     catch (std::exception& e){
         throw("initial state and starting time do not match. Assuming initial starting time.\n");

@@ -11,7 +11,13 @@
 #include "Measurement.h"
 #include "Simulator.h"
 
+struct Results{
+  std::vector<State> t_seq;
+  std::vector<State> i_seq;
+};
+
 class SimManager{
+  //thread handler
   std::mutex _mut;
 
   //Target trajectory
@@ -22,9 +28,6 @@ class SimManager{
   //Interceptor trajectory
   std::vector<State> _iloc;
   std::vector<Control>  _iu;
-
-  //Interceptor Trajectory history
-  std::vector<std::vector<State> > _itraj;
 
   //Dynamics
   Eigen::MatrixXf _F;
@@ -57,17 +60,16 @@ class SimManager{
   State readState(const std::vector<std::string>& tokens);
   std::vector<Control> readControlSequence(const std::vector<std::string>& tokens);
   void readFile(const std::string& ifile);
-  void writeFile(const std::string& ofile, const std::vector<State>& st);
+  void writeStates(std::ofstream& fstream, const std::vector<State>& st);
+  void writeFile(const std::string& ofile, const Results& st);
 
   //Simulator helpers
   std::unordered_map<int,int> mapTargetToInterceptor();
-  std::vector<State> simulateProNav(const int&& t_id, const int&& i_id);
+  Results simulateProNav(const int&& t_id, const int&& i_id);
   
 public:
   SimManager(const std::string& ifile);
   void runSimulation(const std::string& resDir);
-  void generateMeasurement(const std::string measDir);
-
 };
 
 
