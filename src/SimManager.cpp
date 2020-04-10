@@ -4,7 +4,6 @@
 #include <cassert>
 #include <future>
 #include <unordered_set>
-#include <queue>
 #include <random>
 #define _USE_KF 1
 
@@ -271,11 +270,14 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
     // move interceptor t->t_k+1;
     //go to step 1;
     //repeat until distance minimized.     
+    
     double dist = __DBL_MAX__;
     State t_st = std::move(_ics[t_id]);//actual target state
     std::vector<Control> ut = std::move(_u[t_id]); //actual target control
 
+#if _USE_KF
     //Move the initial point randomly
+    std::unique_lock<std::mutex> ulock(_mut);
     std::random_device rd;
     std::mt19937 eng(rd());    
     Eigen::VectorXf ex =t_st.x();
@@ -284,8 +286,10 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
         std::normal_distribution<double> pdf(0,0.01*eP(i,i) );
         ex(i) = ex(i) + pdf(eng);
     }        
+    ulock.unlock();
     State et_st(t_st.t(),ex,eP); // estimate carried on by the onboard seeker.
     //interceptor state and controls
+#endif
 
     State i_st = std::move(_iloc[i_id]);    
     Control ui = std::move(_iu[i_id]);    
@@ -294,28 +298,31 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
     std::vector<double> disthist;
     while(dist > 1e-5 && t_st.t() <_tf[t_id]){
         //Actual target simulation
-        
+        // ulock.unlock();
         _sim->SimStep(t_st,ut);
 
         //Generation of radar measurment;
-        // std::cout << t_st.P().rows() <<" " << i_st.P().rows() << " ,<-row, col->"
-        //           << t_st.P().cols() <<" " << i_st.P().cols() 
-        //           <<std::endl; 
-        
+        // ulock.lock();
         State relst(t_st.t(),t_st.x()-i_st.x(),t_st.P()+i_st.P());        
 
+
+#if (_USE_KF)        
+        ulock.lock();
         Measurement m = _m->generateNoisyMeasurement(std::move(relst),_R);
+        ulock.unlock();
 
         //EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE ONBOARD SEEKER.
         //Kalman filter to estimate the target. Should be tuned separately different targets.
         //set _USE_KF to zero if you want to use direct measurements. 
-#if (_USE_KF)        
+        // ulock.unlock();
         //Estimate postion of the target
         _f->update(et_st,m,i_st,_dt);
         // get relative state of the target with respect to the interceptor
+        // ulock.lock();
         relst = State(et_st.t(),et_st.x()-i_st.x(),et_st.P()+i_st.P());
 #endif
         
+        // ulock.unlock();
         //generate control
         _c->generateControl({relst});        
 
@@ -324,6 +331,7 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
         _sim->SimStep(i_st,_c->getControl());
         
         //Save state sequence
+        // ulock.lock();
         i_st_seq.push_back(i_st);
         dist = i_st.getDistance(t_st);
 
@@ -336,25 +344,17 @@ std::vector<State> SimManager::simulateProNav(const int&& t_id, const int&& i_id
             if (std::all_of(disthist.begin(),disthist.end(),[dist](const double& d){
                 return (d <= dist);
             })){
+                // ulock.unlock();
                 break;
             }
             disthist.erase(disthist.begin());
             disthist.push_back(dist);
         }
-
-        // Eigen::VectorXf diffst = t_st.x()-et_st.x();
-        // std::cout << "Target at = " <<t_st.x() << std::endl;
-        // std::cout << "Estimated target at = " <<et_st.x() << std::endl;
-        // std::cout << "difference = "<< diffst << std::endl;
-        // std::cout <<"error in pos = " << ( (diffst).head(_N_STATES) ).norm() << 
-        // ", error in vel = " << ( (diffst).tail(_N_STATES) ).norm() << std::endl;
-        // std::cout << "Interceptor at = " << i_st.x() << std::endl;
-        // printf("time = %f, dist = %f\n",i_st.t(),dist);                
-        
-
     }
-    printf("time = %f, dist = %f\n",i_st.t(),dist);                
-    
+    std::cout << "Thread id = " << (std::this_thread::get_id())
+              << ". Time = " << i_st.t()
+              << ". Dist = " << dist << std::endl;                
+    std::this_thread::sleep_for(std::chrono::milliseconds(1));
     
     return i_st_seq;
      
