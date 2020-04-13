@@ -43,6 +43,10 @@ class SimManager{
   //Simulator 
   //For simplicity filter and simulator run at the same speed
   double _dt;
+
+  //Tolerances and Stopping criteria
+  double _tol;
+  static int constexpr _dist_buffer_check{30};
   
 
   

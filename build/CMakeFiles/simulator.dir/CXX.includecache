@@ -65,6 +65,8 @@ unordered_set
 -
 random
 -
+cmath
+-
 
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.h
 vector
@@ -99,4 +101,10 @@ string
 -
 Dynamics.h
 /home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/Dynamics.h
+
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/main.cpp
+iostream
+-
+SimManager.h
+/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/src/SimManager.h
 

@@ -5,6 +5,7 @@
 #include <future>
 #include <unordered_set>
 #include <random>
+#include <cmath>
 #define _USE_KF 1
 
 static std::vector<std::string> tokenizer(const std::string& s, const char& delimiter = ' '){
@@ -204,6 +205,13 @@ void SimManager::readFile(const std::string& ifile){
                 _dt = std::stof(tokens[0]);
             }
 
+            //Get tolerance criterion
+
+            if(count == 6){
+                assert(tokens.size() == 1);
+                _tol = std::stof(tokens[0]);
+            }
+
         }
     }
 }
@@ -308,7 +316,7 @@ Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
     i_st_seq.push_back(i_st);
     
     std::vector<double> disthist;
-    while(dist > 1e-5 && t_st.t() <_tf[t_id]){
+    while(dist > _tol && t_st.t() <_tf[t_id]){
         //Actual target simulation        
         _sim->SimStep(t_st,ut);
         t_st_seq.push_back(t_st);
@@ -343,7 +351,7 @@ Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
         dist = i_st.getDistance(t_st);
 
 
-        if (disthist.size() < 10){
+        if (disthist.size() < SimManager::_dist_buffer_check){
             disthist.push_back(dist);
         }
         else{
@@ -357,8 +365,11 @@ Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
             disthist.erase(disthist.begin());
             disthist.push_back(dist);
         }
-        std::cout << "Thread id = " << (std::this_thread::get_id()) 
-                  << " time = " << t_st.t() << " dist = " << dist << std::endl;
+
+        if ( fabs(std::nearbyint(t_st.t()) - t_st.t()) < 1.0e-5 ){
+            std::cout << "Thread id = " << (std::this_thread::get_id()) 
+                      << " time = " << t_st.t() << " dist = " << dist << std::endl;            
+        }
     }
     std::cout << "Thread id = " << (std::this_thread::get_id())
               << ". Time = " << i_st.t()
