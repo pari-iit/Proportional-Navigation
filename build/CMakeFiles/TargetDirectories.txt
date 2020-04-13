@@ -1,3 +1,0 @@
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles/rebuild_cache.dir
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles/simulator.dir
-/home/pdutta/Documents/CPPTutorials/UdacityCPPNanodegree/Proportional-Navigation/build/CMakeFiles/edit_cache.dir
