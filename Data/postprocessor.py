@@ -69,7 +69,7 @@ def readInputFile(dirname = '../Data/',ns = 6):
 
 
     
-def create_movie(Trajs, ns = 6,saveVideo = True):    
+def create_movie(Trajs, ns = 6,saveVideo = False):    
     def processXdata(Traj):                                    
         onlyx = [x for x in Traj._x]
         onlyx = np.squeeze(onlyx)
