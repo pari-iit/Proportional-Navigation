@@ -1,18 +1,35 @@
 #include <iostream>
 #include "SimManager.h"
 
+
+
+void printUsage(const std::string& fname){
+    std::cout << "Usage ./simulator <inputfile> <dof>\n"
+            <<" Using dof = 3, inputfile = " << fname << std::endl;
+    
+}
+
 int main(int argc, char** argv) {
-    std::string in_file = "../Data/inputfile.txt";
-    if(argc <=1){
-        printf("No arguments.Using default file\n");
+    std::string in_file = "../Data/inputfile_3d.txt";
+    int dof = 3;
+    if(argc < 2){
+        printUsage(in_file);
     }
-    else{        
-        in_file = std::string(argv[0]);
+    else if (argc == 2){              
+        in_file = std::string(argv[1]);                
+        printUsage(in_file);
+    }
+    else{
+        in_file = std::string(argv[1]);        
+        dof = std::atoi(argv[2]);
     }
     
     std::unique_ptr<SimManager> sim(new SimManager(in_file) );
     sim->runSimulation("../Data");
-    std::cout << "Hello World!" << "\n";
+    std::cout << "Simulation completed.\n" 
+    << "Results in ../Data. \n"
+    <<"To view results, please change directory to ../Data and run python postprocessor.py.\n" ;
+
 
     //First simulate the robot and store it
 

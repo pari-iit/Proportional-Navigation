@@ -80,7 +80,7 @@ std::vector<Control> SimManager::readControlSequence(const std::vector<std::stri
 
             v[ccnt++] = std::stof(tokens[i]);
         }
-        if (ccnt == 3){
+        if (ccnt == _N_CONTROL){
             Control u(t,v);
             uo.emplace_back(u);
             ccnt = 0;
@@ -326,9 +326,7 @@ Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
 
 
 #if (_USE_KF)        
-        ulock.lock();
-        Measurement m = _m->generateNoisyMeasurement(std::move(relst),_R);
-        ulock.unlock();
+        Measurement m = _m->generateNoisyMeasurement(std::move(relst),_R);        
 
         //EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE ONBOARD SEEKER.
         //Kalman filter to estimate the target. Should be tuned separately different targets.
@@ -339,9 +337,10 @@ Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
         relst = State(et_st.t(),et_st.x()-i_st.x(),et_st.P()+i_st.P());
 #endif        
         //generate control
+        ulock.lock();
         _c->generateControl({relst});        
-
-      
+        ulock.unlock();
+        
         //Apply control to the interceptor to move it
         _sim->SimStep(i_st,_c->getControl());
         

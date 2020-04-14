@@ -71,7 +71,7 @@ Eigen::MatrixXf NonlinearMeasurementModel::Jacobian(const State& st){
     }
 
     for(int i=0;i<_N_STATES;++i){
-        J(1,i+3) =  (x(i)/d) ;
+        J(1,i+_N_STATES) =  (x(i)/d) ;
     }
 
 

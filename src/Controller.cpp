@@ -59,14 +59,18 @@ void ProNav::generateControl(const std::vector<State>& st){
         Eigen::Vector3f r = x.head(_N_STATES), v = x.tail(_N_STATES);
         Eigen::Vector3f omega = ( r.cross(v))/( r.dot(r) );        
 #elif _N_STATES == 2
-        Eigen::Vector2f r = x.head(_N_STATES), v = x.tail(_N_STATES);
-        Eigen::Vector2f omega = ( r.cross(v))/( r.dot(r) );
+        Eigen::Vector3f r,v; 
+        r << x.head(_N_STATES),Eigen::VectorXf::Zero(1);
+        v << x.tail(_N_STATES),Eigen::VectorXf::Zero(1);
+        Eigen::Vector3f omega = ( r.cross(v))/( r.dot(r) );
 #endif    
         double mult = (-1.0*_N* (v.norm())/(r.norm()) );
         Eigen::VectorXf a  = r.cross(omega);
-        a = mult* a;
-        Control u(s.t(),a);
-        _U_t.emplace_back(u);
+        a = mult* a;        
+
+        Control u(s.t(),a.head(_N_CONTROL));    
+
+        _U_t.emplace_back(u);    
     }
     
 }
