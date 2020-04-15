@@ -1,17 +1,17 @@
 
-#CPPND: Proportional Navigation Repository 
+# CPPND: Proportional Navigation Repository 
 
 This project creates a simulator for **proportional navigation (PN)** guidance for aerial, terrestrial and naval vehicles. Proportional Navigation has been widely used for missile interception. It was widely used during Iraq war for pinpoint target homing. More mathematical details has been omitted and interested readers are directed to the [Wikipedia page](https://en.wikipedia.org/wiki/Proportional_navigation).
 
-In this project I have simulated multiple targets (not necessarily missiles) to be intercepted by multiple interceptors. The targets and interceptors are simulated concurrently. Number of targets are assumed to be the same as number of missiles. All code have been developed from scratch from the boilerplate CPPND starter repo. 
+In this project I have simulated multiple targets (not necessarily missiles) to be intercepted by multiple interceptors. The targets and interceptors are simulated concurrently. Number of targets are assumed to be the same as number of missiles. Further, the code works for both 2D and 3D. Hence if you have two robots, you can use this for rendezvous problem. All code have been developed from scratch from the boilerplate CPPND starter repo. 
 
 ## Algorithm followed for simulation.
 1. Number of targets and interceptors ascertained. 
 2. Each interceptor assigned to a target. 
-The following steps are executed in a loop until all the targets are intercepted.
+3. The following steps are executed in a loop until all the targets are intercepted.
   1. Target moves one step.
   2. Interceptor observes the target using a radar.
-  3. Interceptor uses Kalman filter to estimate target states. 
+  3. Interceptor uses Kalman filter or an extended Kalman filter to estimate target states. 
   4. Interceptor generates PN control signal/guidance law from estimated states. 
   5. Interceptor moves one time step using calculated control signal/guidance law. 
 
