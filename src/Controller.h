@@ -72,11 +72,13 @@ public:
 };
 
 class ProNav:public Controller{
+    int const _N_STATE;
+    int const _N_CONTROL;
     double _N;
     std::vector<Control> _U_t;
     std::mutex _mut;
 public:
-    ProNav(const double& N):_N(N),_U_t(std::vector<Control>()){}
+    ProNav(const double& N,const int& ns,const int& nc):_N(N),_N_STATE(ns),_N_CONTROL(nc),_U_t(std::vector<Control>()){}
 
     void generateControl(const std::vector<State>& st);
     std::any getGain() const {return _N;};                

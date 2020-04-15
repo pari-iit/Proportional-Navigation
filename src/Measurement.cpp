@@ -21,8 +21,8 @@ For simplicity, we will drop the factor 2/lambda (lambda is the radar wavelength
 */
 Eigen::VectorXf NonlinearMeasurementModel::estimateMeasurement(const State& st){
     Eigen::VectorXf s = st.x();
-    Eigen::RowVectorXf x(_N_STATES),v(_N_STATES);
-    x = s.head(_N_STATES), v = s.tail(_N_STATES);
+    Eigen::RowVectorXf x(_N_STATE),v(_N_STATE);
+    x = s.head(_N_STATE), v = s.tail(_N_STATE);
     //Distance measure
     double d = x.norm();
     //Doppler frequency
@@ -60,18 +60,18 @@ For simplicity, we will drop the factor -2/lambda (lambda is the radar wavelengt
 */
 Eigen::MatrixXf NonlinearMeasurementModel::Jacobian(const State& st){
     Eigen::VectorXf s = st.x();
-    Eigen::RowVectorXf x(_N_STATES),v(_N_STATES);
-    x = s.head(_N_STATES), v = s.tail(_N_STATES);
+    Eigen::RowVectorXf x(_N_STATE),v(_N_STATE);
+    x = s.head(_N_STATE), v = s.tail(_N_STATE);
     Eigen::MatrixXf J(_NM,s.size());
     //Distance measure
     double d = x.norm();
-    J.row(0) << x/d, Eigen::RowVectorXf::Zero(_N_STATES);    
-    for(int i=0;i<_N_STATES;++i){
+    J.row(0) << x/d, Eigen::RowVectorXf::Zero(_N_STATE);    
+    for(int i=0;i<_N_STATE;++i){
         J(1,i) =  (  (v(i)/d) -  (v(i)*pow(x(i),2)/pow(d,3))  );
     }
 
-    for(int i=0;i<_N_STATES;++i){
-        J(1,i+_N_STATES) =  (x(i)/d) ;
+    for(int i=0;i<_N_STATE;++i){
+        J(1,i+_N_STATE) =  (x(i)/d) ;
     }
 
 

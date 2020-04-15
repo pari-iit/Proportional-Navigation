@@ -1,9 +1,19 @@
-<<<<<<< HEAD
-# CPPND: ROS Simulation in Gazebo Repo 
 
-This repository creates a robotic simulation in Gazebo using ROS. The aim is missile interception guidance using a proportional controller to hit a target. 
+#CPPND: Proportional Navigation Repository 
 
-This space will be filled up as and when the project is developed. 
+This project creates a simulator for **proportional navigation (PN)** guidance for aerial, terrestrial and naval vehicles. Proportional Navigation has been widely used for missile interception. It was widely used during Iraq war for pinpoint target homing. More mathematical details has been omitted and interested readers are directed to the [Wikipedia page](https://en.wikipedia.org/wiki/Proportional_navigation).
+
+In this project I have simulated multiple targets (not necessarily missiles) to be intercepted by multiple interceptors. The targets and interceptors are simulated concurrently. Number of targets are assumed to be the same as number of missiles. All code have been developed from scratch from the boilerplate CPPND starter repo. 
+
+## Algorithm followed for simulation.
+1. Number of targets and interceptors ascertained. 
+2. Each interceptor assigned to a target. 
+The following steps are executed in a loop until all the targets are intercepted.
+  1. Target moves one step.
+  2. Interceptor observes the target using a radar.
+  3. Interceptor uses Kalman filter to estimate target states. 
+  4. Interceptor generates PN control signal/guidance law from estimated states. 
+  5. Interceptor moves one time step using calculated control signal/guidance law. 
 
 
 ## Dependencies for Running Locally
@@ -24,7 +34,5 @@ This space will be filled up as and when the project is developed.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./simulator.
-=======
-# ROS-Simulation-Gazebo
-ROS simulation in Gazebo
->>>>>>> 25cfc9e896228eaea081091282e6abcdf75d393b
+======
+

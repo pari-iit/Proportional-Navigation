@@ -5,9 +5,9 @@
 #include <map>
 #include <eigen3/Eigen/Dense>
 #include "Controller.h"
-#define _N_STATES 2
-#define NS (2*_N_STATES)
-#define _N_CONTROL 2
+// #define _N_STATES 2
+// #define NS (2*_N_STATES)
+// #define _N_CONTROL 2
 
 class Control;
 class State{
@@ -16,7 +16,7 @@ class State{
     Eigen::MatrixXf _P;//covariance
 
 public:
-    State():_t(0.0),_x(Eigen::VectorXf::Zero(_N_STATES) ),_P(Eigen::MatrixXf::Identity(_N_STATES,_N_STATES) ){}
+    // State():_t(0.0),_x(Eigen::VectorXf::Zero(1) ),_P(Eigen::MatrixXf::Identity(1,1) ){}
     State(const double& t,const Eigen::VectorXf& x, const Eigen::MatrixXf& P):_t(t),_x(x),_P(P){}
     ~State(){
         // printf("State at %f destroyed.\n",_t);
@@ -49,7 +49,9 @@ public:
 
 
     double getDistance(const State& that){        
-        return (_x.head(_N_STATES)-that.x().head(_N_STATES) ).norm();
+        assert(_x.size() == that.x().size());
+        int _N_STATE = _x.size()/2;
+        return (_x.head(_N_STATE)-that.x().head(_N_STATE) ).norm();
     }
 
 };
@@ -64,12 +66,15 @@ public:
 
 //Any generalized linear dynamics. Can be used for Kalman filter.
 class LinearDynamics:public Dynamics{
+    int const _N_STATE;
+    int const _N_CONTROL;
     Eigen::MatrixXf const  _F;
     Eigen::MatrixXf _Q;
-    Eigen::MatrixXf const _B;    
+    Eigen::MatrixXf const _B; 
+
 public:
-    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q):_F(F),_Q(Q),_B(Eigen::MatrixXf::Zero(NS,_N_CONTROL)){}
-    LinearDynamics(const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q, const Eigen::MatrixXf& B):_F(F),_Q(Q), _B(B){}    
+    LinearDynamics(const int& ns,const int& nc, const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q):_N_STATE(ns),_N_CONTROL(nc),_F(F),_Q(Q),_B(Eigen::MatrixXf::Zero(2*ns,nc)){}
+    LinearDynamics(const int& ns,const int& nc, const Eigen::MatrixXf& F, const Eigen::MatrixXf& Q, const Eigen::MatrixXf& B):_N_STATE(ns),_N_CONTROL(nc),_F(F),_Q(Q), _B(B){}    
     void propagate(State& s, const double& dt);
     void propagate(State& s, const Control& u, const double& dt);    
     Eigen::MatrixXf Q(){return _Q;};

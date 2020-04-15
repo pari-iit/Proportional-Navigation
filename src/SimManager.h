@@ -20,6 +20,12 @@ class SimManager{
   //thread handler
   std::mutex _mut;
 
+  //Num dof of the problem
+  int _dof;
+  int _NS;
+  int _N_STATE;
+  int _N_CONTROL;
+
   //Target trajectory
   std::vector<double> _tf;
   std::vector<State> _ics;
@@ -48,7 +54,6 @@ class SimManager{
   double _tol;
   static int constexpr _dist_buffer_check{30};
   
-
   
 
   //pointers to individual programs

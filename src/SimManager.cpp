@@ -37,25 +37,25 @@ SimManager::SimManager(const std::string& ifile){
 
     readFile(ifile);
     
-    _c = std::make_unique<ProNav>(_N);
-    _m = std::make_unique<NonlinearMeasurementModel>();
-    _f = std::make_unique<KalmanFilter>(std::make_shared<LinearDynamics>(_F,_Q), std::make_unique<NonlinearMeasurementModel>());        
-    _sim = std::make_shared<Simulator>(_dt,std::make_shared<LinearDynamics>(_F,_Q,_B));
+    _c = std::make_unique<ProNav>(_N,_N_STATE,_N_CONTROL);
+    _m = std::make_unique<NonlinearMeasurementModel>(_N_STATE);
+    _f = std::make_unique<KalmanFilter>(std::make_shared<LinearDynamics>(_N_STATE,_N_CONTROL,_F,_Q), std::make_unique<NonlinearMeasurementModel>(_N_STATE));        
+    _sim = std::make_shared<Simulator>(_N_CONTROL,_dt,std::make_shared<LinearDynamics>(_N_STATE,_N_CONTROL,_F,_Q,_B));
 }
 
 State SimManager::readState(const std::vector<std::string>& tokens){
 
     double t = std::stof(tokens[0]);
-    Eigen::VectorXf x(NS);
-    for(int i=1;i< 1+NS;++i){
+    Eigen::VectorXf x(_NS);
+    for(int i=1;i< 1+_NS;++i){
         x(i-1) =  std::stof( tokens[i] );
     }
                 
-    Eigen::MatrixXf P(NS,NS);
-    for(int i=NS+1;i< 1+NS +(NS*NS);++i){
-        int idx =i-(NS+1);
-        int rowv = (int)(idx/NS);
-        int colv = idx - (rowv*NS);
+    Eigen::MatrixXf P(_NS,_NS);
+    for(int i=_NS+1;i< 1+_NS +(_NS*_NS);++i){
+        int idx =i-(_NS+1);
+        int rowv = (int)(idx/_NS);
+        int colv = idx - (rowv*_NS);
                 
         P(rowv,colv)  = std::stof( tokens[i] );
     }
@@ -104,19 +104,29 @@ void SimManager::readFile(const std::string& ifile){
                 count++; 
                 continue;
             }
+
+            //Get num dof of the problem
+            if(count == 0){
+                assert(tokens.size() == 1);
+                _dof = std::stoi(tokens[0]);
+                _NS = 2*_dof;
+                _N_CONTROL = _dof;
+                _N_STATE = _dof;
+            }
+
             //first get the target vehicle initial conditions
-            if (count == 0){
-                assert(tokens.size() >= 2+ NS + NS*NS);                
+            if (count == 1){
+                assert(tokens.size() >= 2+ _NS + _NS*_NS);                
                 _tf.emplace_back(std::stof(tokens[0]));
                 
-                State s = readState(slice(tokens,1,2+ NS + NS*NS));
+                State s = readState(slice(tokens,1,2+ _NS + _NS*_NS));
                 
                 _ics.emplace_back(s);  
 
-                if (tokens.size() > 2+ NS + NS*NS){
-                    int numel = tokens.size() - (2+ NS + NS*NS);
+                if (tokens.size() > 2+ _NS + _NS*_NS){
+                    int numel = tokens.size() - (2+ _NS + _NS*_NS);
                     assert(numel% (_N_CONTROL + 1)  == 0);
-                    int tokcnt = 2+ NS + NS*NS;                    
+                    int tokcnt = 2+ _NS + _NS*_NS;                    
                     std::vector<Control> uo = readControlSequence(slice(tokens,tokcnt,tokens.size()) );                    
                     _u.emplace_back(uo);
                 }
@@ -126,15 +136,15 @@ void SimManager::readFile(const std::string& ifile){
                 
             }
             //Get the initial states for the interceptors.
-            if (count == 1){
-                assert(tokens.size() >= 1+ NS + NS*NS);                
-                State s = readState(slice(tokens,0,1+ NS + NS*NS));                
+            if (count == 2){
+                assert(tokens.size() >= 1+ _NS + _NS*_NS);                
+                State s = readState(slice(tokens,0,1+ _NS + _NS*_NS));                
                 _iloc.emplace_back(s);  
 
-                if (tokens.size() > 1+ NS + NS*NS){
-                    int numel = tokens.size() - (1+ NS + NS*NS);
+                if (tokens.size() > 1+ _NS + _NS*_NS){
+                    int numel = tokens.size() - (1+ _NS + _NS*_NS);
                     assert(numel == (_N_CONTROL + 1) );
-                    int tokcnt = 1+ NS + NS*NS;                    
+                    int tokcnt = 1+ _NS + _NS*_NS;                    
                     std::vector<Control> uo = readControlSequence(slice(tokens,tokcnt,tokens.size()) );                 
                     assert (uo.size() == 1);   
                     assert (s.t() == uo[0].time());
@@ -147,43 +157,43 @@ void SimManager::readFile(const std::string& ifile){
             }
 
             //then get the F, Q and B  of the vehicles. Assume identical robots
-            if(count == 2){
-                assert(tokens.size() >= 2*NS*NS);
-                _F = Eigen::MatrixXf::Identity(NS,NS);
-                _Q = Eigen::MatrixXf::Identity(NS,NS);
-                for(int i=0;i<NS*NS;++i){
-                    int rnum = i/NS;
-                    int cnum = i - (rnum*NS);
+            if(count == 3){
+                assert(tokens.size() >= 2*_NS*_NS);
+                _F = Eigen::MatrixXf::Identity(_NS,_NS);
+                _Q = Eigen::MatrixXf::Identity(_NS,_NS);
+                for(int i=0;i<_NS*_NS;++i){
+                    int rnum = i/_NS;
+                    int cnum = i - (rnum*_NS);
                     _F(rnum,cnum) = std::stof(tokens[i]);
                 }
 
-                for(int i=0;i<NS*NS;++i){
-                    int rnum = i/NS;
-                    int cnum = i - (rnum*NS);
-                    _Q(rnum,cnum) = std::stof(tokens[i+NS*NS]);
+                for(int i=0;i<_NS*_NS;++i){
+                    int rnum = i/_NS;
+                    int cnum = i - (rnum*_NS);
+                    _Q(rnum,cnum) = std::stof(tokens[i+_NS*_NS]);
                 }
-                if (tokens.size() > NS*NS*2){
+                if (tokens.size() > _NS*_NS*2){
 
-                    int numel = tokens.size()-NS*NS*2;
-                    assert (numel = _N_CONTROL*NS);
-                    // int ncols = numel/NS;
+                    int numel = tokens.size()-_NS*_NS*2;
+                    assert (numel = _N_CONTROL*_NS);
+                    // int ncols = numel/_NS;
                     //Proper number of elements required to complete matrix.
-                    // assert(ncols*NS == numel); 
-                    _B = Eigen::MatrixXf::Zero(NS,_N_CONTROL);
+                    // assert(ncols*_NS == numel); 
+                    _B = Eigen::MatrixXf::Zero(_NS,_N_CONTROL);
                     for(int i=0;i<numel;++i){
                         int rnum = i/(_N_CONTROL);
                         int cnum = i - (rnum*_N_CONTROL);
-                        _B(rnum,cnum) = std::stof(tokens[i+NS*NS*2]);
+                        _B(rnum,cnum) = std::stof(tokens[i+_NS*_NS*2]);
                     }
                 }
                 else{
-                    _B = Eigen::MatrixXf::Zero(NS,1);
+                    _B = Eigen::MatrixXf::Zero(_NS,1);
                 }
 
             }
 
             //Get the R Matrix
-            if(count == 3){
+            if(count == 4){
                 assert(tokens.size() == _NM*_NM);
                 _R = Eigen::MatrixXf::Zero(_NM,_NM);
                 for(int i=0;i < tokens.size(); ++i){
@@ -194,20 +204,19 @@ void SimManager::readFile(const std::string& ifile){
             }
 
             //Get the ProNav gain.
-            if(count == 4){
+            if(count == 5){
                 assert(tokens.size() == 1);
                 _N = std::stof(tokens[0]);
             }
 
             //Get the simulation interval.
-            if(count == 5){
+            if(count == 6){
                 assert(tokens.size() == 1);
                 _dt = std::stof(tokens[0]);
             }
 
             //Get tolerance criterion
-
-            if(count == 6){
+            if(count == 7){
                 assert(tokens.size() == 1);
                 _tol = std::stof(tokens[0]);
             }

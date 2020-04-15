@@ -56,7 +56,9 @@ public:
 
 class NonlinearMeasurementModel:public MeasurementModel{
     // Eigen::VectorXf MeasurementFunction(const State& st);   
+    int const _N_STATE;
 public:
+    NonlinearMeasurementModel(const int& ns):_N_STATE(ns){};
     Eigen::VectorXf estimateMeasurement(const State& st);
     Eigen::MatrixXf Jacobian(const State& st);
     Measurement generateNoisyMeasurement(const State&& st,const Eigen::MatrixXf& R);

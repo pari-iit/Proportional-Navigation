@@ -4,24 +4,18 @@
 
 
 void printUsage(const std::string& fname){
-    std::cout << "Usage ./simulator <inputfile> <dof>\n"
-            <<" Using dof = 3, inputfile = " << fname << std::endl;
+    std::cout << "Usage: ./simulator <inputfile>\n"
+            <<" Using inputfile = " << fname << std::endl;
     
 }
 
 int main(int argc, char** argv) {
     std::string in_file = "../Data/inputfile_3d.txt";
-    int dof = 3;
     if(argc < 2){
-        printUsage(in_file);
-    }
-    else if (argc == 2){              
-        in_file = std::string(argv[1]);                
         printUsage(in_file);
     }
     else{
         in_file = std::string(argv[1]);        
-        dof = std::atoi(argv[2]);
     }
     
     std::unique_ptr<SimManager> sim(new SimManager(in_file) );
