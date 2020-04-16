@@ -326,18 +326,22 @@ Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
     
     std::vector<double> disthist;
     while(dist > _tol && t_st.t() <_tf[t_id]){
+
         //Actual target simulation        
         _sim->SimStep(t_st,ut);
         t_st_seq.push_back(t_st);
 
-        //Generation of radar measurment;
+        //Generation of radar measurment
         State relst(t_st.t(),t_st.x()-i_st.x(),t_st.P()+i_st.P());        
-
 
 #if (_USE_KF)        
         Measurement m = _m->generateNoisyMeasurement(std::move(relst),_R);        
 
-        //EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE ONBOARD SEEKER.
+        /* 
+        EVERYTHING HERE ON AFTER IS WHAT GOES ON IN THE INTERCEPTOR
+        POINT TO NOTE IS THAT THE INTERCEPTOR IS AGNOSTIC TO TARGET MOTION. 
+        THE INTERCEPTOR ONLY HAS IDEA OF THE TARGET FROM THE MEASUREMENTS (the line just above the comment section) 
+        */
         //Kalman filter to estimate the target. Should be tuned separately different targets.
         //set _USE_KF to zero if you want to use direct measurements.         
         //Estimate postion of the target
