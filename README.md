@@ -42,7 +42,7 @@ In this project I have simulated multiple targets (not necessarily missiles) to 
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./simulator` _`<inputfile>`_.
-    * Example: `./simulator ../data/inputfile_3d.txt`
+    * Example: `./simulator ../Data/inputfile_3d.txt`
     * **The _`<inputfile>`_ argument is optional.** If not provided it will use the default file which is `inputfile_3d.txt`. Format of the _`<inputfile>`_ described in `Data/README_inp.md`.
 5. Install dependencies for postprocessing: `cd .. && chmod 777 INSTALL.sh && ./INSTALL.sh`
 6. Post processing the output:  `cd Data/ && python3 postprocessor.py <dof>`
