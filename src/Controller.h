@@ -1,3 +1,13 @@
+/*******************************************************************************
+ * Copyright (C) 2020 Parikshit Dutta
+ *
+ * This file is a part of target interception using Proportional Navigation (PN)
+ * Algorithm
+ *
+ * All Rights Reserved.
+ ******************************************************************************/
+
+// Author: Parikshit Dutta
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
