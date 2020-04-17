@@ -111,6 +111,7 @@ def create_movie_3d(Trajs, ns = 6,saveVideo = False):
     fig = plt.figure()
     ax = p3.Axes3D(fig)   
     lines = [ax.plot(dat[0:1,0], dat[0:1,1], dat[0:1,2])[0] for dat in x_list]
+    points = [ax.plot([dat[0,0]], [dat[0,1]], [dat[0,2]],'x')[0] for dat in x_list]
     
     max_len = 0
     for x in x_list:
@@ -125,16 +126,18 @@ def create_movie_3d(Trajs, ns = 6,saveVideo = False):
             max_lim[k] = max(max_lim[k], max(x[:,k]))
             min_lim[k] = min(min_lim[k], min(x[:,k]))
     
-    def update_lines(num, dataLines, lines) :
-        for line, data in zip(lines, dataLines) :
+    def update_lines(num, dataLines, lines, points) :
+        for line, data, pt in zip(lines, dataLines,points) :
             # NOTE: there is no .set_data() for 3 dim data...                                    
             r,_ = np.shape(data)
         
             val = num
             if num > r:
                 val = r
-            line.set_data( np.transpose(data[:val,0:2]) )
-            line.set_3d_properties(np.transpose(data[:num,2]))
+            line.set_data( np.transpose(data[:val,0:2]) )            
+            line.set_3d_properties(np.transpose(data[:val,2]))
+            pt.set_data( np.transpose(data[val,0:2]))
+            pt.set_3d_properties(np.transpose(data[val,2]))
         return lines
     
 
@@ -151,7 +154,7 @@ def create_movie_3d(Trajs, ns = 6,saveVideo = False):
     ax.set_title('Result Animation')
 
     # Creating the Animation object
-    line_ani = animation.FuncAnimation(fig, update_lines, frames = max_len, fargs=(x_list, lines),
+    line_ani = animation.FuncAnimation(fig, update_lines, frames = max_len, fargs=(x_list, lines,points),
                                    interval=1, blit=False)
 
     if saveVideo:
@@ -199,7 +202,7 @@ def create_movie_2d(Trajs, ns = 4,saveVideo = False):
     fig = plt.figure()
     ax = plt.axes()  
     lines = [ax.plot(dat[0:1,0], dat[0:1,1])[0] for dat in x_list]
-    
+    points = [ax.plot([dat[0,0]], [dat[0,1]], 'x')[0] for dat in x_list]  
     max_len = 0
     for x in x_list:
         if np.shape(x)[0] > max_len:
@@ -213,8 +216,8 @@ def create_movie_2d(Trajs, ns = 4,saveVideo = False):
             max_lim[k] = max(max_lim[k], max(x[:,k]))
             min_lim[k] = min(min_lim[k], min(x[:,k]))
     
-    def update_lines(num, dataLines, lines) :
-        for line, data in zip(lines, dataLines) :
+    def update_lines(num, dataLines, lines, points) :
+        for line, data, pts in zip(lines, dataLines, points) :
             # NOTE: there is no .set_data() for 3 dim data...                                    
             r,_ = np.shape(data)
         
@@ -222,6 +225,7 @@ def create_movie_2d(Trajs, ns = 4,saveVideo = False):
             if num > r:
                 val = r
             line.set_data( np.transpose(data[:val,0:2]) )            
+            pts.set_data( np.transpose(data[val,0:2]) )
         return lines
     
 
@@ -237,7 +241,7 @@ def create_movie_2d(Trajs, ns = 4,saveVideo = False):
     ax.set_title('Result animation.')
 
     # Creating the Animation object
-    line_ani = animation.FuncAnimation(fig, update_lines, frames = max_len, fargs=(x_list, lines),
+    line_ani = animation.FuncAnimation(fig, update_lines, frames = max_len, fargs=(x_list, lines, points),
                                    interval=1, blit=False)
 
     if saveVideo:

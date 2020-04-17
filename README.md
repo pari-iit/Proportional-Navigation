@@ -42,11 +42,12 @@ In this project I have simulated multiple targets (not necessarily missiles) to 
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./simulator` _`<inputfile>`_.
+    * Example: `./simulator ../data/inputfile_3d.txt`
     * **The _`<inputfile>`_ argument is optional.** If not provided it will use the default file which is `inputfile_3d.txt`. Format of the _`<inputfile>`_ described in `Data/README_inp.md`.
 5. Install dependencies for postprocessing: `cd .. && chmod 777 INSTALL.sh && ./INSTALL.sh`
-6. Post processing the output:  `python3 postprocessor.py <dof>`
+6. Post processing the output:  `cd Data/ && python3 postprocessor.py <dof>`
     * The `<dof>` refers to the degrees of freedom of the system simulated.
-    * Example command: `python3 postprocessor.py 3`
+    * Example command: `cd Data/ && python3 postprocessor.py 3`
     * The outputs are written in files `Data/res_*.txt`, where `*` refers to the target number.
 
 Right now I am in the process of migrating the output mechanism to ROS and Gazebo, so that simulation outputs could be viewed in real time. However, I do not think I will be able to do that before June, 2020.  
