@@ -379,11 +379,13 @@ Results SimManager::simulateProNav(const int&& t_id, const int&& i_id){
         }
 
         if ( fabs(std::nearbyint(t_st.t()) - t_st.t()) < 1.0e-5 ){
-            std::cout << "Thread id = " << (std::this_thread::get_id()) 
+            std::cout << "Thread id = " << (std::this_thread::get_id())  
+                      << " target = " << t_id <<" interceptor = " << i_id
                       << " time = " << t_st.t() << " dist = " << dist << std::endl;            
         }
     }
-    std::cout << "Thread id = " << (std::this_thread::get_id())
+    std::cout << "Finishing simulation: Thread id = " << (std::this_thread::get_id())
+              << ". Target = " << t_id <<" interceptor = " << i_id
               << ". Time = " << i_st.t()
               << ". Dist = " << dist << std::endl;                
     std::this_thread::sleep_for(std::chrono::milliseconds(1));

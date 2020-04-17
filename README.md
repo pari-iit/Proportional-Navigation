@@ -29,7 +29,7 @@ In this project I have simulated multiple targets (not necessarily missiles) to 
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 * Requirements for postprocessing simulation results.
-  * Python >= 2.7.12 
+  * Python >= 2.7.12
     * All OSes: [click here for download and installation instructions](https://www.python.org/downloads/)
   * NumPy >= 1.16.6 
     * All OSes: [click here for download and installation instructions](https://numpy.org/)
@@ -43,6 +43,13 @@ In this project I have simulated multiple targets (not necessarily missiles) to 
 3. Compile: `cmake .. && make`
 4. Run it: `./simulator` _`<inputfile>`_.
     * **The _`<inputfile>`_ argument is optional.** If not provided it will use the default file which is `inputfile_3d.txt`. Format of the _`<inputfile>`_ described in `Data/README_inp.md`.
+5. Install dependencies for postprocessing: `cd .. && chmod 777 INSTALL.sh && ./INSTALL.sh`
+6. Post processing the output:  `python3 postprocessor.py <dof>`
+    * The `<dof>` refers to the degrees of freedom of the system simulated.
+    * Example command: `python3 postprocessor.py 3`
+    * The outputs are written in files `Data/res_*.txt`, where `*` refers to the target number.
+
+Right now I am in the process of migrating the output mechanism to ROS and Gazebo, so that simulation outputs could be viewed in real time. However, I do not think I will be able to do that before June, 2020.  
 
 ## Class Structure
 
