@@ -15,9 +15,7 @@
 #include <map>
 #include <eigen3/Eigen/Dense>
 #include "Controller.h"
-// #define _N_STATES 2
-// #define NS (2*_N_STATES)
-// #define _N_CONTROL 2
+
 
 class Control;
 class State{
