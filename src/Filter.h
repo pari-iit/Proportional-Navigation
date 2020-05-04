@@ -20,6 +20,16 @@
 class MeasurementModel;
 class Filter{
     public:
+    virtual ~Filter() {};
+    //Rule of five
+    Filter () = default;
+
+    //Rule of five            
+    Filter(const Filter& that) = default;
+    Filter& operator=(const Filter& that) = default;
+    Filter(Filter&& that) = default;
+    Filter& operator=(Filter&& that) = default;
+
     virtual void update(State& st, const Measurement& m, const State& sref, const double& dt) = 0;
 };
 

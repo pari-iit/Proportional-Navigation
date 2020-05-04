@@ -71,7 +71,7 @@ class SimManager{
   //Used to generate spurious measurement from target states. This is different from the Kalman filter measurement.
   std::unique_ptr<MeasurementModel> _m;
   //Using Filter here instead of KalmanFilter gives valgrind error. Dont know why. 
-  std::unique_ptr<KalmanFilter> _f;
+  std::unique_ptr<Filter> _f;
   //Multiple threads can use the same pointer. 
   std::shared_ptr<Simulator> _sim;  
 
