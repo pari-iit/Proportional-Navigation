@@ -97,5 +97,17 @@ public:
     void setControl(const std::vector<Control>& u){_U_t = u;};
 };
 
+class MPC:public Controller{
+    int const _nc,_np;
+public:
+    MPC(const int& nc, const int& np):_nc(nc),_np(np){}
+    void generateControl(const std::vector<State>& st);
+    std::any getGain() const;
+    void setGain(const std::any& K);
+    std::vector<Control> getControl() const;
+    void setControl(const std::vector<Control>& u);
+};
+
+
 
 #endif
