@@ -63,34 +63,6 @@ Right now I am in the process of migrating the output mechanism to ROS and Gazeb
 
 An important point to note is that the target simulation is done only to generate measurements for the Kalman filter in the interceptor. Target measurements can as well be obtained from other sources such as real radar simulation.
 
-## Project Rubric Points Addressed
-
-* **Loops, Functions, I/O**
-  * The project demonstrates an understanding of C++ functions and control structures.
-  * The project reads data from a file and process the data, or the program writes data to a file.
-
-* **Object Oriented Programming**
-  * The project uses Object Oriented Programming techniques.
-  * Classes use appropriate access specifiers for class members.
-  * Class constructors utilize member initialization lists.
-  * Classes abstract implementation details from their interfaces.
-  * Classes encapsulate behavior.
-  * Classes follow an appropriate inheritance hierarchy.
-  * Overloaded functions allow the same function to operate on different parameters.
-  * Derived class functions override virtual base class functions.
-  * Templates generalize functions in the project.
-
-* **Memory Management**
-  * The project makes use of references in function declarations.
-  * The project uses destructors appropriately.
-  * The project follows the Rule of 5.
-  * The project uses move semantics to move data, instead of copying it, where possible.
-  * The project uses smart pointers instead of raw pointers.
-
-* **Concurrency**
-  * A promise and future is used in the project.
-  * A mutex or lock is used in the project.
-
 ## License
 
 The project is distributed under the BSD-3 clause license.
